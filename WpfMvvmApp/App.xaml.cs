@@ -1,0 +1,41 @@
+﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Navigation;
+using WpfMvvmApp.Interfaces;
+using WpfMvvmApp.ViewModels;
+using WpfMvvmApp.Services;
+
+namespace WpfMvvmApp
+{
+    public partial class App : Application
+    {
+        public App()
+        {
+            Ioc.Default.ConfigureServices(
+                new ServiceCollection()
+
+                //Services
+                .AddSingleton<INavigationService, WpfMvvmApp.Services.NavigationService>()
+                .AddSingleton<IPopupService, PopupService>()
+                .AddSingleton<IToastService, ToastService>()
+                .AddSingleton<ISettingService, SettingService>()
+                .AddSingleton<IVariablesService, VariablesService>()
+                //.AddSingleton(RestService.For<IRedditService>("https://www.reddit.com/"))
+                //.AddSingleton(RestService.For<IContactsService>("https://randomuser.me/"))
+
+                //ViewModels
+                .AddTransient<SplashPageViewModel>()
+                //.AddTransient<Test2ViewModel>()
+
+                .BuildServiceProvider());
+        }
+    }
+}
