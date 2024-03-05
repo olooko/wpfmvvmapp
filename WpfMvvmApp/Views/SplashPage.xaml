@@ -12,6 +12,7 @@
 
     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
         <Label Content="Now Loading..." HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <Button Content="Go to SamplePage." Command="{Binding GoToNextPageCommand}" />
+        <Button Content="Go to SamplePage" Command="{Binding GoToSamplePageCommand}" />
+        <Button Content="Go to ContentPage" Command="{Binding GoToNextPageCommand}" />
     </StackPanel>
 </Page>

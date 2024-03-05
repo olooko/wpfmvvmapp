@@ -10,9 +10,17 @@ namespace WpfMvvmApp.Services
 {
     public sealed class PopupService : IPopupService
     {
-        public void ShowPopup(UserControl control)
+        public void Push(UserControl control)
         {
             ((MainWindow)App.Current.MainWindow).PopupContainer.Children.Add(control);
+        }
+
+        public void Pop() 
+        {
+            int lastIndex = ((MainWindow)App.Current.MainWindow).PopupContainer.Children.Count - 1;
+
+            if (lastIndex >= 0)
+                ((MainWindow)App.Current.MainWindow).PopupContainer.Children.RemoveAt(lastIndex);
         }
     }
 }

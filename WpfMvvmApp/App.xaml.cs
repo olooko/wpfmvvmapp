@@ -22,20 +22,22 @@ namespace WpfMvvmApp
             Ioc.Default.ConfigureServices(
                 new ServiceCollection()
 
-                //Services
-                .AddSingleton<INavigationService, WpfMvvmApp.Services.NavigationService>()
-                .AddSingleton<IPopupService, PopupService>()
-                .AddSingleton<IToastService, ToastService>()
-                .AddSingleton<ISettingService, SettingService>()
-                .AddSingleton<IVariablesService, VariablesService>()
-                //.AddSingleton(RestService.For<IRedditService>("https://www.reddit.com/"))
-                //.AddSingleton(RestService.For<IContactsService>("https://randomuser.me/"))
+                    //Services
+                    .AddSingleton<IHttpService, HttpService>()
+                    .AddSingleton<INavigationService, WpfMvvmApp.Services.NavigationService>()
+                    .AddSingleton<IPopupService, PopupService>()
+                    .AddSingleton<ISettingService, SettingService>()
+                    .AddSingleton<IToastService, ToastService>()
+                    .AddSingleton<IVariablesService, VariablesService>()
 
-                //ViewModels
-                .AddTransient<SplashPageViewModel>()
-                //.AddTransient<Test2ViewModel>()
+                    //.AddSingleton(RestService.For<IRedditService>("https://www.reddit.com/"))
+                    //.AddSingleton(RestService.For<IContactsService>("https://randomuser.me/"))
 
-                .BuildServiceProvider());
+                    //ViewModels
+                    .AddTransient<SplashPageViewModel>()
+                    //.AddTransient<Test2ViewModel>()
+
+                    .BuildServiceProvider());
         }
     }
 }

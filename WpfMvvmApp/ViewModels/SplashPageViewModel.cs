@@ -19,10 +19,17 @@ namespace WpfMvvmApp.ViewModels
         }
 
         [RelayCommand]
-        private void GoToNextPage()
+        private void GoToSamplePage()
         {
             INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
             navigationService.Navigate(new Views.SamplePage());
+        }
+
+        [RelayCommand]
+        private void GoToNextPage()
+        {
+            INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
+            navigationService.Navigate(new Views.ContentPage());
         }
     }
 }
