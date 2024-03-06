@@ -28,7 +28,6 @@ namespace WpfMvvmApp.ViewModels
             this.ListBoxItemList = new ObservableCollection<ListBoxItemModel>();
             //this.ListBoxItemList.Add(new ListBoxItemModel { Text = "Button", Content = new ButtonPage() });
             //this.ListBoxItemList.Add(new ListBoxItemModel { Text = "CheckBox", Content = new CheckBoxPage() });
-            this.ListBoxItemList.Add(new ListBoxItemModel { Text = "Popup", Content = new PopupPage() });
             this.ListBoxItemList.Add(new ListBoxItemModel { Text = "Toast", Content = new ToastPage() });
         }
 

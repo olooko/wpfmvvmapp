@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
 using WpfMvvmApp.Interfaces;
 
@@ -13,23 +12,15 @@ namespace WpfMvvmApp.Services
     {
         public void Push(UserControl control)
         {
-            var popupContainer = ((MainWindow)App.Current.MainWindow).PopupContainer;
-
-            popupContainer.Children.Add(control);
-            popupContainer.Visibility = Visibility.Visible;
+            ((MainWindow)App.Current.MainWindow).PopupContainer.Children.Add(control);
         }
 
         public void Pop() 
         {
-            var popupContainer = ((MainWindow)App.Current.MainWindow).PopupContainer;
+            int lastIndex = ((MainWindow)App.Current.MainWindow).PopupContainer.Children.Count - 1;
 
-            int lastIndex = popupContainer.Children.Count - 1;
-
-            if (lastIndex > 0)
-                popupContainer.Children.RemoveAt(lastIndex);
-
-            if (popupContainer.Children.Count == 1)
-                popupContainer.Visibility = Visibility.Hidden;
+            if (lastIndex >= 0)
+                ((MainWindow)App.Current.MainWindow).PopupContainer.Children.RemoveAt(lastIndex);
         }
     }
 }
