@@ -17,17 +17,28 @@ namespace WpfMvvmApp.Controls.Popups
 {
     public partial class AlertOkPopupControl : UserControl
     {
-        public event EventHandler OkClicked;
+        public static readonly RoutedEvent OkClickedEvent = 
+            EventManager.RegisterRoutedEvent(
+                nameof(OkClicked), 
+                RoutingStrategy.Bubble, 
+                typeof(RoutedEventHandler), 
+                typeof(UserControl));
+
+        public event RoutedEventHandler OkClicked
+        {
+            add => AddHandler(OkClickedEvent, value);
+            remove => RemoveHandler(OkClickedEvent, value);
+        }
 
         public AlertOkPopupControl()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.OkClicked != null)
-                this.OkClicked(this, EventArgs.Empty);
+            RoutedEventArgs args = new RoutedEventArgs(OkClickedEvent);
+            this.RaiseEvent(args);
         }
     }
 }

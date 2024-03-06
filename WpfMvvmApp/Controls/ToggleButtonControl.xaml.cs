@@ -17,6 +17,24 @@ namespace WpfMvvmApp.Controls
 {
     public partial class ToggleButtonControl : UserControl
     {
+        public static readonly DependencyProperty IsSelectedProperty = 
+            DependencyProperty.Register(
+                nameof(IsSelected), 
+                typeof(bool), 
+                typeof(ToggleButtonControl),
+                new FrameworkPropertyMetadata(false, new PropertyChangedCallback(OnSelectedChanged)));
+
+        public bool IsSelected
+        {
+            get => (bool)GetValue(IsSelectedProperty);
+            set => SetValue(IsSelectedProperty, value);
+        }
+
+        private static void OnSelectedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
+
         public ToggleButtonControl()
         {
             InitializeComponent();

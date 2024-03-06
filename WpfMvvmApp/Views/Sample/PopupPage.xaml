@@ -10,15 +10,28 @@
         <viewModels:PopupPageViewModel />
     </Page.DataContext>
     <Grid>
-        <Button Command="{Binding Path=ShowPopupCommand}">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Content" Value="Show Popup" />
-                    <Setter Property="HorizontalAlignment" Value="Center" />
-                    <Setter Property="VerticalAlignment" Value="Center" />
-                    <Setter Property="Padding" Value="7" />
-                </Style>
-            </Button.Style>
-        </Button>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Command="{Binding Path=ShowOkPopupCommand}">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Content" Value="Show [OK] Popup" />
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                        <Setter Property="Padding" Value="7" />
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Command="{Binding Path=ShowYesNoPopupCommand}">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Content" Value="Show [Yes or No] Popup" />
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                        <Setter Property="Padding" Value="7" />
+                    </Style>
+                </Button.Style>
+            </Button>            
+        </StackPanel>
+
     </Grid>
 </Page>

@@ -8,18 +8,37 @@ using System.Text;
 using System.Threading.Tasks;
 using WpfMvvmApp.Interfaces;
 using WpfMvvmApp.Controls.Popups;
+using System.Windows;
 
 namespace WpfMvvmApp.ViewModels.Sample
 {
     public partial class PopupPageViewModel : ObservableRecipient
     {
         [RelayCommand]
-        private void ShowPopup()
+        private void ShowOkPopup()
         {
             IPopupService popupService = Ioc.Default.GetRequiredService<IPopupService>();
 
             AlertOkPopupControl popup = new AlertOkPopupControl();
-            popup.OkClicked += delegate (object s, EventArgs e) {
+
+            popup.OkClicked += delegate (object sender, RoutedEventArgs e) {
+                popupService.Pop();
+            };
+
+            popupService.Push(popup);
+        }
+
+        [RelayCommand]
+        private void ShowYesNoPopup()
+        {
+            IPopupService popupService = Ioc.Default.GetRequiredService<IPopupService>();
+
+            AlertYesNoPopupControl popup = new AlertYesNoPopupControl();
+
+            popup.YesClicked += delegate (object sender, RoutedEventArgs e) {
+                popupService.Pop();
+            };
+            popup.NoClicked += delegate (object sender, RoutedEventArgs e) {
                 popupService.Pop();
             };
 
