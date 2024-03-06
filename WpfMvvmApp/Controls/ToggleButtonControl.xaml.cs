@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,12 +33,22 @@ namespace WpfMvvmApp.Controls
 
         private static void OnSelectedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
+            UpdateUI((ToggleButtonControl)d);
+        }
 
+        private static void UpdateUI(ToggleButtonControl control)
+        {
+            string templateName = "UncheckedTemplate";
+            if (control.IsSelected) templateName = "CheckedTemplate";
+
+            ((CheckBox)control.Content).Template = (ControlTemplate)control.Resources[templateName];
         }
 
         public ToggleButtonControl()
         {
             InitializeComponent();
+
+            UpdateUI(this);
         }
     }
 }

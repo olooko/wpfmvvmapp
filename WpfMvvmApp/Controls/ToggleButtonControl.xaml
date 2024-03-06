@@ -3,10 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WpfMvvmApp.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             d:DesignHeight="60" d:DesignWidth="180">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="CheckedTemplate" TargetType="CheckBox">
+            <Border CornerRadius="5" Background="CadetBlue">
+                <TextBlock Text="Selected" Padding="7"></TextBlock>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="UncheckedTemplate" TargetType="CheckBox">
+            <Border CornerRadius="5" Background="AntiqueWhite">
+                <TextBlock Text="Unselected" Padding="7"></TextBlock>
+            </Border>
+        </ControlTemplate>        
+    </UserControl.Resources>
+    <CheckBox Template="{StaticResource CheckedTemplate}" IsChecked="{Binding Path=IsSelected}">
+        <!--<CheckBox.Style>
+            <Style TargetType="CheckBox">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Path=IsSelected}" Value="False">
+                        <Setter Property="Template" Value="{StaticResource UncheckedTemplate}" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </CheckBox.Style>-->
+    </CheckBox>
 </UserControl>
