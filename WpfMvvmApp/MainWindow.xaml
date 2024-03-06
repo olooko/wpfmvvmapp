@@ -17,7 +17,9 @@
     </Window.Resources>
     <Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="0,0,0,0" />
-        <Grid x:Name="PopupContainer" />
+        <Grid x:Name="PopupContainer" Visibility="Hidden">
+            <Rectangle Fill="Black" Opacity="0.7" />
+        </Grid>
         <StackPanel x:Name="ToastContainer" Visibility="Hidden">
             <StackPanel.Style>
                 <Style TargetType="StackPanel">

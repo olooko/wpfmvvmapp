@@ -13,13 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfMvvmApp.Popups
+namespace WpfMvvmApp.Controls.Popups
 {
-    public partial class AlertPopup : UserControl
+    public partial class AlertOkPopupControl : UserControl
     {
-        public AlertPopup()
+        public event EventHandler OkClicked;
+
+        public AlertOkPopupControl()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.OkClicked != null)
+                this.OkClicked(this, EventArgs.Empty);
         }
     }
 }
