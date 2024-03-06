@@ -13,11 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfMvvmApp.Views
+namespace WpfMvvmApp.Views.Sample
 {
-    public partial class ContentPage : Page
+    public partial class PopupPage : Page
     {
-        public ContentPage()
+        public PopupPage()
         {
             InitializeComponent();
         }
