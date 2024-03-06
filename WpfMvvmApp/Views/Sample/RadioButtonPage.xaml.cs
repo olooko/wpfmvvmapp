@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace WpfMvvmApp.Views.Sample
 {
-    public partial class ToggleButtonPage : Page
+    public partial class RadioButtonPage : Page
     {
-        public ToggleButtonPage()
+        public RadioButtonPage()
         {
             InitializeComponent();
         }

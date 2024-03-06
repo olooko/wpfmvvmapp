@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfMvvmApp.Views.Sample.ToggleButtonPage"
+﻿<Page x:Class="WpfMvvmApp.Views.Sample.RadioButtonPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,13 +8,15 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
     <Page.DataContext>
-        <viewModels:TogglePageViewModel />
+        <viewModels:RadioButtonPageViewModel />
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <controls:ToggleButtonControl IsSelected="True" />
+            <controls:RadioButtonControl GroupName="Sample" />
             <Rectangle Height="7" />
-            <controls:ToggleButtonControl IsSelected="False" />
+            <controls:RadioButtonControl GroupName="Sample" />
+            <Rectangle Height="7" />
+            <controls:RadioButtonControl GroupName="Sample" IsChecked="True" />
         </StackPanel>
     </Grid>
 </Page>

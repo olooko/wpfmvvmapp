@@ -29,6 +29,7 @@ namespace WpfMvvmApp.ViewModels
             this.ListBoxItemList.Add(new ListBoxItemModel { Text = "Popup", Content = new PopupPage() });
             this.ListBoxItemList.Add(new ListBoxItemModel { Text = "Toast", Content = new ToastPage() });
             this.ListBoxItemList.Add(new ListBoxItemModel { Text = "ToggleButton", Content = new ToggleButtonPage() });
+            this.ListBoxItemList.Add(new ListBoxItemModel { Text = "RadioButton", Content = new RadioButtonPage() });
         }
 
         public void SetContent()
