@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
              d:DesignHeight="60" d:DesignWidth="180">
     <UserControl.Resources>
         <ControlTemplate x:Key="CheckedTemplate" TargetType="RadioButton">
@@ -18,5 +17,13 @@
             </Border>
         </ControlTemplate>
     </UserControl.Resources>
-    <RadioButton Template="{StaticResource CheckedTemplate}" GroupName="{Binding Path=GroupName}" IsChecked="{Binding Path=IsChecked}" />
+    <RadioButton>
+        <RadioButton.Style>
+            <Style TargetType="RadioButton">
+                <Setter Property="Template" Value="{StaticResource CheckedTemplate}" />
+                <Setter Property="GroupName" Value="{Binding Path=GroupName, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <Setter Property="IsChecked" Value="{Binding Path=IsChecked, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+            </Style>
+        </RadioButton.Style>
+    </RadioButton>
 </UserControl>

@@ -22,7 +22,7 @@ namespace WpfMvvmApp.Controls
                 nameof(GroupName),
                 typeof(string),
                 typeof(RadioButtonControl),
-                new FrameworkPropertyMetadata(string.Empty, new PropertyChangedCallback(OnCheckedChanged)));
+                new FrameworkPropertyMetadata(string.Empty));
 
         public static readonly DependencyProperty IsCheckedProperty =
             DependencyProperty.Register(
