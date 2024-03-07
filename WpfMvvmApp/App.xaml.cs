@@ -11,6 +11,7 @@ using System.Windows;
 using System.Windows.Navigation;
 using WpfMvvmApp.Interfaces;
 using WpfMvvmApp.ViewModels;
+using WpfMvvmApp.ViewModels.Sample;
 using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp
@@ -30,12 +31,17 @@ namespace WpfMvvmApp
                     .AddSingleton<IToastService, ToastService>()
                     .AddSingleton<IVariablesService, VariablesService>()
 
-                    //.AddSingleton(RestService.For<IRedditService>("https://www.reddit.com/"))
-                    //.AddSingleton(RestService.For<IContactsService>("https://randomuser.me/"))
-
                     //ViewModels
-                    .AddTransient<SplashPageViewModel>()
-                    //.AddTransient<Test2ViewModel>()
+                    //.AddTransient<SplashPageViewModel>()
+                    //.AddTransient<ContentPageViewModel>()
+                    //.AddTransient<SamplePageViewModel>()
+
+                    //ViewModels.Sample
+                    //.AddTransient<PopupPageViewModel>()
+                    //.AddTransient<ToastPageViewModel>()
+                    //.AddTransient<ToggleButtonPageViewModel>()
+                    //.AddTransient<RadioButtonPageViewModel>()
+                    //.AddTransient<ItemsBindingPageViewModel>()
 
                     .BuildServiceProvider());
         }

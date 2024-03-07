@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WpfMvvmApp.ViewModels.Sample
 {
-    public partial class TogglePageViewModel : ObservableRecipient
+    public partial class ToggleButtonPageViewModel : ObservableRecipient
     {
     }
 }

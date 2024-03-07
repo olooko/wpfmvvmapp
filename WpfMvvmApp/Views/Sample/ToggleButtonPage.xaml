@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
     <Page.DataContext>
-        <viewModels:TogglePageViewModel />
+        <viewModels:ToggleButtonPageViewModel />
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">

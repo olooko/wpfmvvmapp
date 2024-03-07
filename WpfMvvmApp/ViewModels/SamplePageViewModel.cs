@@ -15,21 +15,22 @@ namespace WpfMvvmApp.ViewModels
     public partial class SamplePageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private ObservableCollection<ListBoxItemModel> listBoxItemList;
+        private ObservableCollection<SamplePageListBoxItemModel> listBoxList;
 
         [ObservableProperty]
         private Page frameContent;
 
         [ObservableProperty]
-        private ListBoxItemModel selectedListBoxItem;
+        private SamplePageListBoxItemModel selectedListBoxItem;
 
         public SamplePageViewModel()
         {
-            this.ListBoxItemList = new ObservableCollection<ListBoxItemModel>();
-            this.ListBoxItemList.Add(new ListBoxItemModel { Text = "Popup", Content = new PopupPage() });
-            this.ListBoxItemList.Add(new ListBoxItemModel { Text = "Toast", Content = new ToastPage() });
-            this.ListBoxItemList.Add(new ListBoxItemModel { Text = "ToggleButton", Content = new ToggleButtonPage() });
-            this.ListBoxItemList.Add(new ListBoxItemModel { Text = "RadioButton", Content = new RadioButtonPage() });
+            this.listBoxList = new ObservableCollection<SamplePageListBoxItemModel>();
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Popup", Content = new PopupPage() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Toast", Content = new ToastPage() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ToggleButton", Content = new ToggleButtonPage() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "RadioButton", Content = new RadioButtonPage() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Items Binding", Content = new ItemsBindingPage() });
         }
 
         public void SetContent()
