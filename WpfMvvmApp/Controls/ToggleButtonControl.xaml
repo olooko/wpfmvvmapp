@@ -6,30 +6,30 @@
              mc:Ignorable="d" 
              d:DesignHeight="60" d:DesignWidth="180">
     <UserControl.Resources>
-        <ControlTemplate x:Key="SelectedTemplate" TargetType="CheckBox">
+        <ControlTemplate x:Key="SelectedTemplate" TargetType="ToggleButton">
             <Border CornerRadius="5" Background="CadetBlue">
                 <TextBlock Text="Selected" Padding="7"></TextBlock>
             </Border>
         </ControlTemplate>
-        <ControlTemplate x:Key="UnselectedTemplate" TargetType="CheckBox">
+        <ControlTemplate x:Key="UnselectedTemplate" TargetType="ToggleButton">
             <Border CornerRadius="5" Background="AntiqueWhite">
                 <TextBlock Text="Unselected" Padding="4"></TextBlock>
             </Border>
         </ControlTemplate>
-        <ControlTemplate x:Key="SelectedDisabledTemplate" TargetType="CheckBox">
+        <ControlTemplate x:Key="SelectedDisabledTemplate" TargetType="ToggleButton">
             <Border CornerRadius="5" Background="Gray">
                 <TextBlock Text="Selected Disabled" Padding="5"></TextBlock>
             </Border>
         </ControlTemplate>
-        <ControlTemplate x:Key="UnselectedDisabledTemplate" TargetType="CheckBox">
+        <ControlTemplate x:Key="UnselectedDisabledTemplate" TargetType="ToggleButton">
             <Border CornerRadius="5" Background="LightGray">
                 <TextBlock Text="Unselceted Disabled" Padding="4"></TextBlock>
             </Border>
         </ControlTemplate>        
     </UserControl.Resources>
-    <CheckBox>
-        <CheckBox.Style>
-            <Style TargetType="CheckBox">
+    <ToggleButton IsThreeState="False">
+        <ToggleButton.Style>
+            <Style TargetType="ToggleButton">
                 <Setter Property="IsEnabled" Value="{Binding Path=IsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                 <Setter Property="IsChecked" Value="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                 <Setter Property="Template" Value="{StaticResource UnselectedTemplate}" />
@@ -57,7 +57,7 @@
                     </MultiTrigger>                    
                 </Style.Triggers>
             </Style>
-        </CheckBox.Style>
-    </CheckBox>
+        </ToggleButton.Style>
+    </ToggleButton>
 
 </UserControl>
