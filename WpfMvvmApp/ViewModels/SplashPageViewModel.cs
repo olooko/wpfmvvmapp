@@ -17,7 +17,7 @@ namespace WpfMvvmApp.ViewModels
         private void GoToSamplePage()
         {
             INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
-            navigationService.Navigate(new Views.SamplePage());
+            navigationService.Navigate(new Views._SamplePage());
         }
 
         [RelayCommand]
