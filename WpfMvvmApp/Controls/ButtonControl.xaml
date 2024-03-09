@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="WpfMvvmApp.Controls.ButtonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="180">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="NormalTemplate" TargetType="Button">
+            <Border CornerRadius="5" Background="CadetBlue">
+                <TextBlock Text="NormalState" Padding="7"></TextBlock>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="PressedTemplate" TargetType="Button">
+            <Border CornerRadius="5" Background="AntiqueWhite">
+                <TextBlock Text="PressedState" Padding="4"></TextBlock>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="DisabledTemplate" TargetType="Button">
+            <Border CornerRadius="5" Background="Gray">
+                <TextBlock Text="Disabled" Padding="5"></TextBlock>
+            </Border>
+        </ControlTemplate>        
+    </UserControl.Resources>
+    <Button>
+        <Button.Style>
+            <Style TargetType="Button">
+                <Setter Property="IsEnabled" Value="{Binding Path=IsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <Setter Property="Template" Value="{StaticResource NormalTemplate}" />
+                <Style.Triggers>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter Property="Template" Value="{StaticResource PressedTemplate}" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter Property="Template" Value="{StaticResource DisabledTemplate}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Button.Style>
+    </Button>
+</UserControl>

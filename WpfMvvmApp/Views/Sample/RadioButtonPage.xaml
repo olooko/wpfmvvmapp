@@ -12,11 +12,17 @@
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <controls:RadioButtonControl GroupName="Sample" />
+            <controls:RadioButtonControl GroupName="Sample1" />
             <Rectangle Height="7" />
-            <controls:RadioButtonControl GroupName="Sample" />
+            <controls:RadioButtonControl GroupName="Sample1" />
             <Rectangle Height="7" />
-            <controls:RadioButtonControl GroupName="Sample" IsChecked="True" />
+            <controls:RadioButtonControl GroupName="Sample1" IsChecked="True" />
+            <Rectangle Height="7" />
+            <controls:RadioButtonControl GroupName="Sample1" IsEnabled="{Binding ButtonEnabled}" />
+            <Rectangle Height="17" />
+            <controls:RadioButtonControl GroupName="Sample2" IsChecked="True" IsEnabled="{Binding ButtonEnabled}" />
+            <Rectangle Height="7" />
+            <controls:RadioButtonControl GroupName="Sample2" IsEnabled="{Binding ButtonEnabled}" />            
         </StackPanel>
     </Grid>
 </Page>

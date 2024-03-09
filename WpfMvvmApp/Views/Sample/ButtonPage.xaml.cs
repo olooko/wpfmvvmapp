@@ -1,10 +1,10 @@
 ﻿using System.Windows.Controls;
 
-namespace WpfMvvmApp.Views
+namespace WpfMvvmApp.Views.Sample
 {
-    public partial class SplashPage : Page
+    public partial class ButtonPage : Page
     {
-        public SplashPage()
+        public ButtonPage()
         {
             InitializeComponent();
         }

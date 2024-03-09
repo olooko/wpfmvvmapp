@@ -6,23 +6,58 @@
              mc:Ignorable="d" 
              d:DesignHeight="60" d:DesignWidth="180">
     <UserControl.Resources>
-        <ControlTemplate x:Key="CheckedTemplate" TargetType="CheckBox">
+        <ControlTemplate x:Key="SelectedTemplate" TargetType="CheckBox">
             <Border CornerRadius="5" Background="CadetBlue">
                 <TextBlock Text="Selected" Padding="7"></TextBlock>
             </Border>
         </ControlTemplate>
-        <ControlTemplate x:Key="UncheckedTemplate" TargetType="CheckBox">
+        <ControlTemplate x:Key="UnselectedTemplate" TargetType="CheckBox">
             <Border CornerRadius="5" Background="AntiqueWhite">
                 <TextBlock Text="Unselected" Padding="4"></TextBlock>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="SelectedDisabledTemplate" TargetType="CheckBox">
+            <Border CornerRadius="5" Background="Gray">
+                <TextBlock Text="Selected Disabled" Padding="5"></TextBlock>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="UnselectedDisabledTemplate" TargetType="CheckBox">
+            <Border CornerRadius="5" Background="LightGray">
+                <TextBlock Text="Unselceted Disabled" Padding="4"></TextBlock>
             </Border>
         </ControlTemplate>        
     </UserControl.Resources>
     <CheckBox>
         <CheckBox.Style>
             <Style TargetType="CheckBox">
-                <Setter Property="Template" Value="{StaticResource CheckedTemplate}" />
+                <Setter Property="IsEnabled" Value="{Binding Path=IsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
                 <Setter Property="IsChecked" Value="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <Setter Property="Template" Value="{StaticResource UnselectedTemplate}" />
+                <Style.Triggers>
+                    <Trigger Property="IsChecked" Value="True">
+                        <Setter Property="Template" Value="{StaticResource SelectedTemplate}" />
+                    </Trigger>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition Property="IsChecked" Value="True" />
+                            <Condition Property="IsEnabled" Value="False" />
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter Property="Template" Value="{StaticResource SelectedDisabledTemplate}" />
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition Property="IsChecked" Value="False" />
+                            <Condition Property="IsEnabled" Value="False" />
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter Property="Template" Value="{StaticResource UnselectedDisabledTemplate}" />
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>                    
+                </Style.Triggers>
             </Style>
         </CheckBox.Style>
     </CheckBox>
+
 </UserControl>

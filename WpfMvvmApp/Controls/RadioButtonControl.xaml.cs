@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfMvvmApp.Controls
 {
@@ -29,7 +17,7 @@ namespace WpfMvvmApp.Controls
                 nameof(IsChecked),
                 typeof(bool),
                 typeof(RadioButtonControl),
-                new FrameworkPropertyMetadata(false, new PropertyChangedCallback(OnCheckedChanged)));
+                new FrameworkPropertyMetadata(false));
 
         public string GroupName
         {
@@ -43,24 +31,9 @@ namespace WpfMvvmApp.Controls
             set => SetValue(IsCheckedProperty, value);
         }
 
-        private static void OnCheckedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            UpdateUI((RadioButtonControl)d);
-        }
-
-        private static void UpdateUI(RadioButtonControl control)
-        {
-            string templateName = "UncheckedTemplate";
-            if (control.IsChecked) templateName = "CheckedTemplate";
-
-            ((RadioButton)control.Content).Template = (ControlTemplate)control.Resources[templateName];
-        }
-
         public RadioButtonControl()
         {
             InitializeComponent();
-
-            UpdateUI(this);
         }
     }
 }
