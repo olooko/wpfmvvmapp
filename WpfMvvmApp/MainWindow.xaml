@@ -8,7 +8,7 @@
         Height="450" Width="800">
     <Window.Resources>
         <Storyboard x:Key="ShowToast" Completed="ShowToast_Completed">
-            <DoubleAnimation AutoReverse="True" Duration="0:0:3.0" Storyboard.TargetName="ToastContainer" Storyboard.TargetProperty="Opacity" From="0" To="1">
+            <DoubleAnimation AutoReverse="True" Duration="0:0:2.0" Storyboard.TargetName="ToastContainer" Storyboard.TargetProperty="Opacity" From="0" To="1">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="10" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>

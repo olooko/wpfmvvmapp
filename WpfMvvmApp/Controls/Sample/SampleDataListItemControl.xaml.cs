@@ -1,11 +1,19 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using WpfMvvmApp.Enums;
 
 namespace WpfMvvmApp.Controls.Sample
 {
     public partial class SampleDataListItemControl : UserControl
     {
+        public static readonly DependencyProperty ColorProperty =
+            DependencyProperty.Register(
+                nameof(Color),
+                typeof(SampleDataListItemColorEnum),
+                typeof(SampleDataListItemControl),
+                new FrameworkPropertyMetadata(SampleDataListItemColorEnum.White));
+
         public static readonly DependencyProperty TextProperty =
             DependencyProperty.Register(
                 nameof(Text),
@@ -26,6 +34,12 @@ namespace WpfMvvmApp.Controls.Sample
                 typeof(object),
                 typeof(SampleDataListItemControl),
                 new FrameworkPropertyMetadata(null));
+
+        public SampleDataListItemColorEnum Color
+        {
+            get => (SampleDataListItemColorEnum)GetValue(ColorProperty);
+            set => SetValue(ColorProperty, value);
+        }
 
         public string Text
         {

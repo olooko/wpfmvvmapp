@@ -10,23 +10,34 @@
     <Page.DataContext>
         <viewModels:ItemsBindingPageViewModel />
     </Page.DataContext>
-    <Grid>
-        <ItemsControl Margin="50,50,50,50" Background="AliceBlue" ItemsSource="{Binding SampleDataList}">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
+    <ItemsControl Margin="50" Background="AliceBlue" ItemsSource="{Binding SampleDataList}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <Border Padding="9">
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" Value="Aqua" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Selected}" Value="True">
+                                    <Setter Property="Background" Value="Green" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
                     <StackPanel Orientation="Vertical">
                         <controls:SampleDataListItemControl>
                             <controls:SampleDataListItemControl.Style>
                                 <Style TargetType="controls:SampleDataListItemControl">
+                                    <Setter Property="Color" Value="{Binding Path=Color}" />
                                     <Setter Property="Text" Value="{Binding Path=Text}" />
                                     <Setter Property="Command" Value="{Binding Path=DataContext.DeleteItemCommand, RelativeSource={RelativeSource AncestorType=Page}}" />
                                     <Setter Property="CommandParameter" Value="{Binding Path=Id}" />
-                                </Style>                                
+                                </Style>
                             </controls:SampleDataListItemControl.Style>
                         </controls:SampleDataListItemControl>
                         <Label VerticalContentAlignment="Center" Content="{Binding Path=Text}" />
@@ -40,8 +51,8 @@
                             </Button.Style>
                         </Button>
                     </StackPanel>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-    </Grid>
+                </Border>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
 </Page>

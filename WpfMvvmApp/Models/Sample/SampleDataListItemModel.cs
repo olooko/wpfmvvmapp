@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.ObjectModel;
+using WpfMvvmApp.Enums;
 
 namespace WpfMvvmApp.Models.Sample
 {
@@ -6,7 +7,7 @@ namespace WpfMvvmApp.Models.Sample
     {
         public int Id { get; set; }
         public string Text { get; set; }
-
         public bool Selected { get; set; }
+        public SampleDataListItemColorEnum Color { get; set; }
     }
 }
