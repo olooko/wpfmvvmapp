@@ -30,6 +30,7 @@ namespace WpfMvvmApp.ViewModels
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Button", Content = new ButtonPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ToggleButton", Content = new ToggleButtonPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "RadioButton", Content = new RadioButtonPage() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ComboBox", Content = new ComboBoxPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Items Binding", Content = new ItemsBindingPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Selector Binding", Content = new SelectorBindingPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "View to ViewModel", Content = new ViewToViewModelPage() });
@@ -37,20 +38,16 @@ namespace WpfMvvmApp.ViewModels
 
 
             //Calendar Styles and Templates
-            //CheckBox Styles and Templates
-            //ComboBox Styles and Templates
             //ContextMenu Styles and Templates
             //DataGrid Styles and Templates
             //DatePicker Styles and Templates
             //DocumentViewer Styles and Templates
             //Expander Styles and Templates
-            //Frame Styles and Templates
             //GroupBox Styles and Templates
 
             //ListBox Styles and Templates
             //ListView Styles and Templates
             //Menu Styles and Templates
-            //NavigationWindow Styles and Templates
             //PasswordBox Styles and Templates
             //ProgressBar Styles and Templates
             //RepeatButton Styles and Templates
@@ -64,7 +61,6 @@ namespace WpfMvvmApp.ViewModels
 
             //ToolTip Styles and Templates
             //TreeView Styles and Templates
-            //Window Styles and Templates
         }
 
         public void SetContent()
