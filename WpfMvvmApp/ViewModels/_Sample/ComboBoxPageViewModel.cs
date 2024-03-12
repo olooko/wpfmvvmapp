@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Linq;
 using WpfMvvmApp.Enums._Sample;
 using WpfMvvmApp.Models._Sample;
 
@@ -13,6 +14,12 @@ namespace WpfMvvmApp.ViewModels._Sample
         [ObservableProperty]
         private ObservableCollection<SampleDataListItemModel> sampleDataList;
 
+        [ObservableProperty]
+        private SampleDataListItemModel selectedItem;
+
+        [ObservableProperty]
+        private int selectedIndex;
+
         public ComboBoxPageViewModel()
         {
             this.IsComboBoxEnabled = false;
@@ -24,6 +31,9 @@ namespace WpfMvvmApp.ViewModels._Sample
             this.SampleDataList.Add(new SampleDataListItemModel { Id = 4, Text = "Item4", Selected = false, Color = SampleDataListItemColorEnum.Red });
             this.SampleDataList.Add(new SampleDataListItemModel { Id = 5, Text = "Item5", Selected = true, Color = SampleDataListItemColorEnum.White });
             this.SampleDataList.Add(new SampleDataListItemModel { Id = 6, Text = "Item6", Selected = false, Color = SampleDataListItemColorEnum.Blue });
+
+            this.SelectedItem = this.SampleDataList.First();
+            this.SelectedIndex = 3;
         }
     }
 }

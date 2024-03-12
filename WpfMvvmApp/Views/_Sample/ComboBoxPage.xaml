@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:controls="clr-namespace:WpfMvvmApp.Controls"
+      xmlns:controls="clr-namespace:WpfMvvmApp.Controls._Sample"
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels._Sample"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
@@ -12,10 +12,9 @@
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!--<controls:ComboBoxControl ItemsSource="{Binding SampleDataList}" />
+            <controls:SampleDataComboBoxControl ItemsSource="{Binding SampleDataList}" SelectedItem="{Binding SelectedItem}" />
             <Rectangle Height="7" />
-            <controls:ComboBoxControl ItemsSource="{Binding SampleDataList}" IsEnabled="{Binding IsComboBoxEnabled}" />-->
-            <ComboBox ItemsSource="{Binding SampleDataList}" />
+            <controls:SampleDataComboBoxControl ItemsSource="{Binding SampleDataList}" SelectedIndex="{Binding SelectedIndex}" IsEnabled="{Binding IsComboBoxEnabled}" />
         </StackPanel>        
     </Grid>
 </Page>
