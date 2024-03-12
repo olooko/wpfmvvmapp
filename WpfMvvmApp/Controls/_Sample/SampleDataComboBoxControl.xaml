@@ -9,23 +9,37 @@
         <ControlTemplate x:Key="DefaultTemplate" TargetType="ComboBox">
             <Border CornerRadius="5" Background="CadetBlue">
                 <Grid>
-                    <ToggleButton x:Name="DropDownToggle" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="-1" HorizontalContentAlignment="Right" IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
-                        <Path x:Name="BtnArrow" Height="4" Width="8" Stretch="Uniform" Margin="0,0,4,0"  Fill="Black" Data="F1 M 300,-190L 310,-190L 305,-183L 301,-190 Z " />
+                    <ToggleButton>
+                        <ToggleButton.Style>
+                            <Style TargetType="ToggleButton">
+                                <Setter Property="IsChecked" Value="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <Setter Property="Background" Value="Yellow" />
+                                <Setter Property="Width" Value="20" />
+                                <Setter Property="HorizontalAlignment" Value="Left" />
+                            </Style>
+                        </ToggleButton.Style>
+                        <Path Height="4" Width="8" Stretch="Uniform" Margin="0,0,4,0"  Fill="Black" Data="F1 M 300,-190L 310,-190L 305,-183L 301,-190 Z " />
                     </ToggleButton>
-                    <!--<ContentPresenter x:Name="ContentPresenter" Margin="6,2,25,2"
-                  Content="{TemplateBinding SelectionBoxItem}"
-                  ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
-                  ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}">
-                </ContentPresenter>
-                <TextBox x:Name="PART_EditableTextBox"
-                  Style="{x:Null}"
-                  Focusable="False"
-                  Background="{TemplateBinding Background}"
-                  HorizontalAlignment="Left" 
-                  VerticalAlignment="Center" 
-                  Margin="3,3,23,3"
-                  Visibility="Hidden"
-                  IsReadOnly="{TemplateBinding IsReadOnly}"/>-->
+                    <!--<TextBox x:Name="PART_EditableTextBox">
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <Setter Property="Visibility" Value="Hidden" />
+                                <Setter Property="Background" Value="Black" />
+                                <Setter Property="Margin" Value="20,0,0,0" />
+                                <Setter Property="IsReadOnly" Value="{Binding Path=IsReadOnly, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>-->
+                    <ContentPresenter>
+                        <ContentPresenter.Style>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Margin" Value="20,0,0,0" />
+                                <Setter Property="Content" Value="{Binding Path=SelectionBoxItem, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <Setter Property="ContentTemplate" Value="{Binding Path=SelectionBoxItemTemplate, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <Setter Property="ContentTemplateSelector" Value="{Binding Path=ItemTemplateSelector, RelativeSource={RelativeSource TemplatedParent}}" />
+                            </Style>
+                        </ContentPresenter.Style>
+                    </ContentPresenter>
                     <Popup x:Name="PART_Popup" AllowsTransparency="True" IsOpen="{TemplateBinding IsDropDownOpen}">
                         <Border>
                             <Border.Style>
