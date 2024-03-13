@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
 using WpfMvvmApp.Interfaces;
-using WpfMvvmApp.Controls.Popups;
+using WpfMvvmApp.Controls.Popups._Sample;
 using System.Windows;
 
 namespace WpfMvvmApp.ViewModels._Sample

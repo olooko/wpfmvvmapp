@@ -31,6 +31,7 @@ namespace WpfMvvmApp.ViewModels
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ToggleButton", Content = new ToggleButtonPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "RadioButton", Content = new RadioButtonPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ComboBox", Content = new ComboBoxPage() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ScrollViewer", Content = new ScrollViewerPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Items Binding", Content = new ItemsBindingPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Selector Binding", Content = new SelectorBindingPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "View to ViewModel", Content = new ViewToViewModelPage() });

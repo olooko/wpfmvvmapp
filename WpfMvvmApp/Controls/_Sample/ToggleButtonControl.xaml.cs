@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfMvvmApp.Controls
+namespace WpfMvvmApp.Controls._Sample
 {
     public partial class ToggleButtonControl : UserControl
     {
