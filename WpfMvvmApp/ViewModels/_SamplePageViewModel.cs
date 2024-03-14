@@ -36,6 +36,7 @@ namespace WpfMvvmApp.ViewModels
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Selector Binding", Content = new SelectorBindingPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "View to ViewModel", Content = new ViewToViewModelPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ViewModel to View", Content = new ViewModelToViewPage() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Async Command", Content = new AsyncRelayCommandPage() });
 
 
             //Calendar Styles and Templates
@@ -55,7 +56,7 @@ namespace WpfMvvmApp.ViewModels
             //ScrollBar Styles and Templates
             //ScrollViewer Styles and Templates
             //Slider Styles and Templates
-            //StatusBar Styles and Templates
+
             //TabControl Styles and Templates
             //TextBox Styles and Templates
             //Thumb Styles and Templates
