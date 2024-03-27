@@ -7,11 +7,19 @@ namespace WpfMvvmApp.ViewModels._Sample
 {
     public partial class AsyncRelayCommandPageViewModel : ObservableRecipient
     {
+        [ObservableProperty]
+        private string sampleText1;
+
         [RelayCommand]
         private async Task AsyncTest()
         {
-            await Task.Delay(5000);
+            this.SampleText1 = string.Empty;
 
+            for (int i = 0; i < 10; i++)
+            {
+                this.SampleText1 += i.ToString();
+                await Task.Delay(1000);
+            }
             
         }
     }

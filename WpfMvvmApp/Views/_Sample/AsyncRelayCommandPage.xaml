@@ -12,6 +12,6 @@
     <Grid>
         <Button Command="{Binding AsyncTestCommand}" VerticalAlignment="Center" HorizontalAlignment="Center">Async Test!!</Button>
 
-        <TextBox VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,50,0,0" Width="100" />
+        <TextBox VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,50,0,0" Width="100" Text="{Binding SampleText1}" />
     </Grid>
 </Page>
