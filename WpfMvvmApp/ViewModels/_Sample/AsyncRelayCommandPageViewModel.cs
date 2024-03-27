@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace WpfMvvmApp.ViewModels._Sample
 {
@@ -17,7 +18,19 @@ namespace WpfMvvmApp.ViewModels._Sample
 
             for (int i = 0; i < 10; i++)
             {
-                this.SampleText1 += i.ToString();
+                if (i % 2 == 0)
+                {
+                    Dispatcher.CurrentDispatcher.Invoke(new System.Action(() => {
+                        this.SampleText1 += i.ToString();
+                    }));
+                }
+                else
+                {
+                    this.SampleText1 += i.ToString();
+                }
+
+
+ 
                 await Task.Delay(1000);
             }
             
