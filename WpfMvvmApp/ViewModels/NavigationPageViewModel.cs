@@ -5,9 +5,9 @@ using WpfMvvmApp.Interfaces;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class SplashPageViewModel : ObservableRecipient
+    public partial class NavigationPageViewModel : ObservableRecipient
     {
-        public SplashPageViewModel()
+        public NavigationPageViewModel()
         {
             ISettingService settingService = Ioc.Default.GetRequiredService<ISettingService>();
             settingService.Load();

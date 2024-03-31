@@ -15,7 +15,7 @@ namespace WpfMvvmApp
 
                     //Services
                     .AddSingleton<IHttpService, HttpService>()
-                    .AddSingleton<INavigationService, WpfMvvmApp.Services.NavigationService>()
+                    .AddSingleton<INavigationService, NavigationService>()
                     .AddSingleton<IPopupService, PopupService>()
                     .AddSingleton<ISettingService, SettingService>()
                     .AddSingleton<IToastService, ToastService>()

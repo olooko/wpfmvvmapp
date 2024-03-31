@@ -29,6 +29,7 @@ namespace WpfMvvmApp
             MainWindow window = new MainWindow();
             window.Show();
 
+            App.Current.MainWindow = window;
             this.Owner = window;
             
         }

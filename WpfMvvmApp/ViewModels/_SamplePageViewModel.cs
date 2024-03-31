@@ -38,7 +38,6 @@ namespace WpfMvvmApp.ViewModels
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ViewModel to View", Content = new ViewModelToViewPage() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Async Command", Content = new AsyncRelayCommandPage() });
 
-
             //Calendar Styles and Templates
             //ContextMenu Styles and Templates
             //DataGrid Styles and Templates

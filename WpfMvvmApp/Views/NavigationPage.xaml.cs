@@ -2,9 +2,9 @@
 
 namespace WpfMvvmApp.Views
 {
-    public partial class SplashPage : Page
+    public partial class NavigationPage : Page
     {
-        public SplashPage()
+        public NavigationPage()
         {
             InitializeComponent();
         }
