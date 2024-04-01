@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -25,18 +26,18 @@ namespace WpfMvvmApp.ViewModels
         public _SamplePageViewModel()
         {
             this.listBoxList = new ObservableCollection<SamplePageListBoxItemModel>();
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Popup", Content = new PopupPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Toast", Content = new ToastPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Button", Content = new ButtonPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ToggleButton", Content = new ToggleButtonPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "RadioButton", Content = new RadioButtonPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ComboBox", Content = new ComboBoxPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ScrollViewer", Content = new ScrollViewerPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Items Binding", Content = new ItemsBindingPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Selector Binding", Content = new SelectorBindingPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "View to ViewModel", Content = new ViewToViewModelPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ViewModel to View", Content = new ViewModelToViewPage() });
-            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Async Command", Content = new AsyncRelayCommandPage() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Popup", Content = Ioc.Default.GetService<PopupPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Toast", Content = Ioc.Default.GetService<ToastPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Button", Content = Ioc.Default.GetService<ButtonPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ToggleButton", Content = Ioc.Default.GetService<ToggleButtonPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetService<RadioButtonPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ComboBox", Content = Ioc.Default.GetService<ComboBoxPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ScrollViewer", Content = Ioc.Default.GetService<ScrollViewerPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Items Binding", Content = Ioc.Default.GetService<ItemsBindingPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Selector Binding", Content = Ioc.Default.GetService<SelectorBindingPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "View to ViewModel", Content = Ioc.Default.GetService<ViewToViewModelPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ViewModel to View", Content = Ioc.Default.GetService<ViewModelToViewPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Async Command", Content = Ioc.Default.GetService<AsyncRelayCommandPage>() });
 
             //Calendar Styles and Templates
             //ContextMenu Styles and Templates

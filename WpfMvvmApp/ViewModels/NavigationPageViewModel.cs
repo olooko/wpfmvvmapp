@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
 using WpfMvvmApp.Interfaces;
+using WpfMvvmApp.Views;
 
 namespace WpfMvvmApp.ViewModels
 {
@@ -9,22 +10,22 @@ namespace WpfMvvmApp.ViewModels
     {
         public NavigationPageViewModel()
         {
-            ISettingService settingService = Ioc.Default.GetRequiredService<ISettingService>();
+            ISettingService settingService = Ioc.Default.GetService<ISettingService>();
             settingService.Load();
         }
 
         [RelayCommand]
         private void GoToSamplePage()
         {
-            INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
-            navigationService.Navigate(new Views._SamplePage());
+            INavigationService navigationService = Ioc.Default.GetService<INavigationService>();
+            navigationService.Navigate(Ioc.Default.GetService<_SamplePage>());
         }
 
         [RelayCommand]
-        private void GoToNextPage()
+        private void GoToContentPage()
         {
-            INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
-            navigationService.Navigate(new Views.ContentPage());
+            INavigationService navigationService = Ioc.Default.GetService<INavigationService>();
+            navigationService.Navigate(Ioc.Default.GetService<ContentPage>());
         }
     }
 }
