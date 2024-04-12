@@ -1,8 +1,12 @@
 ﻿using System.Windows.Controls;
-using WpfMvvmApp.Interfaces;
 
 namespace WpfMvvmApp.Services
 {
+    public interface INavigationService
+    {
+        void Navigate(Page page);
+    }
+
     public sealed class NavigationService : INavigationService
     {
         public void Navigate(Page page)

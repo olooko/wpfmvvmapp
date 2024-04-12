@@ -21,7 +21,7 @@ namespace WpfMvvmApp
             InitializeComponent();
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private async void SplashWindow_Loaded(object sender, RoutedEventArgs e)
         {
             await Task.Delay(3000);
             this.Hide();

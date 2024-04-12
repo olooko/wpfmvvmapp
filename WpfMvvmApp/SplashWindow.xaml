@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfMvvmApp"
         mc:Ignorable="d"
-        Title="SplashWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
-        Loaded="Window_Loaded">
+        Height="300" Width="400" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Loaded="SplashWindow_Loaded">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -21,6 +25,6 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="TextBlock"/>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Loading..."/>
     </Grid>
 </Window>

@@ -13,6 +13,5 @@
         <Label Content="Now Loading..." HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
         <Button Width="180" Height="35" Content="Go to SamplePage" Command="{Binding GoToSamplePageCommand}" />
         <Rectangle Height="7" />
-        <Button Width="180" Height="35" Content="Go to ContentPage" Command="{Binding GoToContentPageCommand}" />
     </StackPanel>
 </Page>

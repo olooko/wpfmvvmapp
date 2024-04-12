@@ -1,9 +1,14 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using WpfMvvmApp.Interfaces;
 
 namespace WpfMvvmApp.Services
 {
+    public interface IPopupService
+    {
+        void Push(UserControl control);
+        void Pop();
+    }
+
     public sealed class PopupService : IPopupService
     {
         public void Push(UserControl control)

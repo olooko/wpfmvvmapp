@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
-using WpfMvvmApp.Interfaces;
 using WpfMvvmApp.Services;
 using WpfMvvmApp.Views;
 using WpfMvvmApp.Views._Sample;
@@ -25,7 +24,6 @@ namespace WpfMvvmApp
 
                     //Views
                     .AddTransient<_SamplePage>()
-                    .AddTransient<ContentPage>()
 
                     //Views._Sample
                     .AddTransient<PopupPage>()

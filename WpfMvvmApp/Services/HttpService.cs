@@ -1,8 +1,16 @@
 ﻿using System.Net.Http;
-using WpfMvvmApp.Interfaces;
 
 namespace WpfMvvmApp.Services
 {
+    interface IHttpService
+    {
+        void Get();
+        void Post();
+        void Put();
+        void Delete();
+        void Patch();
+    }
+
     public class HttpService : IHttpService
     {
         private HttpClient _httpClient;

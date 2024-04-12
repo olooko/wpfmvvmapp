@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
-using WpfMvvmApp.Interfaces;
+using WpfMvvmApp.Services;
 using WpfMvvmApp.Views;
 
 namespace WpfMvvmApp.ViewModels
@@ -19,13 +19,6 @@ namespace WpfMvvmApp.ViewModels
         {
             INavigationService navigationService = Ioc.Default.GetService<INavigationService>();
             navigationService.Navigate(Ioc.Default.GetService<_SamplePage>());
-        }
-
-        [RelayCommand]
-        private void GoToContentPage()
-        {
-            INavigationService navigationService = Ioc.Default.GetService<INavigationService>();
-            navigationService.Navigate(Ioc.Default.GetService<ContentPage>());
         }
     }
 }
