@@ -12,7 +12,7 @@ namespace WpfMvvmApp.ViewModels._Sample
         [RelayCommand]
         private void ShowOkPopup()
         {
-            IPopupService popupService = Ioc.Default.GetService<IPopupService>();
+            IPopupService popupService = Ioc.Default.GetRequiredService<IPopupService>();
 
             AlertOkPopupControl popup = new AlertOkPopupControl();
 
@@ -26,7 +26,7 @@ namespace WpfMvvmApp.ViewModels._Sample
         [RelayCommand]
         private void ShowYesNoPopup()
         {
-            IPopupService popupService = Ioc.Default.GetService<IPopupService>();
+            IPopupService popupService = Ioc.Default.GetRequiredService<IPopupService>();
 
             AlertYesNoPopupControl popup = new AlertYesNoPopupControl();
 

@@ -10,15 +10,15 @@ namespace WpfMvvmApp.ViewModels
     {
         public NavigationPageViewModel()
         {
-            ISettingService settingService = Ioc.Default.GetService<ISettingService>();
+            ISettingService settingService = Ioc.Default.GetRequiredService<ISettingService>();
             settingService.Load();
         }
 
         [RelayCommand]
         private void GoToSamplePage()
         {
-            INavigationService navigationService = Ioc.Default.GetService<INavigationService>();
-            navigationService.Navigate(Ioc.Default.GetService<_SamplePage>());
+            INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
+            navigationService.Navigate(Ioc.Default.GetRequiredService<_SamplePage>());
         }
     }
 }

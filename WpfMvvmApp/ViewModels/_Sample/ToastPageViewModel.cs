@@ -17,13 +17,13 @@ namespace WpfMvvmApp.ViewModels._Sample
         [RelayCommand]
         private void ShowToast()
         {
-            IToastService toastService = Ioc.Default.GetService<IToastService>();
+            IToastService toastService = Ioc.Default.GetRequiredService<IToastService>();
             toastService.ShowToast("This is toast message.");
         }
 
         public void Receive(SampleToastMessage message)
         {
-            IToastService toastService = Ioc.Default.GetService<IToastService>();
+            IToastService toastService = Ioc.Default.GetRequiredService<IToastService>();
             toastService.ShowToast(message.Value);
         }
     }
