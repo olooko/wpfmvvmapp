@@ -35,6 +35,7 @@ namespace WpfMvvmApp.ViewModels
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ScrollViewer", Content = Ioc.Default.GetService<ScrollViewerPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Items Binding", Content = Ioc.Default.GetService<ItemsBindingPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Selector Binding", Content = Ioc.Default.GetService<SelectorBindingPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Control Binding", Content = Ioc.Default.GetService<ControlBindingPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "View to ViewModel", Content = Ioc.Default.GetService<ViewToViewModelPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ViewModel to View", Content = Ioc.Default.GetService<ViewModelToViewPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Async Command", Content = Ioc.Default.GetService<AsyncRelayCommandPage>() });

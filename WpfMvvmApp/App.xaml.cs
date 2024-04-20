@@ -34,6 +34,7 @@ namespace WpfMvvmApp
                     .AddTransient<ComboBoxPage>()
                     .AddTransient<ScrollViewerPage>()
                     .AddTransient<ItemsBindingPage>()
+                    .AddTransient<ControlBindingPage>()
                     .AddTransient<SelectorBindingPage>()
                     .AddTransient<ViewToViewModelPage>()
                     .AddTransient<ViewModelToViewPage>()
