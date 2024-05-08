@@ -1,13 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using System;
+using WpfMvvmApp.Messages._Sample;
 
 namespace WpfMvvmApp.ViewModels._Sample
 {
     public partial class ViewModelToViewPageViewModel : ObservableRecipient
     {
-        public event EventHandler OfThreeMultipled;
-
         [ObservableProperty]
         private int count;
 
@@ -21,10 +21,7 @@ namespace WpfMvvmApp.ViewModels._Sample
         {
             if (++this.Count % 3 == 0)
             {
-                if (this.OfThreeMultipled != null) 
-                { 
-                    this.OfThreeMultipled(this, EventArgs.Empty);
-                }
+                WeakReferenceMessenger.Default.Send(new SampleStoryBoardBeginMessage(string.Empty));
             }
         }
     }

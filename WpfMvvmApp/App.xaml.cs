@@ -40,6 +40,8 @@ namespace WpfMvvmApp
                     .AddTransient<ViewToViewModelPage>()
                     .AddTransient<ViewModelToViewPage>()
                     .AddTransient<AsyncRelayCommandPage>()
+                    .AddTransient<MessengerFirstPage>()
+                    .AddTransient<MessengerSecondPage>()
 
                     .BuildServiceProvider());
         }

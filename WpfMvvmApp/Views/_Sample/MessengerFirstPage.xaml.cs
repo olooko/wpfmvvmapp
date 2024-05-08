@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace WpfMvvmApp.Views._Sample
 {
-    public partial class ControlBindingPage : Page
+    public partial class MessengerFirstPage : Page
     {
-        public ControlBindingPage()
+        public MessengerFirstPage()
         {
             InitializeComponent();
         }

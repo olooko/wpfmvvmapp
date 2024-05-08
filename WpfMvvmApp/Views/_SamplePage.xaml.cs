@@ -9,10 +9,5 @@ namespace WpfMvvmApp.Views
         {
             InitializeComponent();
         }
-
-        private void SamplePageListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ((_SamplePageViewModel)this.DataContext).SetContent();
-        }
     }
 }

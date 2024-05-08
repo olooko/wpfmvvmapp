@@ -1,6 +1,7 @@
-﻿using System.Windows.Controls;
+﻿using CommunityToolkit.Mvvm.Messaging;
+using System.Windows.Controls;
 using System.Windows.Media.Animation;
-using WpfMvvmApp.ViewModels._Sample;
+using WpfMvvmApp.Messages._Sample;
 
 namespace WpfMvvmApp.Views._Sample
 {
@@ -10,13 +11,11 @@ namespace WpfMvvmApp.Views._Sample
         {
             InitializeComponent();
 
-            ((ViewModelToViewPageViewModel)this.DataContext).OfThreeMultipled += ViewModelToViewPage_OfThreeMultipled;
-        }
-
-        private void ViewModelToViewPage_OfThreeMultipled(object sender, System.EventArgs e)
-        {
-            Storyboard sb = Resources["TextAnimated"] as Storyboard;
-            sb.Begin();
+            WeakReferenceMessenger.Default.Register<SampleStoryBoardBeginMessage>(this, (r, m) =>
+            {
+                Storyboard sb = Resources["TextAnimated"] as Storyboard;
+                sb.Begin();
+            });
         }
     }
 }

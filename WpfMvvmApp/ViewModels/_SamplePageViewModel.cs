@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.DependencyInjection;
+using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -40,33 +41,10 @@ namespace WpfMvvmApp.ViewModels
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "View to ViewModel", Content = Ioc.Default.GetRequiredService<ViewToViewModelPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "ViewModel to View", Content = Ioc.Default.GetRequiredService<ViewModelToViewPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Async Command", Content = Ioc.Default.GetRequiredService<AsyncRelayCommandPage>() });
-
-            //Calendar Styles and Templates
-            //ContextMenu Styles and Templates
-            //DataGrid Styles and Templates
-            //DatePicker Styles and Templates
-            //DocumentViewer Styles and Templates
-            //Expander Styles and Templates
-            //GroupBox Styles and Templates
-
-            //ListBox Styles and Templates
-            //ListView Styles and Templates
-            //Menu Styles and Templates
-            //PasswordBox Styles and Templates
-            //ProgressBar Styles and Templates
-            //RepeatButton Styles and Templates
-            //ScrollBar Styles and Templates
-            //ScrollViewer Styles and Templates
-            //Slider Styles and Templates
-
-            //TabControl Styles and Templates
-            //TextBox Styles and Templates
-            //Thumb Styles and Templates
-
-            //ToolTip Styles and Templates
-            //TreeView Styles and Templates
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Messenger", Content = Ioc.Default.GetRequiredService<MessengerFirstPage>() });
         }
 
+        [RelayCommand]
         public void SetContent()
         {
             if (this.SelectedListBoxItem.Text == "Toast")
