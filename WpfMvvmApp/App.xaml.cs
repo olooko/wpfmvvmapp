@@ -32,6 +32,7 @@ namespace WpfMvvmApp
                     .AddTransient<ToggleButtonPage>()
                     .AddTransient<RadioButtonPage>()
                     .AddTransient<ComboBoxPage>()
+                    .AddTransient<ComboBox2Page>()
                     .AddTransient<ScrollViewerPage>()
                     .AddTransient<ItemsBindingPage>()
                     .AddTransient<ItemsBinding2Page>()
