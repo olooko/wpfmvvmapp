@@ -32,5 +32,12 @@ namespace WpfMvvmApp.ViewModels._Sample
         {
             this.Message = message.Value;
         }
+
+        [RelayCommand]
+        private void GoBack()
+        {
+            INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
+            navigationService.GoBack();
+        }
     }
 }

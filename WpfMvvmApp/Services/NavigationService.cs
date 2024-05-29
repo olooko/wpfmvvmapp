@@ -7,6 +7,7 @@ namespace WpfMvvmApp.Services
     public interface INavigationService
     {
         void Navigate(Page page, object extraData = null);
+        void GoBack();
     }
 
     public sealed class NavigationService : INavigationService
@@ -20,6 +21,12 @@ namespace WpfMvvmApp.Services
 
             Frame frame = ((MainWindow)App.Current.MainWindow).MainFrame;
             frame.Navigate(page);
+        }
+
+        public void GoBack()
+        {
+            Frame frame = ((MainWindow)App.Current.MainWindow).MainFrame;
+            frame.GoBack();
         }
     }
 }

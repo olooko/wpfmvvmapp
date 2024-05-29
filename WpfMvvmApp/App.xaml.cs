@@ -16,6 +16,7 @@ namespace WpfMvvmApp
 
                     //Services
                     .AddSingleton<IHttpService, HttpService>()
+                    .AddSingleton<IDialogService, DialogService>()
                     .AddSingleton<INavigationService, NavigationService>()
                     .AddSingleton<IPopupService, PopupService>()
                     .AddSingleton<ISettingService, SettingService>()
@@ -27,6 +28,7 @@ namespace WpfMvvmApp
 
                     //Views._Sample
                     .AddTransient<PopupPage>()
+                    .AddTransient<DialogPage>()
                     .AddTransient<ToastPage>()
                     .AddTransient<ButtonPage>()
                     .AddTransient<ToggleButtonPage>()
