@@ -12,14 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfMvvmApp.ViewModels._Sample;
 
 namespace WpfMvvmApp.Views._Sample
 {
-    public partial class DialogPage : Page
+    public partial class TextBoxPage : Page
     {
-        public DialogPage()
+        public TextBoxPage()
         {
             InitializeComponent();
         }
+
     }
 }

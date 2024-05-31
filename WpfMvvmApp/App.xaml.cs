@@ -45,6 +45,7 @@ namespace WpfMvvmApp
                     .AddTransient<AsyncRelayCommandPage>()
                     .AddTransient<MessengerFirstPage>()
                     .AddTransient<MessengerSecondPage>()
+                    .AddTransient<TextBoxPage>()
 
                     .BuildServiceProvider());
         }

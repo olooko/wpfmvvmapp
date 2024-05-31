@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfMvvmApp.Dialogs
 {
-    /// <summary>
-    /// SampleDialog.xaml에 대한 상호 작용 논리
-    /// </summary>
     public partial class SampleDialog : Window
     {
         public SampleDialog()
