@@ -12,9 +12,14 @@
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <controls:ButtonControl />
+            <controls:ButtonControl  />
             <Rectangle Height="7" />
             <controls:ButtonControl IsEnabled="{Binding IsButtonEnabled}" />
+            <Rectangle Height="21" />
+            <controls:StyleButtonControl Width="200" 
+                                         Height="70"
+                                         Background="SandyBrown"
+                                         Command="{Binding ButtonClickCommand}" />
         </StackPanel>
     </Grid>
 </Page>

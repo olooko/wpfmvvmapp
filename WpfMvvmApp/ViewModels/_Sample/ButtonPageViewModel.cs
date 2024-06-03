@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System.Windows;
 
 namespace WpfMvvmApp.ViewModels._Sample
 {
@@ -11,5 +13,12 @@ namespace WpfMvvmApp.ViewModels._Sample
         {
             isButtonEnabled = false;
         }
+
+        [RelayCommand]
+        private void ButtonClick()
+        {
+            MessageBox.Show("button clicked!");
+        }
+        
     }
 }
