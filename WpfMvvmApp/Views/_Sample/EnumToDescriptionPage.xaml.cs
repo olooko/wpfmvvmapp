@@ -17,9 +17,6 @@ using WpfMvvmApp.Helpers;
 
 namespace WpfMvvmApp.Views._Sample
 {
-    /// <summary>
-    /// EnumToDescriptionPage.xaml에 대한 상호 작용 논리
-    /// </summary>
     public partial class EnumToDescriptionPage : Page
     {
         public EnumToDescriptionPage()
