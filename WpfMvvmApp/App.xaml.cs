@@ -46,6 +46,7 @@ namespace WpfMvvmApp
                     .AddTransient<MessengerFirstPage>()
                     .AddTransient<MessengerSecondPage>()
                     .AddTransient<TextBoxPage>()
+                    .AddTransient<EnumToDescriptionPage>()
 
                     .BuildServiceProvider());
         }
