@@ -20,6 +20,19 @@ namespace WpfMvvmApp.Controls._Sample
     /// </summary>
     public partial class StyleButtonControl : Button
     {
+        public static readonly DependencyProperty TextProperty =
+            DependencyProperty.Register(
+                nameof(Text),
+                typeof(string),
+                typeof(StyleButtonControl),
+                new FrameworkPropertyMetadata(string.Empty));
+
+        public string Text
+        {
+            get => (string)GetValue(TextProperty);
+            set => SetValue(TextProperty, value);
+        }
+
         public StyleButtonControl()
         {
             InitializeComponent();

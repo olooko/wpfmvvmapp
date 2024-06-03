@@ -19,6 +19,7 @@
             <controls:StyleButtonControl Width="200" 
                                          Height="70"
                                          Background="SandyBrown"
+                                         Text="Styled Button"
                                          Command="{Binding ButtonClickCommand}" />
         </StackPanel>
     </Grid>

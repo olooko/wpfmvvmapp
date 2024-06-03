@@ -12,9 +12,9 @@
                 <Setter.Value>
                     <ControlTemplate>
                         <Border CornerRadius="4" Background="{TemplateBinding Background}">
-                            <!--<StackPanel Orientation="Horizontal">
-
-                            </StackPanel>-->
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="{Binding Path=Text, RelativeSource={RelativeSource AncestorType=Button}}" />
+                            </StackPanel>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
