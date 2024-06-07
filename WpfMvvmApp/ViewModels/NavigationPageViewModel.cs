@@ -25,7 +25,7 @@ namespace WpfMvvmApp.ViewModels
         [RelayCommand]
         private void ShowOpacityWindow()
         {
-            OpacityWindow window = new OpacityWindow();
+            Opacity2Window window = new Opacity2Window();
             window.Owner = App.Current.MainWindow;
             window.Show();
         }

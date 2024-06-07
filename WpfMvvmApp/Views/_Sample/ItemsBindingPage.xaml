@@ -10,7 +10,7 @@
     <Page.DataContext>
         <viewModels:ItemsBindingPageViewModel />
     </Page.DataContext>
-    <ItemsControl Margin="50" Background="AliceBlue" ItemsSource="{Binding SampleDataList}">
+    <ItemsControl x:Name="listview" Margin="50" Background="AliceBlue" ItemsSource="{Binding SampleDataList}">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
                 <StackPanel Orientation="Horizontal"/>
@@ -18,7 +18,7 @@
         </ItemsControl.ItemsPanel>
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <Border Padding="9">
+                <Border Padding="9" AllowDrop="True" PreviewMouseMove="PreviewMouseMove" Drop="Drop">
                     <Border.Style>
                         <Style TargetType="Border">
                             <Setter Property="Background" Value="Aqua" />

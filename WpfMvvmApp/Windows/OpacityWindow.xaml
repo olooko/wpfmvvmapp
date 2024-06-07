@@ -6,15 +6,89 @@
         xmlns:local="clr-namespace:WpfMvvmApp.Windows"
         mc:Ignorable="d"
         Height="450" Width="800"
+        Background="#01000000"
+        AllowsTransparency="True"
+        WindowState="Normal"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
         Loaded="Window_Loaded">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Rectangle Height="40" Fill="Brown" />
-        <Rectangle Grid.Row="1" Fill="Bisque" />
+    <Border>
+        <Grid 
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center" 
+        Height="400" 
+        Width="400">
+            <Border 
+            CornerRadius="20"
+            Background="White" 
+            Opacity=".5"/>
 
+            <!--Profile photo-->
+            <Ellipse 
+            Stroke="White" 
+            StrokeThickness="1" 
+            Height="100"
+            Width="100" 
+            VerticalAlignment="Top" 
+            Margin="-50"
+            Fill="Red">
+            </Ellipse>
 
-    </Grid>
+            <StackPanel 
+            Width="300"
+            Orientation="Vertical"
+            Margin="0,86,0,44" 
+            HorizontalAlignment="Center">
+                <TextBlock
+                Text="Username:" 
+                Margin="10,5,10,0"/>
+                <TextBox  Height="50"
+                Margin="10,5,10,0"
+                Background="Transparent" VerticalContentAlignment="Center"
+                Padding="10,0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBlock
+                Text="Password:" 
+                Margin="10,5,10,0"/>
+                <TextBox  Height="50"
+                Margin="10,5,10,0"
+                Background="Transparent" VerticalContentAlignment="Center"
+                Padding="10,0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <Button 
+                Margin="10" 
+                Height="40"
+                Width="100"
+                Content="Login">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Grid>
+                    <TextBlock
+                Text="Forgot password?"  FontSize="12"
+                Margin="10,0"/>
+                    <TextBlock
+                Text="Create Account" HorizontalAlignment="Right" FontSize="12"
+                Margin="10,0"/>
+                </Grid>
+            </StackPanel>
+
+            <!--Optional-->
+
+        </Grid>
+    </Border>
 </Window>

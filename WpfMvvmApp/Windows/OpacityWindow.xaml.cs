@@ -13,66 +13,92 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static WpfMvvmApp.Windows.AcrylicTransparency;
 
 namespace WpfMvvmApp.Windows
 {
     public class AcrylicTransparency
     {
-        [DllImport("user32.dll")]
-        internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
-
-        public enum WindowCompositionAttribute
-        {
-            WCA_ACCENT_POLICY = 19
-        }
-
-        public enum AccentState
+        internal enum AccentState
         {
             ACCENT_DISABLED = 0,
             ACCENT_ENABLE_GRADIENT = 1,
             ACCENT_ENABLE_TRANSPARENTGRADIENT = 2,
             ACCENT_ENABLE_BLURBEHIND = 3,
-            ACCENT_INVALID_STATE = 4
+            ACCENT_ENABLE_ACRYLICBLURBEHIND = 4,
+            ACCENT_INVALID_STATE = 5
         }
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct WindowCompositionAttributeData
-        {
-            #region Field 
-            public WindowCompositionAttribute Attribute;
-            public IntPtr DataHandle;
-            public int DataCount;
-            #endregion
-        }
-
         [StructLayout(LayoutKind.Sequential)]
         internal struct AccentPolicy
         {
             public AccentState AccentState;
-            public int AccentFlags;
-            public int GradientColor;
-            public int AnimationId;
+            public uint AccentFlags;
+            public uint GradientColor;
+            public uint AnimationId;
         }
 
-        public static void turnOn(Window win)
+        [StructLayout(LayoutKind.Sequential)]
+        internal struct WindowCompositionAttributeData
         {
-            IntPtr hwnd = new WindowInteropHelper(win).Handle;
-            if (hwnd == IntPtr.Zero)
-                throw new InvalidProgramException("에러!!!!!");
-            win.Background = Brushes.Transparent;
-            HwndSource.FromHwnd(hwnd).CompositionTarget.BackgroundColor = Colors.Transparent;
-            AccentPolicy accent = new AccentPolicy();
-            int accentStructSize = Marshal.SizeOf(accent);
-            accent.AccentState = AccentState.ACCENT_ENABLE_BLURBEHIND;
-            IntPtr accentPtr = Marshal.AllocHGlobal(accentStructSize);
+            public WindowCompositionAttribute Attribute;
+            public IntPtr Data;
+            public int SizeOfData;
+        }
+        internal enum WindowCompositionAttribute
+        {
+            WCA_ACCENT_POLICY = 19
+        }
+
+
+
+        [DllImport("user32.dll")]
+        internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
+
+        private uint _blurOpacity;
+        public double BlurOpacity
+        {
+            get { return _blurOpacity; }
+            set { _blurOpacity = (uint)value; EnableBlur(); }
+        }
+
+        private uint _blurBackgroundColor = 0x990000; //0x990000;
+
+        private Window window { get; set; }
+        private AccentState accentState { get; set; }
+        internal void EnableBlur()
+        {
+            var windowHelper = new WindowInteropHelper(window);
+            var accent = new AccentPolicy();
+
+
+            //To  enable blur the image behind the window
+            accent.AccentState = accentState;
+            //accent.GradientColor = (_blurOpacity << 24) | (_blurBackgroundColor & 0xFFFFFF); /*(White mask 0xFFFFFF)*/
+
+
+            var accentStructSize = Marshal.SizeOf(accent);
+
+            var accentPtr = Marshal.AllocHGlobal(accentStructSize);
             Marshal.StructureToPtr(accent, accentPtr, false);
-            WindowCompositionAttributeData data = new WindowCompositionAttributeData();
+
+            var data = new WindowCompositionAttributeData();
             data.Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY;
-            data.DataCount = accentStructSize;
-            data.DataHandle = accentPtr;
-            SetWindowCompositionAttribute(hwnd, ref data);
+            data.SizeOfData = accentStructSize;
+            data.Data = accentPtr;
+
+            SetWindowCompositionAttribute(windowHelper.Handle, ref data);
+
             Marshal.FreeHGlobal(accentPtr);
         }
+
+        //to call blur in our desired window
+        internal AcrylicTransparency(Window window, AccentState accentState)
+        {
+            this.window = window;
+            this.accentState = accentState;
+            EnableBlur();
+        }
+
     }
 
 
@@ -87,9 +113,16 @@ namespace WpfMvvmApp.Windows
             InitializeComponent();
         }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //To move our window on mouse down
+            if (e.ChangedButton == MouseButton.Left)
+                DragMove();
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            AcrylicTransparency.turnOn(this);
+            this.DataContext = new AcrylicTransparency(this, AccentState.ACCENT_ENABLE_BLURBEHIND) { BlurOpacity = 100 };
         }
     }
 }
