@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
 using WpfMvvmApp.Services;
 using WpfMvvmApp.Views;
+using WpfMvvmApp.Windows;
 
 namespace WpfMvvmApp.ViewModels
 {
@@ -19,6 +20,14 @@ namespace WpfMvvmApp.ViewModels
         {
             INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
             navigationService.Navigate(Ioc.Default.GetRequiredService<_SamplePage>());
+        }
+
+        [RelayCommand]
+        private void ShowOpacityWindow()
+        {
+            OpacityWindow window = new OpacityWindow();
+            window.Owner = App.Current.MainWindow;
+            window.Show();
         }
     }
 }
