@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using WpfMvvmApp.Models._Sample;
 
 namespace WpfMvvmApp.Views._Sample
 {
@@ -12,36 +13,36 @@ namespace WpfMvvmApp.Views._Sample
             InitializeComponent();
         }
 
-        private void Drop(object sender, DragEventArgs e)
-        {
-            var source = e.Data.GetData("Source") as string;
-            if (source != null)
-            {
-                int newIndex = listview.Items.IndexOf(sender as Border);
-                var list = listview.ItemsSource as ObservableCollection<string>;
-                list.RemoveAt(list.IndexOf(source));
-                list.Insert(newIndex, source);
-            }
-        }
 
-        private void PreviewMouseMove(object sender, MouseEventArgs e)
+        private void Border_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                Task.Factory.StartNew(new Action(() =>
-                {
-                    Thread.Sleep(500);
-                    App.Current.Dispatcher.BeginInvoke(new Action(() =>
-                    {
-                        if (e.LeftButton == MouseButtonState.Pressed)
-                        {
-                            var data = new DataObject();
-                            data.SetData("Source",sender as Border);
-                            DragDrop.DoDragDrop(sender as DependencyObject, data, DragDropEffects.Move);
-                            e.Handled = true;
-                        }
-                    }), null);
-                }), CancellationToken.None);
+                var sourceModel = (SampleDataListItemModel)(sender as Border).DataContext;
+
+                DataObject data = new DataObject();
+                data.SetData("SourceModel", sourceModel);
+
+                DragDrop.DoDragDrop(sender as DependencyObject, data, DragDropEffects.Move);
+                e.Handled = true;
+            }
+        }
+
+        private void Border_Drop(object sender, DragEventArgs e)
+        {
+            var targetModel = (SampleDataListItemModel)(sender as Border).DataContext;
+
+            if (targetModel != null)
+            {
+                var sourceModel = e.Data.GetData("SourceModel") as SampleDataListItemModel;
+
+                ObservableCollection<SampleDataListItemModel> sampleDataList = (ObservableCollection<SampleDataListItemModel>)this.listview.ItemsSource;
+
+                int newIndex = sampleDataList.IndexOf(targetModel);
+
+                sampleDataList.RemoveAt(sampleDataList.IndexOf(sourceModel));
+
+                sampleDataList.Insert(newIndex, sourceModel);
             }
         }
     }

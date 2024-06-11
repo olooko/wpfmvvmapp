@@ -18,7 +18,7 @@
         </ItemsControl.ItemsPanel>
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <Border Padding="9" AllowDrop="True" PreviewMouseMove="PreviewMouseMove" Drop="Drop">
+                <Border Padding="9" AllowDrop="True" MouseMove="Border_MouseMove" Drop="Border_Drop">
                     <Border.Style>
                         <Style TargetType="Border">
                             <Setter Property="Background" Value="Aqua" />
