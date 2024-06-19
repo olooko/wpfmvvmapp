@@ -2,8 +2,9 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:controls="clr-namespace:WpfMvvmApp.Controls._Sample"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:controls="clr-namespace:WpfMvvmApp.Controls"
+      xmlns:sampleControls="clr-namespace:WpfMvvmApp.Controls._Sample"
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels._Sample"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
@@ -12,15 +13,32 @@
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <controls:ButtonControl  />
+            <sampleControls:ButtonControl  />
             <Rectangle Height="7" />
-            <controls:ButtonControl IsEnabled="{Binding IsButtonEnabled}" />
+            <sampleControls:ButtonControl IsEnabled="{Binding IsButtonEnabled}" />
             <Rectangle Height="21" />
-            <controls:StyleButtonControl Width="200" 
+            <sampleControls:StyleButtonControl Width="200" 
                                          Height="70"
                                          Background="SandyBrown"
                                          Text="Styled Button"
                                          Command="{Binding ButtonClickCommand}" />
+            <Rectangle Height="21" />
+            <controls:ImageButtonControl Width="200" 
+                                     Height="70"
+                                     Foreground="Green"
+                                     Background="GreenYellow"
+                                     BorderBrush="Green"
+                                     BorderThickness="2"
+                                     CornerRadius="7"
+                                     FontSize="16"
+                                     FontWeight="Bold"
+                                     ImageSource="/Images/right_arrow.png"
+                                     ImageWidth="40"
+                                     ImageHeight="40"
+                                     ImageStretch="Uniform"
+                                     ImageStretchDirection="Both"
+                                     ImagePosition="Left"
+                                     Text="Go to SamplePage" />
         </StackPanel>
     </Grid>
 </Page>

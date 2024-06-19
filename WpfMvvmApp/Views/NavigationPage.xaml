@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:controls="clr-namespace:WpfMvvmApp.Controls"
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
@@ -10,9 +11,6 @@
         <viewModels:NavigationPageViewModel />
     </Page.DataContext>
     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Label Content="Now Loading..." HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <Button Width="180" Height="35" Content="Go to SamplePage" Command="{Binding GoToSamplePageCommand}" />
-        <Rectangle Height="7" />
-        <Button Width="180" Height="35" Content="Show OpacityWindow" Command="{Binding ShowOpacityWindowCommand}" />
+        <Button Width="200" Height="70" Content="Go to SamplePage" Command="{Binding GoToSamplePageCommand}" />
     </StackPanel>
 </Page>
