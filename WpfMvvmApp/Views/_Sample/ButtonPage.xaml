@@ -11,10 +11,14 @@
         <viewModels:ButtonPageViewModel />
     </Page.DataContext>
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Width="150" HorizontalAlignment="Center" VerticalAlignment="Center">
             <controls:ButtonControl  />
             <Rectangle Height="4" />
             <controls:ButtonControl IsEnabled="{Binding IsButtonEnabled}" />
+            <Rectangle Height="24" />
+            <controls:StyledButtonControl Background="#0D6EFD" Foreground="White" Height="40" Command="{Binding ButtonClickCommand}">
+                <TextBlock Text="Styled Button" />
+            </controls:StyledButtonControl>
         </StackPanel>
     </Grid>
 </Page>
