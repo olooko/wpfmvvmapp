@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Windows\**" />
+    <EmbeddedResource Remove="Windows\**" />
+    <None Remove="Windows\**" />
+    <Page Remove="Windows\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Images\right_arrow.png" />
     <None Remove="Images\WPF_Splash.png" />
   </ItemGroup>
@@ -21,10 +28,6 @@
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.77" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Windows\" />
   </ItemGroup>
 
   <ItemGroup>
