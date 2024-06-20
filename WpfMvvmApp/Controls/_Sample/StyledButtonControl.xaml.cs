@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace WpfMvvmApp.Controls._Sample
 {
-    public partial class StyledButtonControl : Button
+    public partial class StyledButtonControl : UserControl
     {
         public StyledButtonControl()
         {

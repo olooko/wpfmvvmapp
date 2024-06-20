@@ -16,9 +16,13 @@
             <Rectangle Height="4" />
             <controls:ButtonControl IsEnabled="{Binding IsButtonEnabled}" />
             <Rectangle Height="24" />
-            <controls:StyledButtonControl Background="#0D6EFD" Foreground="White" Height="40" Command="{Binding ButtonClickCommand}">
+            <controls:StyledButtonControl Height="30">
                 <TextBlock Text="Styled Button" />
             </controls:StyledButtonControl>
+            <Rectangle Height="24" />
+            <Button Style="{StaticResource StyledButton}" Height="30" Command="{Binding ButtonClickCommand}">
+                <TextBlock Text="Styled Button" Foreground="White" />
+            </Button>
         </StackPanel>
     </Grid>
 </Page>
