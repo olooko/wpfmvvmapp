@@ -12,25 +12,25 @@
     </Page.DataContext>
     <Grid>
         <StackPanel Width="150" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <controls:ButtonControl Background="#0D6EFD" />
+            <controls:TemplateButtonControl Height="30" Command="{Binding ButtonClickCommand}" />
             <Rectangle Height="4" />
-            <controls:ButtonControl Background="#0D6EFD" IsEnabled="{Binding IsButtonEnabled}" />
+            <controls:TemplateButtonControl Height="30" IsEnabled="{Binding IsButtonEnabled}" />
+            
             <Rectangle Height="24" />
-            <controls:RoundedButtonControl Background="#0D6EFD" Height="30" CornerRadius="10">
+
+            <controls:RoundedButtonControl Background="#0D6EFD" Height="30" CornerRadius="10" Command="{Binding ButtonClickCommand}">
                 <TextBlock Text="Rounded Button" Foreground="Yellow" />
             </controls:RoundedButtonControl>
             <Rectangle Height="4" />
-            <controls:RoundedButtonControl Background="#0D6EFD" Height="30" CornerRadius="10" IsEnabled="False">
-                <TextBlock Text="Rounded Button" Foreground="Yellow" />
-            </controls:RoundedButtonControl>
+            <controls:RoundedButtonControl Background="#0D6EFD" Content="Rounded Button" Height="30" CornerRadius="10" IsEnabled="{Binding IsButtonEnabled}" />
+            
             <Rectangle Height="24" />
+            
             <Button Style="{StaticResource StyledButton}" Height="30" Command="{Binding ButtonClickCommand}">
-                <TextBlock Text="Styled Button" Foreground="White" />
+                <TextBlock Text="Styled Button" />
             </Button>
             <Rectangle Height="4" />
-            <Button Style="{StaticResource StyledButton}" Height="30" IsEnabled="False">
-                <TextBlock Text="Styled Button" Foreground="White" />
-            </Button>
+            <Button Style="{StaticResource StyledButton}" Content="Styled Button" Height="30" IsEnabled="{Binding IsButtonEnabled}" />
         </StackPanel>
     </Grid>
 </Page>

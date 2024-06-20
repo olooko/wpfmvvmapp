@@ -22,12 +22,12 @@ namespace WpfMvvmApp.Controls._Sample
 
         public Brush MouseOverBackground
         {
-            get => this.Background.ToDarken();
+            get => this.Background.ToBrighten(0.8);
         }
 
         public Brush DisabledBackground
         {
-            get => this.Background.ToLighten();
+            get => Brushes.LightSlateGray;
         }
 
         public RoundedButtonControl()
