@@ -7,22 +7,22 @@
              d:DesignHeight="60" d:DesignWidth="180">
     <UserControl.Resources>
         <ControlTemplate x:Key="NormalTemplate" TargetType="Button">
-            <Border CornerRadius="5" Background="CadetBlue">
+            <Border CornerRadius="15" Background="CadetBlue">
                 <TextBlock Text="NormalState" Padding="7"></TextBlock>
             </Border>
         </ControlTemplate>
         <ControlTemplate x:Key="MouseOverTemplate" TargetType="Button">
-            <Border CornerRadius="5" Background="AntiqueWhite">
+            <Border CornerRadius="15" Background="AntiqueWhite">
                 <TextBlock Text="MouseOverState" Padding="7"></TextBlock>
             </Border>
         </ControlTemplate>        
         <ControlTemplate x:Key="PressedTemplate" TargetType="Button">
-            <Border CornerRadius="5" Background="Orange">
+            <Border CornerRadius="15" Background="Orange">
                 <TextBlock Text="PressedState" Padding="4"></TextBlock>
             </Border>
         </ControlTemplate>
         <ControlTemplate x:Key="DisabledTemplate" TargetType="Button">
-            <Border CornerRadius="5" Background="Gray">
+            <Border CornerRadius="15" Background="Gray">
                 <TextBlock Text="Disabled" Padding="5"></TextBlock>
             </Border>
         </ControlTemplate>        

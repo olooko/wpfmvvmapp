@@ -11,6 +11,6 @@
         <viewModels:NavigationPageViewModel />
     </Page.DataContext>
     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button Width="200" Height="70" Content="Go to SamplePage" Command="{Binding GoToSamplePageCommand}" />
+        <Button Width="200" Height="40" Content="Go to SamplePage" Command="{Binding GoToSamplePageCommand}" />
     </StackPanel>
 </Page>

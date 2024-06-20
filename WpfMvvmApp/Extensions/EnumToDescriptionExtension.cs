@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WpfMvvmApp.Helpers
 {
-    public static class EnumToDescriptionHelper
+    public static class EnumToDescriptionExtension
     {
         public static string ToDescription(this Enum source)
         {

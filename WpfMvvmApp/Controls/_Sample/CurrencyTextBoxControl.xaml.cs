@@ -58,15 +58,15 @@ namespace WpfMvvmApp.Controls._Sample
                 }
             }
 
-            if (c != '0' && char.IsDigit(c))
-            {
-                string input = this.Text.Substring(0, this.CaretIndex);
+            //if (c != '0' && char.IsDigit(c))
+            //{
+            //    string input = this.Text.Substring(0, this.CaretIndex);
 
-                if (Regex.IsMatch(input, "[0]"))
-                {
-                    this.Text = this.Text.Replace("0", "");
-                }
-            }
+            //    if (Regex.IsMatch(input, "[0]"))
+            //    {
+            //        this.Text = this.Text.Replace("0", "");
+            //    }
+            //}
         }
 
         protected override void OnTextChanged(TextChangedEventArgs e)
