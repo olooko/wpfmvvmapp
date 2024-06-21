@@ -25,67 +25,25 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
-    <Style x:Key="StyledScrollViewer" TargetType="ScrollViewer">
-        <Setter Property="OverridesDefaultStyle" Value="True" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="ScrollViewer">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Border Grid.Column="1" BorderThickness="5" BorderBrush="Gray">
-                            <ScrollContentPresenter CanContentScroll="{TemplateBinding CanContentScroll}" />
-                        </Border>
-                        <ScrollBar x:Name="PART_VerticalScrollBar"
-                                     Value="{TemplateBinding VerticalOffset}"
-                                     Maximum="{TemplateBinding ScrollableHeight}"
-                                     ViewportSize="{TemplateBinding ViewportHeight}"
-                                     Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
-                        <ScrollBar x:Name="PART_HorizontalScrollBar"
-                                     Orientation="Horizontal"
-                                     Grid.Row="1"
-                                     Grid.Column="1"
-                                     Value="{TemplateBinding HorizontalOffset}"
-                                     Maximum="{TemplateBinding ScrollableWidth}"
-                                     ViewportSize="{TemplateBinding ViewportWidth}"
-                                     Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"/>
-
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
     
-    <!--
-
-    <Style x:Key="SubPageComboBox" TargetType="{x:Type ComboBox}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="FontWeight" Value="Normal" />
+    <Style x:Key="StyledComboBox" TargetType="ComboBox">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ComboBox}">
+                <ControlTemplate TargetType="ComboBox">
                     <Grid>
                         <ToggleButton Focusable="false" ClickMode="Press" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
                             <ToggleButton.Style>
-                                <Style TargetType="{x:Type ToggleButton}">
+                                <Style TargetType="ToggleButton">
                                     <Setter Property="Template">
                                         <Setter.Value>
-                                            <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <ControlTemplate TargetType="ToggleButton">
                                                 <Grid>
-                                                    <Border CornerRadius="4" BorderThickness="0" Background="{StaticResource BackgroundB25Brush}" />
-                                                    <Image x:Name="Arrow" Source="/Images/combobox_icon_down_arrow.png" Width="16" Height="16" HorizontalAlignment="Right" Margin="0,0,16,0" />
+                                                    <Border CornerRadius="4" BorderThickness="0" Background="LightGray" />
+                                                    <TextBlock x:Name="Arrow" Text="down" Width="36" Height="16" HorizontalAlignment="Right" Margin="0,0,16,0" />
                                                 </Grid>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsChecked" Value="True">
-                                                        <Setter TargetName="Arrow" Property="Image.Source" Value="/Images/combobox_icon_up_arrow.png" />
+                                                        <Setter TargetName="Arrow" Property="TextBlock.Text" Value="up" />
                                                     </Trigger>
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
@@ -103,7 +61,7 @@
                                           Margin="16,0,0,0" />
                         <Popup IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True" Focusable="False" PopupAnimation="Slide" Placement="Bottom">
                             <Grid MinWidth="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                                <Border BorderThickness="1" BorderBrush="{StaticResource BackgroundB25Brush}" Background="White" CornerRadius="4" Margin="0,8,0,0" />
+                                <Border BorderThickness="1" BorderBrush="LightGray" Background="White" CornerRadius="4" Margin="0,8,0,0" />
                                 <ScrollViewer Margin="16">
                                     <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
                                 </ScrollViewer>
@@ -115,12 +73,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="SubPageComboBoxItem" TargetType="{x:Type ComboBoxItem}">
-        <Setter Property="FontSize" Value="12" />
-        <Setter Property="FontWeight" Value="Normal" />
+    <Style x:Key="StyledComboBoxItem" TargetType="ComboBoxItem">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                <ControlTemplate TargetType="ComboBoxItem">
                     <Border Padding="10" Background="Transparent">
                         <ContentPresenter HorizontalAlignment="Center" />
                     </Border>
@@ -128,6 +84,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-    -->
 
 </ResourceDictionary>

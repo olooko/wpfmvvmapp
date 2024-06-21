@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <ListBox FontSize="24">
+        <ListBox FontSize="24" Margin="100">
             <ListBoxItem>Item 1 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
             <ListBoxItem>Item 2 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
             <ListBoxItem>Item 3 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
