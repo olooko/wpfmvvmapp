@@ -39,11 +39,14 @@
                                             <ControlTemplate TargetType="ToggleButton">
                                                 <Grid>
                                                     <Border CornerRadius="4" BorderThickness="0" Background="LightGray" />
-                                                    <TextBlock x:Name="Arrow" Text="down" Width="36" Height="16" HorizontalAlignment="Right" Margin="0,0,16,0" />
+                                                    <TextBlock x:Name="Arrow" Text="down" Width="46" Height="16" HorizontalAlignment="Right" Margin="0,0,16,0" />
                                                 </Grid>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsChecked" Value="True">
                                                         <Setter TargetName="Arrow" Property="TextBlock.Text" Value="up" />
+                                                    </Trigger>
+                                                    <Trigger Property="IsEnabled" Value="False">
+                                                        <Setter TargetName="Arrow" Property="TextBlock.Text" Value="disabled" />
                                                     </Trigger>
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>

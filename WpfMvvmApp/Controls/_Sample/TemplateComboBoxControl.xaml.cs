@@ -9,27 +9,27 @@ using System.Windows.Controls;
 
 namespace WpfMvvmApp.Controls._Sample
 {
-    public partial class SampleDataComboBoxControl : UserControl
+    public partial class TemplateComboBoxControl : UserControl
     {
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register(
                 nameof(ItemsSource),
                 typeof(IEnumerable),
-                typeof(SampleDataComboBoxControl),
+                typeof(TemplateComboBoxControl),
                 new FrameworkPropertyMetadata(null));
 
         public static readonly DependencyProperty SelectedItemProperty =
             DependencyProperty.Register(
                 nameof(SelectedItem),
                 typeof(object),
-                typeof(SampleDataComboBoxControl),
+                typeof(TemplateComboBoxControl),
                 new FrameworkPropertyMetadata(null));
 
         public static readonly DependencyProperty SelectedIndexProperty =
             DependencyProperty.Register(
                 nameof(SelectedIndex),
                 typeof(int),
-                typeof(SampleDataComboBoxControl),
+                typeof(TemplateComboBoxControl),
                 new FrameworkPropertyMetadata(0));
 
         public IEnumerable ItemsSource
@@ -50,7 +50,7 @@ namespace WpfMvvmApp.Controls._Sample
             set => SetValue(SelectedIndexProperty, value);
         }
 
-        public SampleDataComboBoxControl()
+        public TemplateComboBoxControl()
         {
             InitializeComponent();
         }
