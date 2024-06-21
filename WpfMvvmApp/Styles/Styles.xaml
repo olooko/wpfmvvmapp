@@ -26,146 +26,44 @@
         </Style.Triggers>
     </Style>
 
-
-    <!--
-
-    <Style x:Key="SubPageRoundButton" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="FontWeight" Value="Normal" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="BorderBrush" Value="Transparent" />
+    <Style x:Key="StyledScrollViewer" TargetType="ScrollViewer">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border CornerRadius="4" 
-                            Background="{TemplateBinding Background}" 
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            BorderBrush="{TemplateBinding BorderBrush}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="SubPageTabButton" TargetType="{x:Type ToggleButton}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="20" />
-        <Setter Property="FontWeight" Value="Medium" />
-        <Setter Property="Foreground" Value="{StaticResource TextColorPrimaryBlack02Brush}" />
-        <Setter Property="Background" Value="White" />
-        <Setter Property="Width" Value="240" />
-        <Setter Property="Height" Value="76" />
-        <Setter Property="BorderThickness" Value="0,0,0,3" />
-        <Setter Property="BorderBrush" Value="White" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                <ControlTemplate TargetType="ScrollViewer">
                     <Grid>
-                        <Border BorderThickness="{TemplateBinding BorderThickness}" 
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                HorizontalAlignment="Center">
-                            <Grid Background="{TemplateBinding Background}" HorizontalAlignment="Center">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Column="1" BorderThickness="5" BorderBrush="Gray">
+                            <ScrollContentPresenter CanContentScroll="{TemplateBinding CanContentScroll}" />
                         </Border>
+                        <ScrollBar x:Name="PART_VerticalScrollBar"
+                                     Value="{TemplateBinding VerticalOffset}"
+                                     Maximum="{TemplateBinding ScrollableHeight}"
+                                     ViewportSize="{TemplateBinding ViewportHeight}"
+                                     Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                        <ScrollBar x:Name="PART_HorizontalScrollBar"
+                                     Orientation="Horizontal"
+                                     Grid.Row="1"
+                                     Grid.Column="1"
+                                     Value="{TemplateBinding HorizontalOffset}"
+                                     Maximum="{TemplateBinding ScrollableWidth}"
+                                     ViewportSize="{TemplateBinding ViewportWidth}"
+                                     Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"/>
+
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Style.Triggers>
-            <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Foreground" Value="#FDB913" />
-                <Setter Property="BorderBrush" Value="#FDB913" />
-            </Trigger>
-        </Style.Triggers>
     </Style>
-
-    <Style x:Key="SubPageHeaderTitle" TargetType="{x:Type TextBlock}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="40" />
-        <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="Foreground" Value="{StaticResource TextColorPrimaryBlack02Brush}" />
-    </Style>
-
-    <Style x:Key="SubPageHeaderButton" TargetType="{x:Type Button}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="FontWeight" Value="Normal" />
-        <Setter Property="Foreground" Value="{StaticResource TextColorPrimaryBlack01Brush}" />
-        <Setter Property="Background" Value="White" />
-        <Setter Property="Width" Value="120" />
-        <Setter Property="Height" Value="44" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border CornerRadius="4" Background="{TemplateBinding Background}" BorderThickness="0">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="SubPageHeaderSubTitle" TargetType="{x:Type TextBlock}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="20" />
-        <Setter Property="FontWeight" Value="Normal" />
-        <Setter Property="Foreground" Value="{StaticResource TextColorPrimaryBlack02Brush}" />
-    </Style>
-
-    <Style x:Key="SubPageContentContainer" TargetType="{x:Type Border}">
-        <Setter Property="Background" Value="White" />
-        <Setter Property="CornerRadius" Value="8,8,0,0" />
-    </Style>
-
-    <Style x:Key="SubPageFooterLightButton" TargetType="{x:Type Button}" BasedOn="{StaticResource SubPageRoundButton}">
-        <Setter Property="Foreground" Value="{StaticResource TextColorPrimaryBlack01Brush}" />
-        <Setter Property="Background" Value="White" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="#26464646" />
-        <Setter Property="Width" Value="200" />
-        <Setter Property="Height" Value="56" />
-    </Style>
-
-    <Style x:Key="SubPageFooterDarkButton" TargetType="{x:Type Button}" BasedOn="{StaticResource SubPageRoundButton}">
-        <Setter Property="Foreground" Value="#FFFFFF" />
-        <Setter Property="Background" Value="#464646" />
-        <Setter Property="Width" Value="200" />
-        <Setter Property="Height" Value="56" />
-        <Style.Triggers>
-            <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Foreground" Value="#33000000" />
-                <Setter Property="Background" Value="#26464646" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
-    <Style x:Key="SubPageListViewHeaderTitle" TargetType="{x:Type TextBlock}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="16" />
-        <Setter Property="FontWeight" Value="Medium" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="{StaticResource TextColorPrimaryBlack02Brush}" />
-    </Style>
-
-    <Style x:Key="SubPageListViewItemHeader" TargetType="{x:Type TextBlock}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="20" />
-        <Setter Property="FontWeight" Value="Medium" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="{StaticResource TextColorPrimaryBlack02Brush}" />
-    </Style>
-
-    <Style x:Key="SubPageListViewItemValue" TargetType="{x:Type TextBlock}">
-        <Setter Property="FontFamily" Value="Roboto" />
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="FontWeight" Value="Normal" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="{StaticResource TextColorPrimaryBlack02Brush}" />
-    </Style>
+    
+    <!--
 
     <Style x:Key="SubPageComboBox" TargetType="{x:Type ComboBox}">
         <Setter Property="FontFamily" Value="Roboto" />

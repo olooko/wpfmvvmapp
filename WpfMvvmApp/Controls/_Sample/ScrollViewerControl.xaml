@@ -9,21 +9,20 @@
         <ControlTemplate x:Key="DefaultTemplate" TargetType="ScrollViewer">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Border Grid.Column="1"
-                  BorderThickness="0,1,1,1">
+                <Border BorderThickness="5">
                     <Border.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource BorderMediumColor}" />
                     </Border.BorderBrush>
                     <ScrollContentPresenter CanContentScroll="{TemplateBinding CanContentScroll}" />
                 </Border>
-                <ScrollBar x:Name="PART_VerticalScrollBar"
+                <ScrollBar Grid.Column="1" x:Name="PART_VerticalScrollBar"
                      Value="{TemplateBinding VerticalOffset}"
                      Maximum="{TemplateBinding ScrollableHeight}"
                      ViewportSize="{TemplateBinding ViewportHeight}"

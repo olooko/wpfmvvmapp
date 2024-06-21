@@ -9,30 +9,49 @@
       Title="ScrollViewerPage">
 
     <Grid>
-        <controls:ScrollViewerControl Margin="100">
-            <ListBox>
-                <ListBoxItem>Item 1</ListBoxItem>
-                <ListBoxItem>Item 2</ListBoxItem>
-                <ListBoxItem>Item 3</ListBoxItem>
-                <ListBoxItem>Item 4</ListBoxItem>
-                <ListBoxItem>Item 5</ListBoxItem>
-                <ListBoxItem>Item 6</ListBoxItem>
-                <ListBoxItem>Item 7</ListBoxItem>
-                <ListBoxItem>Item 8</ListBoxItem>
-                <ListBoxItem>Item 9</ListBoxItem>
-                <ListBoxItem>Item 10</ListBoxItem>
-                <ListBoxItem>Item 11</ListBoxItem>
-                <ListBoxItem>Item 12</ListBoxItem>
-                <ListBoxItem>Item 13</ListBoxItem>
-                <ListBoxItem>Item 14</ListBoxItem>
-                <ListBoxItem>Item 15</ListBoxItem>
-                <ListBoxItem>Item 16</ListBoxItem>
-                <ListBoxItem>Item 17</ListBoxItem>
-                <ListBoxItem>Item 18</ListBoxItem>
-                <ListBoxItem>Item 19</ListBoxItem>
-                <ListBoxItem>Item 20</ListBoxItem>
-            </ListBox>
-        </controls:ScrollViewerControl>
+
+        <ListBox FontSize="24">
+            <ListBoxItem>Item 1 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 2 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 3 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 4 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 5 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 6 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 7 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 8 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 9 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 10 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 11 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 12 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 13 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 14 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 15 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 16 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 17 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 18 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 19 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 20 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 21 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 22 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 23 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 24 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 25 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 26 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 27 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 28 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 29 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 210 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 211 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 212 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 213 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 214 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 215 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 216 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 217 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 218 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 219 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
+            <ListBoxItem>Item 220 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>                
+        </ListBox>
 
     </Grid>
 </Page>
