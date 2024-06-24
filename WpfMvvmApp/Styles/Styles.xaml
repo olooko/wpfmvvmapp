@@ -38,7 +38,7 @@
                                         <Setter.Value>
                                             <ControlTemplate TargetType="ToggleButton">
                                                 <Grid>
-                                                    <Border CornerRadius="4" BorderThickness="0" Background="LightGray" />
+                                                    <Border x:Name="Background" CornerRadius="4" BorderThickness="0" Background="LightGray" />
                                                     <TextBlock x:Name="Arrow" Text="down" Width="46" Height="16" HorizontalAlignment="Right" Margin="0,0,16,0" />
                                                 </Grid>
                                                 <ControlTemplate.Triggers>
@@ -46,6 +46,7 @@
                                                         <Setter TargetName="Arrow" Property="TextBlock.Text" Value="up" />
                                                     </Trigger>
                                                     <Trigger Property="IsEnabled" Value="False">
+                                                        <Setter TargetName="Background" Property="Border.Background" Value="#EEEEEE" />
                                                         <Setter TargetName="Arrow" Property="TextBlock.Text" Value="disabled" />
                                                     </Trigger>
                                                 </ControlTemplate.Triggers>

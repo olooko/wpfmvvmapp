@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using System.Globalization;
 using System.Windows;
 using WpfMvvmApp.Services;
 using WpfMvvmApp.Views;
@@ -11,6 +12,9 @@ namespace WpfMvvmApp
     {
         public App()
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+
             Ioc.Default.ConfigureServices(
                 new ServiceCollection()
 
@@ -46,6 +50,7 @@ namespace WpfMvvmApp
                     .AddTransient<MessengerSecondPage>()
                     .AddTransient<TextBoxPage>()
                     .AddTransient<EnumToDescriptionPage>()
+                    .AddTransient<MultiLangPage>()
 
                     .BuildServiceProvider());
         }

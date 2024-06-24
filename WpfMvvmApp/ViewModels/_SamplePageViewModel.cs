@@ -45,6 +45,8 @@ namespace WpfMvvmApp.ViewModels
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Messenger", Content = Ioc.Default.GetRequiredService<MessengerFirstPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "TextBox", Content = Ioc.Default.GetRequiredService<TextBoxPage>() });
             this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Enum to Description", Content = Ioc.Default.GetRequiredService<EnumToDescriptionPage>() });
+            this.listBoxList.Add(new SamplePageListBoxItemModel { Text = "Multiple Languages", Content = Ioc.Default.GetRequiredService<MultiLangPage>() });
+
         }
 
         [RelayCommand]

@@ -10,12 +10,12 @@
         WindowStyle="None" 
         ResizeMode="NoResize"
         AllowsTransparency="True"
-        Loaded="SplashWindow_Loaded">
-    <Window.Triggers>
-        <EventTrigger RoutedEvent="Window.Loaded">
+        Loaded="Window_Loaded">
+    <!--<Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Unloaded">
             <BeginStoryboard>
                 <Storyboard>
-                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:1">
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:5">
                         <DoubleAnimation.EasingFunction>
                             <SineEase EasingMode="EaseOut" />
                         </DoubleAnimation.EasingFunction>
@@ -23,8 +23,8 @@
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>
-    </Window.Triggers>
+    </Window.Triggers>-->
     <Grid>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Loading..."/>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Loading..." FontSize="36" />
     </Grid>
 </Window>

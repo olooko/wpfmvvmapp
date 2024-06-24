@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfMvvmApp
+namespace WpfMvvmApp.Windows._Sample
 {
-    public partial class SplashWindow : Window
+    public partial class MultiLangWindow : Window
     {
-        public SplashWindow()
+        public MultiLangWindow()
         {
             InitializeComponent();
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Delay(1000);
-
-            MainWindow window = new MainWindow();
-            window.Show();
-
-            App.Current.MainWindow = window;
-            this.Owner = window;
             this.Close();
         }
     }

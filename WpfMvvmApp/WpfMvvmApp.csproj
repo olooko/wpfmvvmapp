@@ -10,13 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Windows\**" />
-    <EmbeddedResource Remove="Windows\**" />
-    <None Remove="Windows\**" />
-    <Page Remove="Windows\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Images\right_arrow.png" />
     <None Remove="Images\WPF_Splash.png" />
   </ItemGroup>
@@ -36,6 +29,21 @@
 
   <ItemGroup>
     <SplashScreen Include="Images\WPF_Splash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Languages\Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Languages\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
