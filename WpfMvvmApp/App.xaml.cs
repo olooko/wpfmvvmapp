@@ -51,6 +51,7 @@ namespace WpfMvvmApp
                     .AddTransient<TextBoxPage>()
                     .AddTransient<EnumToDescriptionPage>()
                     .AddTransient<MultiLangPage>()
+                    .AddTransient<CryptographyPage>()
 
                     .BuildServiceProvider());
         }
