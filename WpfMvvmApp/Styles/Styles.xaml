@@ -89,4 +89,21 @@
         </Setter>
     </Style>
 
+    <Style x:Key="StyledTextBox" TargetType="TextBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border x:Name="Border" Padding="4,7,4,7" BorderThickness="2" BorderBrush="Gray" CornerRadius="4">
+                        <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="Border" Property="Border.BorderBrush" Value="Green" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
 </ResourceDictionary>
