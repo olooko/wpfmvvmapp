@@ -16,7 +16,7 @@ namespace WpfMvvmApp.ViewModels._Sample
 
         public TextBoxPageViewModel()
         {
-            this.TextValue = "false";
+            this.TextValue = "binding test!";
         }
 
         [RelayCommand]

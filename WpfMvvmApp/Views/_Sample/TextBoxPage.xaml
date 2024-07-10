@@ -12,10 +12,12 @@
     </Page.DataContext>
     <Grid>
         <StackPanel Width="200" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Binding Value" />
+            <Rectangle Height="4" />
             <TextBox Style="{StaticResource StyledTextBox}" Text="{Binding TextValue}" />
             <Rectangle Height="4" />
-            <Button Content="Apply" Command="{Binding ApplyCommand}" />
-            <Rectangle Height="40" />
+            <Button Content="Send Command" Command="{Binding ApplyCommand}" />
+            <Rectangle Height="20" />
             <TextBlock Text="Currency" />
             <Rectangle Height="4" />
             <controls:CurrencyTextBoxControl Style="{StaticResource StyledTextBox}" TextAlignment="Right" />

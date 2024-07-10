@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfMvvmApp.Controls.Popups._Sample
+namespace WpfMvvmApp.Popups._Sample
 {
     public partial class AlertYesNoPopupControl : UserControl
     {
