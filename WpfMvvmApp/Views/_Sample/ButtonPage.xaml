@@ -31,6 +31,10 @@
             </Button>
             <Rectangle Height="4" />
             <Button Style="{StaticResource StyledButton}" Content="Styled Button" Height="30" IsEnabled="{Binding IsButtonEnabled}" />
+
+            <Rectangle Height="24" />
+
+            <controls:ImageTextButtonControl Background="#0D6EFD" />
         </StackPanel>
     </Grid>
 </Page>
