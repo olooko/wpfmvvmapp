@@ -23,6 +23,9 @@ namespace WpfMvvmApp.Controls._Sample
         {
             InitializeComponent();
 
+            if (string.IsNullOrEmpty(this.Text))
+                this.Text = "0";
+
             InputMethod.SetPreferredImeState(this, InputMethodState.Off);
             InputMethod.SetIsInputMethodEnabled(this, false);
 
@@ -58,20 +61,26 @@ namespace WpfMvvmApp.Controls._Sample
                 }
             }
 
-            //if (c != '0' && char.IsDigit(c))
-            //{
-            //    string input = this.Text.Substring(0, this.CaretIndex);
+            if (c != '0')
+            {
+                string input = this.Text.Substring(0, this.CaretIndex);
 
-            //    if (Regex.IsMatch(input, "[0]"))
-            //    {
-            //        this.Text = this.Text.Replace("0", "");
-            //    }
-            //}
-        }
+                if (!string.IsNullOrEmpty(input) && input != "-" && Convert.ToInt64(input) == 0)
+                {
+                    this.Text = this.Text.Substring(this.CaretIndex);
+                    this.CaretIndex = 0;
+                }
+            }
 
-        protected override void OnTextChanged(TextChangedEventArgs e)
-        {
-            base.OnTextChanged(e);
+            string result = this.Text.Insert(this.CaretIndex, c.ToString());
+
+            long value = 0L;
+
+            if (!long.TryParse(result, out value))
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         protected override void OnGotFocus(RoutedEventArgs e)
@@ -88,7 +97,7 @@ namespace WpfMvvmApp.Controls._Sample
             if (string.IsNullOrEmpty(this.Text) || this.Text == "-")
                 this.Text = "0";
 
-            this.Text = string.Format("{0:N0}", Convert.ToInt32(this.Text));
+            this.Text = string.Format("{0:N0}", Convert.ToInt64(this.Text));
         }
 
         private void PreviewExecutedHandler(object sender, ExecutedRoutedEventArgs e)
