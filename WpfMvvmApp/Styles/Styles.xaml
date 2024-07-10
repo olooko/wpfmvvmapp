@@ -94,10 +94,14 @@
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
                     <Border x:Name="Border" Padding="4,7,4,7" BorderThickness="2" BorderBrush="Gray" CornerRadius="4">
-                        <StackPanel Orientation="Horizontal">
-                            <Path Data="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" Fill="Red" />
-                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
-                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Path Grid.Column="0" Data="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" Fill="Red" />
+                            <ScrollViewer Grid.Column="1" Margin="0" x:Name="PART_ContentHost" Background="AliceBlue" />
+                        </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsFocused" Value="True">

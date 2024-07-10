@@ -18,7 +18,7 @@
             <Rectangle Height="40" />
             <TextBlock Text="Currency" />
             <Rectangle Height="4" />
-            <controls:CurrencyTextBoxControl />
+            <controls:CurrencyTextBoxControl Style="{StaticResource StyledTextBox}" TextAlignment="Right" />
         </StackPanel>
     </Grid>
 </Page>
