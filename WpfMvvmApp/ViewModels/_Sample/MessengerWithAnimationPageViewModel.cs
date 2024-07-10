@@ -6,12 +6,12 @@ using WpfMvvmApp.Messages._Sample;
 
 namespace WpfMvvmApp.ViewModels._Sample
 {
-    public partial class ViewModelToViewPageViewModel : ObservableRecipient
+    public partial class MessengerWithAnimationPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
         private int count;
 
-        public ViewModelToViewPageViewModel()
+        public MessengerWithAnimationPageViewModel()
         {
             count = 0;
         }
@@ -21,7 +21,7 @@ namespace WpfMvvmApp.ViewModels._Sample
         {
             if (++this.Count % 3 == 0)
             {
-                WeakReferenceMessenger.Default.Send(new SampleStoryBoardBeginMessage(string.Empty));
+                WeakReferenceMessenger.Default.Send(new SampleStoryBoardBeginMessage(string.Format("{0} times clicked!!!!", this.Count)));
             }
         }
     }

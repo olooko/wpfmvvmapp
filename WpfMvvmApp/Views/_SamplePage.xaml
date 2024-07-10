@@ -22,7 +22,7 @@
                 <Style TargetType="ListBox">
                     <Setter Property="ItemsSource" Value="{Binding ListBoxList}" />
                     <Setter Property="SelectedItem" Value="{Binding SelectedListBoxItem}" />
-                    <Setter Property="Width" Value="180" />
+                    <Setter Property="Width" Value="200" />
                     <Setter Property="HorizontalAlignment" Value="Left" />
                     <Setter Property="SelectionMode" Value="Single" />
                 </Style>
@@ -33,6 +33,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Frame Margin="180,0,0,0" Content="{Binding FrameContent}" />
+        <Frame Margin="200,0,0,0" Content="{Binding FrameContent}" />
     </Grid>
 </Page>

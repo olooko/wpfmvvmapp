@@ -9,13 +9,16 @@ using System.Windows.Controls;
 
 namespace WpfMvvmApp.ViewModels._Sample
 {
-    public partial class ControlBindingPageViewModel : ObservableObject
+    public partial class BindingControlAsParameterPageViewModel : ObservableObject
     {
+        [ObservableProperty]
+        private string _passwordText;
+
         [RelayCommand]
         private void SetText(object parameter)
         {
-            TextBlock textBlock = parameter as TextBlock;
-            textBlock.Text = "My Text!!!";
+            PasswordBox passwordBox = parameter as PasswordBox;
+            this.PasswordText = passwordBox.Password;
         }
     }
 }

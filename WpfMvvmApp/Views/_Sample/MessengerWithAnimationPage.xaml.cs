@@ -5,14 +5,16 @@ using WpfMvvmApp.Messages._Sample;
 
 namespace WpfMvvmApp.Views._Sample
 {
-    public partial class ViewModelToViewPage : Page
+    public partial class MessengerWithAnimationPage : Page
     {
-        public ViewModelToViewPage()
+        public MessengerWithAnimationPage()
         {
             InitializeComponent();
 
             WeakReferenceMessenger.Default.Register<SampleStoryBoardBeginMessage>(this, (r, m) =>
             {
+                this.Button1.Content = m.Value;
+
                 Storyboard sb = Resources["TextAnimated"] as Storyboard;
                 sb.Begin();
             });

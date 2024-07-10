@@ -1,0 +1,43 @@
+﻿<Page x:Class="WpfMvvmApp.Views._Sample.CommandWithAnimationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels._Sample"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800">
+    <Page.DataContext>
+        <viewModels:CommandWithAnimationPageViewModel />
+    </Page.DataContext>
+    <Grid>
+        <StackPanel>
+            <StackPanel.Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                </Style>
+            </StackPanel.Style>
+            <TextBox Text="{Binding Value}" HorizontalContentAlignment="Center" />
+            <Rectangle Height="7" />
+            <Button Content="Clicked with Animations" Padding="7" Command="{Binding CalcCommand}">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ThicknessAnimation AutoReverse="True" Duration="0:0:0.7" Storyboard.TargetProperty="Padding" From="7" To="10">
+                                        <ThicknessAnimation.EasingFunction>
+                                            <BounceEase EasingMode="EaseIn"/>
+                                        </ThicknessAnimation.EasingFunction>
+                                    </ThicknessAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
