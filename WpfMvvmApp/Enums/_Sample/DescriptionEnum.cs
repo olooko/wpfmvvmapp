@@ -11,7 +11,7 @@ namespace WpfMvvmApp.Enums._Sample
     {
         [Description("AA")]
         A,
-        [Description("BB")]
+        [Description("DD")]
         B,
     }
 }

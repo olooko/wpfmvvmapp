@@ -25,6 +25,7 @@ namespace WpfMvvmApp.Views._Sample
 
             this.Values.Items.Add("CC");
             this.Values.Items.Add(DescriptionEnum.A.ToDescription());
+            this.Values.Items.Add(DescriptionEnum.B.ToDescription());
         }
     }
 }
