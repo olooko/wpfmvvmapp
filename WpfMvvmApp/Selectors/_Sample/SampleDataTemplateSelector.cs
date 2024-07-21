@@ -3,9 +3,9 @@ using System.Windows;
 using WpfMvvmApp.Models._Sample;
 using WpfMvvmApp.Enums._Sample;
 
-namespace WpfMvvmApp.Classes._Sample
+namespace WpfMvvmApp.Selectors._Sample
 {
-    public class SampleDataTemplateSelectorClass : DataTemplateSelector
+    public class SampleDataTemplateSelector : DataTemplateSelector
     {
         public DataTemplate ButtonTemplate { get; set; }
         public DataTemplate CheckBoxTemplate { get; set; }

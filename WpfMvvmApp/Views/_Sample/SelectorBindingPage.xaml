@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:classes="clr-namespace:WpfMvvmApp.Classes._Sample"
+      xmlns:selectors="clr-namespace:WpfMvvmApp.Selectors._Sample"
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels._Sample"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
@@ -38,7 +38,7 @@
                 <Setter Property="ItemsSource" Value="{Binding SampleDataList}" />
                 <Setter Property="ItemTemplateSelector">
                     <Setter.Value>
-                        <classes:SampleDataTemplateSelectorClass 
+                        <selectors:SampleDataTemplateSelector
                             ButtonTemplate="{StaticResource ButtonTemplate}" 
                             CheckBoxTemplate="{StaticResource CheckBoxTemplate}" 
                             TextBoxTemplate="{StaticResource TextBoxTemplate}" />
