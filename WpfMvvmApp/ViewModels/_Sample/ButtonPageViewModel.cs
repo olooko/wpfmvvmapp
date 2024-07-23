@@ -7,11 +7,11 @@ namespace WpfMvvmApp.ViewModels._Sample
     public partial class ButtonPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private bool isButtonEnabled;
+        private bool _isButtonEnabled;
 
         public ButtonPageViewModel()
         {
-            isButtonEnabled = false;
+            this.IsButtonEnabled = false;
         }
 
         [RelayCommand]

@@ -5,20 +5,20 @@ namespace WpfMvvmApp.ViewModels._Sample
     public partial class ToggleButtonPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private bool isButton1Selected;
+        private bool _isButton1Selected;
 
         [ObservableProperty]
-        private bool isButton2Selected;
+        private bool _isButton2Selected;
 
         [ObservableProperty]
-        private bool buttonEnabled;
+        private bool _buttonEnabled;
 
         public ToggleButtonPageViewModel()
         {
-            buttonEnabled = false;
+            this.ButtonEnabled = false;
 
-            isButton1Selected = true;
-            isButton2Selected = false;
+            this.IsButton1Selected = true;
+            this.IsButton2Selected = false;
         }
     }
 }

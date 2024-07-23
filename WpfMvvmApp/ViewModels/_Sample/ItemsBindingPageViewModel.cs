@@ -10,7 +10,7 @@ namespace WpfMvvmApp.ViewModels._Sample
     public partial class ItemsBindingPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private ObservableCollection<SampleDataListItemModel> sampleDataList;
+        private ObservableCollection<SampleDataListItemModel> _sampleDataList;
 
         public ItemsBindingPageViewModel()
         {

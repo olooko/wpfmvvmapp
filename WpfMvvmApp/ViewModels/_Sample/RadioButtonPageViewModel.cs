@@ -5,11 +5,11 @@ namespace WpfMvvmApp.ViewModels._Sample
     public partial class RadioButtonPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private bool buttonEnabled;
+        private bool _buttonEnabled;
 
         public RadioButtonPageViewModel()
         {
-            buttonEnabled = false;
+            this.ButtonEnabled = false;
         }
     }
 }

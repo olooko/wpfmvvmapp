@@ -9,16 +9,19 @@ namespace WpfMvvmApp.ViewModels._Sample
     public partial class ComboBoxPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private bool isComboBoxEnabled;
+        private bool _isComboBoxEnabled;
 
         [ObservableProperty]
-        private ObservableCollection<SampleDataListItemModel> sampleDataList;
+        private ObservableCollection<SampleDataListItemModel> _sampleDataList;
 
         [ObservableProperty]
-        private SampleDataListItemModel selectedItem;
+        private ObservableCollection<string> _stringList;
 
         [ObservableProperty]
-        private int selectedIndex;
+        private SampleDataListItemModel _selectedItem;
+
+        [ObservableProperty]
+        private int _selectedIndex;
 
         public ComboBoxPageViewModel()
         {
@@ -34,6 +37,13 @@ namespace WpfMvvmApp.ViewModels._Sample
 
             this.SelectedItem = this.SampleDataList.First();
             this.SelectedIndex = 3;
+
+            this.StringList = new ObservableCollection<string>();
+            this.StringList.Add("Item 1");
+            this.StringList.Add("Item 2");
+            this.StringList.Add("Item 3");
+            this.StringList.Add("Item 4");
+            this.StringList.Add("Item 5");
         }
     }
 }

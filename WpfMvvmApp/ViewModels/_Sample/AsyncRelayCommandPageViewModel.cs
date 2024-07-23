@@ -9,7 +9,7 @@ namespace WpfMvvmApp.ViewModels._Sample
     public partial class AsyncRelayCommandPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private string sampleText1;
+        private string _sampleText1;
 
         [RelayCommand]
         private async Task AsyncTest()

@@ -9,11 +9,11 @@ namespace WpfMvvmApp.ViewModels._Sample
     public partial class MessengerWithAnimationPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private int count;
+        private int _count;
 
         public MessengerWithAnimationPageViewModel()
         {
-            count = 0;
+            this.Count = 0;
         }
 
         [RelayCommand]

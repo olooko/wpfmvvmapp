@@ -8,11 +8,11 @@ namespace WpfMvvmApp.ViewModels._Sample
     public partial class CommandWithAnimationPageViewModel : ObservableRecipient
     {
         [ObservableProperty]
-        private string value;
+        private string _value;
 
         public CommandWithAnimationPageViewModel()
         {
-            value = "1";
+            this.Value = "1";
         }
 
         [RelayCommand]
