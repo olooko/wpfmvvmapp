@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using Serilog;
+using System.IO;
 using System.Globalization;
 using System.Windows;
 using WpfMvvmApp.Services;
@@ -14,6 +16,19 @@ namespace WpfMvvmApp
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+
+            Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Debug()
+#if DEBUG
+            .WriteTo.Trace()
+#endif
+            .WriteTo.File(
+                path: Path.Combine("Logs", "app-.log"),
+                outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff}] {SourceContext}: {Message:lj}{NewLine}{Exception}",
+                retainedFileCountLimit: 7,
+                rollingInterval: RollingInterval.Day)
+            .CreateLogger();
+
 
             Ioc.Default.ConfigureServices(
                 new ServiceCollection()

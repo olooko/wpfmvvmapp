@@ -47,6 +47,8 @@ namespace WpfMvvmApp.ViewModels
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Enum to Description", Content = Ioc.Default.GetRequiredService<EnumToDescriptionPage>() });
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Multiple Languages", Content = Ioc.Default.GetRequiredService<MultiLangPage>() });
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Cryptography", Content = Ioc.Default.GetRequiredService<CryptographyPage>() });
+
+            Serilog.Log.Debug("{0} 개의 항목이 추가되었습니다.", this.ListBoxList.Count);
         }
 
         [RelayCommand]
