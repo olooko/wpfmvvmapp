@@ -93,7 +93,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
-                    <Border x:Name="Border" Padding="4,7,4,7" BorderThickness="2" BorderBrush="Gray" CornerRadius="4">
+                    <Border x:Name="Border" Padding="4,7,4,7" BorderThickness="2" BorderBrush="Gray" CornerRadius="8">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
