@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfMvvmApp"
         mc:Ignorable="d"
-        Height="300" Width="400" 
+        Height="422" Width="1012" 
         WindowStartupLocation="CenterScreen" 
         WindowStyle="None" 
         ResizeMode="NoResize"
@@ -25,6 +25,6 @@
         </EventTrigger>
     </Window.Triggers>-->
     <Grid>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Loading..." FontSize="36" />
+        <Image Source="/Images/WPF_Splash.png" Width="1012" Height="422" />
     </Grid>
 </Window>

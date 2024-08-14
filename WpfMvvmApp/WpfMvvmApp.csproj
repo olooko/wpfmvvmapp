@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <SplashScreen Include="Images\WPF_Splash.png" />
+    <Resource Include="Images\WPF_Splash.png" />
   </ItemGroup>
 
   <ItemGroup>
