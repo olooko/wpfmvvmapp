@@ -46,6 +46,7 @@ namespace WpfMvvmApp
                     .AddTransient<_SamplePage>()
 
                     //Views._Sample
+                    .AddTransient<DefaultPage>()
                     .AddTransient<PopupPage>()
                     .AddTransient<DialogPage>()
                     .AddTransient<ToastPage>()
