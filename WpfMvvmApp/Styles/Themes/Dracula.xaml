@@ -1,8 +1,18 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style x:Key="BorderWindow" TargetType="Border">
-        <Setter Property="Background" Value="Gray" />
-    </Style>
+
+    <Color x:Key="Background">#282a36</Color>
+    <Color x:Key="CurrentLine">#44475a</Color>
+    <Color x:Key="Selection">#44475a</Color>
+    <Color x:Key="Foreground">#f8f8f2</Color>
+    <Color x:Key="Comment">#6272a4</Color>
+    <Color x:Key="Cyan">#8be9fd</Color>
+    <Color x:Key="Green">#50fa7b</Color>
+    <Color x:Key="Orange">#ffb86c</Color>
+    <Color x:Key="Pink">#ff79c6</Color>
+    <Color x:Key="Purple">#bd93f9</Color>
+    <Color x:Key="Red">#ff5555</Color>
+    <Color x:Key="Yellow">#f1fa8c</Color>
 
 </ResourceDictionary>

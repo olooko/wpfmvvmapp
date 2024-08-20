@@ -22,7 +22,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Border Style="{StaticResource BorderWindow}" MouseDown="Border_MouseDown">
+    <Border  MouseDown="Border_MouseDown">
 
     </Border>
 </Window>
