@@ -10,48 +10,31 @@
 
     <Grid>
 
-        <ListBox FontSize="24" Margin="100">
-            <ListBoxItem>Item 1 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 2 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 3 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 4 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 5 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 6 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 7 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 8 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 9 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 10 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 11 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 12 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 13 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 14 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 15 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 16 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 17 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 18 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 19 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 20 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 21 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 22 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 23 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 24 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 25 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 26 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 27 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 28 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 29 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 210 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 211 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 212 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 213 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 214 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 215 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 216 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 217 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 218 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 219 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>
-            <ListBoxItem>Item 220 - Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -Item 1 -</ListBoxItem>                
-        </ListBox>
+        <ScrollViewer Style="{StaticResource StyledScrollViewer}" HorizontalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="300" Background="AliceBlue">
+            <StackPanel>
+                <TextBlock Padding="7" Text="Item 1 - Item 1" />
+                <TextBlock Padding="7" Text="Item 2" />
+                <TextBlock Padding="7" Text="Item 3" />
+                <TextBlock Padding="7" Text="Item 4" />
+                <TextBlock Padding="7" Text="Item 5" />
+                <TextBlock Padding="7" Text="Item 6" />
+                <TextBlock Padding="7" Text="Item 7" />
+                <TextBlock Padding="7" Text="Item 8" />
+                <TextBlock Padding="7" Text="Item 9" />
+                <TextBlock Padding="7" Text="Item 10" />
+                <TextBlock Padding="7" Text="Item 11" />
+                <TextBlock Padding="7" Text="Item 12" />
+                <TextBlock Padding="7" Text="Item 13" />
+                <TextBlock Padding="7" Text="Item 14" />
+                <TextBlock Padding="7" Text="Item 15" />
+                <TextBlock Padding="7" Text="Item 16" />
+                <TextBlock Padding="7" Text="Item 17" />
+                <TextBlock Padding="7" Text="Item 18" />
+                <TextBlock Padding="7" Text="Item 19" />
+
+            </StackPanel>
+
+        </ScrollViewer>
 
     </Grid>
 </Page>
