@@ -12,12 +12,12 @@
 
         <ScrollViewer Style="{StaticResource StyledScrollViewer}" HorizontalScrollBarVisibility="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="300" Background="AliceBlue">
             <StackPanel>
-                <TextBlock Padding="7" Text="Item 1 - Item 1" />
+                <TextBlock Padding="7" Text="Item 1 - Item 1 - Item 1 - Item 1 - Item 1 - Item 1 - Item 1 - Item 1 - Item 1" />
                 <TextBlock Padding="7" Text="Item 2" />
                 <TextBlock Padding="7" Text="Item 3" />
                 <TextBlock Padding="7" Text="Item 4" />
                 <TextBlock Padding="7" Text="Item 5" />
-                <TextBlock Padding="7" Text="Item 6" />
+                <TextBlock Padding="7" Text="Item 6 - Item 1 - Item 1 - Item 1 - Item 1 - Item 1 - Item 1 - Item 1 - Item 1" />
                 <TextBlock Padding="7" Text="Item 7" />
                 <TextBlock Padding="7" Text="Item 8" />
                 <TextBlock Padding="7" Text="Item 9" />
