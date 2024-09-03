@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfMvvmApp.Windows._Sample
 {
-    /// <summary>
-    /// DraculaThemeWindow.xaml에 대한 상호 작용 논리
-    /// </summary>
     public partial class DraculaThemeWindow : Window
     {
         public DraculaThemeWindow()

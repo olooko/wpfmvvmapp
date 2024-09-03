@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace WpfMvvmApp.Views._Sample
 {
-    public partial class DefaultPage : Page
+    public partial class NumericUpDownPage : Page
     {
-        public DefaultPage()
+        public NumericUpDownPage()
         {
             InitializeComponent();
         }

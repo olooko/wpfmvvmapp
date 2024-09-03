@@ -68,6 +68,7 @@ namespace WpfMvvmApp
                     .AddTransient<EnumToDescriptionPage>()
                     .AddTransient<MultiLangPage>()
                     .AddTransient<CryptographyPage>()
+                    .AddTransient<NumericUpDownPage>()
 
                     .BuildServiceProvider());
         }
