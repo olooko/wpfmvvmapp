@@ -22,7 +22,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Border  MouseDown="Border_MouseDown">
+    <Border CornerRadius="12" Background="{StaticResource Background}" MouseDown="Border_MouseDown">
 
     </Border>
 </Window>

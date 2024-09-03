@@ -2,17 +2,17 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
-    <Color x:Key="Background">#282a36</Color>
-    <Color x:Key="CurrentLine">#44475a</Color>
-    <Color x:Key="Selection">#44475a</Color>
-    <Color x:Key="Foreground">#f8f8f2</Color>
-    <Color x:Key="Comment">#6272a4</Color>
-    <Color x:Key="Cyan">#8be9fd</Color>
-    <Color x:Key="Green">#50fa7b</Color>
-    <Color x:Key="Orange">#ffb86c</Color>
-    <Color x:Key="Pink">#ff79c6</Color>
-    <Color x:Key="Purple">#bd93f9</Color>
-    <Color x:Key="Red">#ff5555</Color>
-    <Color x:Key="Yellow">#f1fa8c</Color>
+    <Brush x:Key="Background">#282a36</Brush>
+    <Brush x:Key="CurrentLine">#44475a</Brush>
+    <Brush x:Key="Selection">#44475a</Brush>
+    <Brush x:Key="Foreground">#f8f8f2</Brush>
+    <Brush x:Key="Comment">#6272a4</Brush>
+    <Brush x:Key="Cyan">#8be9fd</Brush>
+    <Brush x:Key="Green">#50fa7b</Brush>
+    <Brush x:Key="Orange">#ffb86c</Brush>
+    <Brush x:Key="Pink">#ff79c6</Brush>
+    <Brush x:Key="Purple">#bd93f9</Brush>
+    <Brush x:Key="Red">#ff5555</Brush>
+    <Brush x:Key="Yellow">#f1fa8c</Brush>
 
 </ResourceDictionary>
