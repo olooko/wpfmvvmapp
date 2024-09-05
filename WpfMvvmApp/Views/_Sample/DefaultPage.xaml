@@ -10,8 +10,6 @@
         <viewModels:DefaultPageViewModel />
     </Page.DataContext>
     <Grid>
-        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding ShowDraculaThemeCommand}">
-            <TextBlock Text="Dracula Theme" />
-        </Button>
+
     </Grid>
 </Page>

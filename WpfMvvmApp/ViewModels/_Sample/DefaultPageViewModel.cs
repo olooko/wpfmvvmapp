@@ -13,13 +13,6 @@ namespace WpfMvvmApp.ViewModels._Sample
 {
     public partial class DefaultPageViewModel : ObservableObject
     {
-        [RelayCommand]
-        private void ShowDraculaTheme()
-        {
-            DraculaThemeWindow window = new DraculaThemeWindow();
-            window.Owner = Application.Current.MainWindow;
-            window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            window.ShowDialog();
-        }
+
     }
 }
