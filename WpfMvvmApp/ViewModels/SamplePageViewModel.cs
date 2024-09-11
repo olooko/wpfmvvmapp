@@ -13,7 +13,7 @@ using WpfMvvmApp.Views._Sample;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class _SamplePageViewModel : ObservableRecipient
+    public partial class SamplePageViewModel : ObservableRecipient
     {
         [ObservableProperty]
         private ObservableCollection<SamplePageListBoxItemModel> _listBoxList;
@@ -24,7 +24,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private SamplePageListBoxItemModel _selectedListBoxItem;
 
-        public _SamplePageViewModel()
+        public SamplePageViewModel()
         {
             this.ListBoxList = new ObservableCollection<SamplePageListBoxItemModel>();
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Popup", Content = Ioc.Default.GetRequiredService<PopupPage>() });
@@ -34,7 +34,6 @@ namespace WpfMvvmApp.ViewModels
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "ToggleButton", Content = Ioc.Default.GetRequiredService<ToggleButtonPage>() });
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "ComboBox", Content = Ioc.Default.GetRequiredService<ComboBoxPage>() });
-            this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "ScrollViewer", Content = Ioc.Default.GetRequiredService<ScrollViewerPage>() });
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Items Binding", Content = Ioc.Default.GetRequiredService<ItemsBindingPage>() });
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Items Binding2", Content = Ioc.Default.GetRequiredService<ItemsBinding2Page>() });
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Selector Binding", Content = Ioc.Default.GetRequiredService<SelectorBindingPage>() });

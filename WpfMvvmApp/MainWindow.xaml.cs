@@ -10,7 +10,7 @@ namespace WpfMvvmApp
         {
             InitializeComponent();
 
-            this.MainFrame.Navigate(new Views.DefaultPage());
+            this.MainFrame.Navigate(new Views.SamplePage());
         }
 
         public void ShowToast(string message)

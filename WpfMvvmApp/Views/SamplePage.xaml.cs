@@ -3,9 +3,9 @@ using WpfMvvmApp.ViewModels;
 
 namespace WpfMvvmApp.Views
 {
-    public partial class _SamplePage : Page
+    public partial class SamplePage : Page
     {
-        public _SamplePage()
+        public SamplePage()
         {
             InitializeComponent();
         }

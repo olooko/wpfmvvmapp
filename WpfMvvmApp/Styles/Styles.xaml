@@ -113,7 +113,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="StyledScrollBar" TargetType="ScrollBar">
+    <Style TargetType="ScrollBar">
         <Style.Triggers>
             <Trigger Property="Orientation" Value="Horizontal">
                 <Setter Property="Width" Value="Auto" />
@@ -238,7 +238,7 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="StyledScrollViewer" TargetType="ScrollViewer">
+    <Style TargetType="ScrollViewer">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ScrollViewer">
@@ -258,13 +258,11 @@
                             <ScrollContentPresenter CanContentScroll="{TemplateBinding CanContentScroll}" />
                         </Border>
                         <ScrollBar x:Name="PART_VerticalScrollBar"
-                                   Style="{StaticResource StyledScrollBar}"
                                    Value="{TemplateBinding VerticalOffset}"
                                    Maximum="{TemplateBinding ScrollableHeight}"
                                    ViewportSize="{TemplateBinding ViewportHeight}"
                                    Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" />
                         <ScrollBar x:Name="PART_HorizontalScrollBar"
-                                   Style="{StaticResource StyledScrollBar}"
                                    Orientation="Horizontal"
                                    Grid.Row="1"
                                    Grid.Column="1"

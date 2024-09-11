@@ -46,8 +46,7 @@ namespace WpfMvvmApp
                     .AddSingleton<IVariablesService, VariablesService>()
 
                     //Views
-                    .AddTransient<_SamplePage>()
-                    .AddTransient<DefaultPage>()
+                    .AddTransient<SamplePage>()
 
                     //Views._Sample
                     .AddTransient<PopupPage>()
@@ -57,7 +56,6 @@ namespace WpfMvvmApp
                     .AddTransient<ToggleButtonPage>()
                     .AddTransient<RadioButtonPage>()
                     .AddTransient<ComboBoxPage>()
-                    .AddTransient<ScrollViewerPage>()
                     .AddTransient<ItemsBindingPage>()
                     .AddTransient<ItemsBinding2Page>()
                     .AddTransient<BindingControlAsParameterPage>()
