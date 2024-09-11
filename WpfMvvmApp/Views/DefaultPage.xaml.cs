@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfMvvmApp.Views._Sample
+namespace WpfMvvmApp.Views
 {
     public partial class DefaultPage : Page
     {

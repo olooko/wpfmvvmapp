@@ -33,6 +33,9 @@ namespace WpfMvvmApp
             Ioc.Default.ConfigureServices(
                 new ServiceCollection()
 
+                    //Logging
+                    //.AddLogging(builder => builder.AddSerilog(dispose: true))
+                    
                     //Services
                     .AddSingleton<IHttpService, HttpService>()
                     .AddSingleton<IDialogService, DialogService>()
@@ -44,9 +47,9 @@ namespace WpfMvvmApp
 
                     //Views
                     .AddTransient<_SamplePage>()
+                    .AddTransient<DefaultPage>()
 
                     //Views._Sample
-                    .AddTransient<DefaultPage>()
                     .AddTransient<PopupPage>()
                     .AddTransient<DialogPage>()
                     .AddTransient<ToastPage>()

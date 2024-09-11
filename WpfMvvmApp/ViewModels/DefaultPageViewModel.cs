@@ -9,7 +9,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows;
 using WpfMvvmApp.Windows._Sample;
 
-namespace WpfMvvmApp.ViewModels._Sample
+namespace WpfMvvmApp.ViewModels
 {
     public partial class DefaultPageViewModel : ObservableObject
     {
