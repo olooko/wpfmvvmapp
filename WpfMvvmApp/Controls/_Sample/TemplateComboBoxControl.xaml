@@ -20,16 +20,6 @@
                         </ToggleButton.Style>
                         <Path Height="4" Width="8" Stretch="Uniform" Margin="0,0,4,0"  Fill="Black" Data="F1 M 300,-190L 310,-190L 305,-183L 301,-190 Z " />
                     </ToggleButton>
-                    <!--<TextBox x:Name="PART_EditableTextBox">
-                        <TextBox.Style>
-                            <Style TargetType="TextBox">
-                                <Setter Property="Visibility" Value="Hidden" />
-                                <Setter Property="Background" Value="Black" />
-                                <Setter Property="Margin" Value="20,0,0,0" />
-                                <Setter Property="IsReadOnly" Value="{Binding Path=IsReadOnly, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
-                            </Style>
-                        </TextBox.Style>
-                    </TextBox>-->
                     <ContentPresenter>
                         <ContentPresenter.Style>
                             <Style TargetType="ContentPresenter">

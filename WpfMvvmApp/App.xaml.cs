@@ -73,5 +73,10 @@ namespace WpfMvvmApp
 
                     .BuildServiceProvider());
         }
+
+        public void ChangeTheme(string theme)
+        {
+            ((App)Application.Current).Resources.MergedDictionaries[0].Source = new Uri(string.Format("/Styles/Colors{0}.xaml"), UriKind.RelativeOrAbsolute);
+        }
     }
 }

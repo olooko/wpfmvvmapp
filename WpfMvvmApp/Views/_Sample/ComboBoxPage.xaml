@@ -15,19 +15,6 @@
             <controls:TemplateComboBoxControl ItemsSource="{Binding SampleDataList}" SelectedItem="{Binding SelectedItem}" />
             <Rectangle Height="4" />
             <controls:TemplateComboBoxControl ItemsSource="{Binding SampleDataList}" SelectedIndex="{Binding SelectedIndex}" IsEnabled="{Binding IsComboBoxEnabled}" />
-            <Rectangle Height="24" />
-            <ComboBox Style="{StaticResource StyledComboBox}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="160" Height="44" SelectedIndex="1" 
-                      ItemContainerStyle="{StaticResource StyledComboBoxItem}" ItemsSource="{Binding StringList}">
-                <!--<ComboBoxItem Style="{StaticResource StyledComboBoxItem}">Item 1</ComboBoxItem>
-                <ComboBoxItem Style="{StaticResource StyledComboBoxItem}">Item 2</ComboBoxItem>
-                <ComboBoxItem Style="{StaticResource StyledComboBoxItem}">Item 3</ComboBoxItem>-->
-            </ComboBox>
-            <Rectangle Height="4" />
-            <ComboBox Style="{StaticResource StyledComboBox}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="160" Height="44" SelectedIndex="1" IsEnabled="False">
-                <ComboBoxItem Style="{StaticResource StyledComboBoxItem}">Item 1</ComboBoxItem>
-                <ComboBoxItem Style="{StaticResource StyledComboBoxItem}">Item 2</ComboBoxItem>
-                <ComboBoxItem Style="{StaticResource StyledComboBoxItem}">Item 3</ComboBoxItem>
-            </ComboBox>
         </StackPanel>        
     </Grid>
 </Page>

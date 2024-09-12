@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Styles/ColorsWebLight.xaml" />
+                <ResourceDictionary Source="/Styles/ColorsLight.xaml" />
                 <ResourceDictionary Source="/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="/Styles/Styles.xaml" />
                 <ResourceDictionary>

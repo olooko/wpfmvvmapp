@@ -12,14 +12,14 @@
         <viewModels:SamplePageViewModel />
     </Page.DataContext>
     <Grid Margin="7">
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200">
-            <ComboBoxItem>Web Light</ComboBoxItem>
-            <ComboBoxItem>Web Dark</ComboBoxItem>
-            <ComboBoxItem>Teams Light</ComboBoxItem>
-            <ComboBoxItem>Teams Dark</ComboBoxItem>
-            <ComboBoxItem>Teams High Contrast</ComboBoxItem>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" ItemsSource="{Binding ThemeTypeList}" SelectedItem="{Binding SelectedThemeType}" DisplayMemberPath="Text" SelectedIndex="0">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding ChangeThemeTypeCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
         </ComboBox>
-        <ListBox Margin="0,25,0,0">
+        <ListBox Margin="0,40,0,0">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding SetContentCommand}" />

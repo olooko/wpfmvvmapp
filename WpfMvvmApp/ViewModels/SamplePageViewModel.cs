@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Navigation;
 using WpfMvvmApp.Messages._Sample;
+using WpfMvvmApp.Models;
 using WpfMvvmApp.Models._Sample;
 using WpfMvvmApp.Views._Sample;
 
@@ -15,6 +16,12 @@ namespace WpfMvvmApp.ViewModels
 {
     public partial class SamplePageViewModel : ObservableRecipient
     {
+        [ObservableProperty]
+        private ObservableCollection<ThemeTypeModel> _themeTypeList;
+
+        [ObservableProperty]
+        private ThemeTypeModel _selectedThemeType;
+
         [ObservableProperty]
         private ObservableCollection<SamplePageListBoxItemModel> _listBoxList;
 
@@ -26,6 +33,14 @@ namespace WpfMvvmApp.ViewModels
 
         public SamplePageViewModel()
         {
+            this.ThemeTypeList = new ObservableCollection<ThemeTypeModel>();
+            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "Light", Text = "Light" });
+            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "Dark", Text = "Dark" });
+            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "TeamsLight", Text = "Teams Light" });
+            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "TeamsDark", Text = "Teams Dark" });
+            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "TeamsHighContrast", Text = "Teams High Contrast" });
+
+
             this.ListBoxList = new ObservableCollection<SamplePageListBoxItemModel>();
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Popup", Content = Ioc.Default.GetRequiredService<PopupPage>() });
             this.ListBoxList.Add(new SamplePageListBoxItemModel { Text = "Dialog", Content = Ioc.Default.GetRequiredService<DialogPage>() });
@@ -51,6 +66,12 @@ namespace WpfMvvmApp.ViewModels
             Serilog.Log.Debug("{0} 개의 항목이 추가되었습니다.", this.ListBoxList.Count);
 
             //this.FrameContent = Ioc.Default.GetRequiredService<DefaultPage>();
+        }
+
+        [RelayCommand]
+        public void ChangeThemeType()
+        {
+            ((App)Application.Current).ChangeTheme(this.SelectedThemeType.Id);
         }
 
         [RelayCommand]

@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\icon-combobox-chevron.png" />
     <None Remove="Images\right_arrow.png" />
     <None Remove="Images\WPF_Splash.png" />
   </ItemGroup>
@@ -26,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\icon-combobox-chevron.png" />
     <Resource Include="Images\right_arrow.png" />
   </ItemGroup>
 
