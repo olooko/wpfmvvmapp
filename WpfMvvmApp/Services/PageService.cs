@@ -4,13 +4,14 @@ using WpfMvvmApp.Messages._Sample;
 
 namespace WpfMvvmApp.Services
 {
-    public interface INavigationService
+    public interface IPageService
     {
         void Navigate(Page page, object extraData = null);
         void GoBack();
+        void Refresh();
     }
 
-    public sealed class NavigationService : INavigationService
+    public sealed class PageService : IPageService
     {
         public void Navigate(Page page, object extraData = null)
         {
@@ -27,6 +28,12 @@ namespace WpfMvvmApp.Services
         {
             Frame frame = ((MainWindow)App.Current.MainWindow).MainFrame;
             frame.GoBack();
+        }
+
+        public void Refresh()
+        {
+            Frame frame = ((MainWindow)App.Current.MainWindow).MainFrame;
+            frame.Refresh();
         }
     }
 }

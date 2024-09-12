@@ -39,7 +39,7 @@ namespace WpfMvvmApp
                     //Services
                     .AddSingleton<IHttpService, HttpService>()
                     .AddSingleton<IDialogService, DialogService>()
-                    .AddSingleton<INavigationService, NavigationService>()
+                    .AddSingleton<IPageService, PageService>()
                     .AddSingleton<IPopupService, PopupService>()
                     .AddSingleton<ISettingService, SettingService>()
                     .AddSingleton<IToastService, ToastService>()
@@ -74,9 +74,9 @@ namespace WpfMvvmApp
                     .BuildServiceProvider());
         }
 
-        public void ChangeTheme(string theme)
+        public static void ChangeTheme(string theme)
         {
-            ((App)Application.Current).Resources.MergedDictionaries[0].Source = new Uri(string.Format("/Styles/Colors{0}.xaml"), UriKind.RelativeOrAbsolute);
+            Application.Current.Resources.MergedDictionaries[0].Source = new Uri(string.Format("/Styles/Colors{0}.xaml", theme), UriKind.Relative);
         }
     }
 }

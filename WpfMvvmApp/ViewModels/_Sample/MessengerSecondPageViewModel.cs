@@ -36,8 +36,8 @@ namespace WpfMvvmApp.ViewModels._Sample
         [RelayCommand]
         private void GoBack()
         {
-            INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
-            navigationService.GoBack();
+            IPageService pageService = Ioc.Default.GetRequiredService<IPageService>();
+            pageService.GoBack();
         }
     }
 }

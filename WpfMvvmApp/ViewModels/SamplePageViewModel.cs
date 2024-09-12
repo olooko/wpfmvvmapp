@@ -10,6 +10,7 @@ using System.Windows.Navigation;
 using WpfMvvmApp.Messages._Sample;
 using WpfMvvmApp.Models;
 using WpfMvvmApp.Models._Sample;
+using WpfMvvmApp.Services;
 using WpfMvvmApp.Views._Sample;
 
 namespace WpfMvvmApp.ViewModels
@@ -71,7 +72,7 @@ namespace WpfMvvmApp.ViewModels
         [RelayCommand]
         public void ChangeThemeType()
         {
-            ((App)Application.Current).ChangeTheme(this.SelectedThemeType.Id);
+            App.ChangeTheme(this.SelectedThemeType.Id);
         }
 
         [RelayCommand]

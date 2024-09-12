@@ -18,8 +18,8 @@ namespace WpfMvvmApp.ViewModels._Sample
         [RelayCommand]
         private void SendMessage()
         {
-            INavigationService navigationService = Ioc.Default.GetRequiredService<INavigationService>();
-            navigationService.Navigate(Ioc.Default.GetRequiredService<MessengerSecondPage>(), new MessengerSampleMessage("This is messenger sample message."));
+            IPageService pageService = Ioc.Default.GetRequiredService<IPageService>();
+            pageService.Navigate(Ioc.Default.GetRequiredService<MessengerSecondPage>(), new MessengerSampleMessage("This is messenger sample message."));
         }
     }
 }
