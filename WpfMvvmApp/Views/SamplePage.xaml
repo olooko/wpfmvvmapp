@@ -11,7 +11,7 @@
     <Page.DataContext>
         <viewModels:SamplePageViewModel />
     </Page.DataContext>
-    <Grid Margin="7">
+    <Grid Margin="9">
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" ItemsSource="{Binding ThemeTypeList}" SelectedItem="{Binding SelectedThemeType}" DisplayMemberPath="Text" SelectedIndex="0">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
@@ -19,26 +19,12 @@
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </ComboBox>
-        <ListBox Margin="0,40,0,0">
+        <ListBox Margin="0,40,0,0" HorizontalAlignment="Left" Width="200" SelectionMode="Single" DisplayMemberPath="Text" ItemsSource="{Binding ListBoxList}" SelectedItem="{Binding SelectedListBoxItem}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding SetContentCommand}" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
-            <ListBox.Style>
-                <Style TargetType="ListBox">
-                    <Setter Property="ItemsSource" Value="{Binding ListBoxList}" />
-                    <Setter Property="SelectedItem" Value="{Binding SelectedListBoxItem}" />
-                    <Setter Property="Width" Value="200" />
-                    <Setter Property="HorizontalAlignment" Value="Left" />
-                    <Setter Property="SelectionMode" Value="Single" />
-                </Style>
-            </ListBox.Style>
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Text}" Padding="4" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
         </ListBox>
         <Frame Margin="200,0,0,0" Content="{Binding FrameContent}" />
     </Grid>

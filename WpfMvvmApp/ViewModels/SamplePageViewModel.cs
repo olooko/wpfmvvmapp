@@ -73,6 +73,8 @@ namespace WpfMvvmApp.ViewModels
         public void ChangeThemeType()
         {
             App.ChangeTheme(this.SelectedThemeType.Id);
+
+            //this.SelectedThemeType = null;
         }
 
         [RelayCommand]
