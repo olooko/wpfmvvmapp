@@ -6,7 +6,6 @@ using System.Globalization;
 using System.Windows;
 using WpfMvvmApp.Services;
 using WpfMvvmApp.Views;
-using WpfMvvmApp.Views._Sample;
 
 namespace WpfMvvmApp
 {
@@ -46,9 +45,7 @@ namespace WpfMvvmApp
                     .AddSingleton<IVariablesService, VariablesService>()
 
                     //Views
-                    .AddTransient<SamplePage>()
-
-                    //Views._Sample
+                    .AddTransient<SplashPage>()
                     .AddTransient<PopupPage>()
                     .AddTransient<DialogPage>()
                     .AddTransient<ToastPage>()

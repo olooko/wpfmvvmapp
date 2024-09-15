@@ -1,6 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Media.Animation;
+using WpfMvvmApp.Views;
 
 namespace WpfMvvmApp
 {
@@ -9,8 +9,6 @@ namespace WpfMvvmApp
         public MainWindow()
         {
             InitializeComponent();
-
-            this.MainFrame.Navigate(new Views.SamplePage());
         }
 
         public void ShowToast(string message)
