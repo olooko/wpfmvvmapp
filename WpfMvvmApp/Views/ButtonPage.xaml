@@ -12,29 +12,17 @@
     </Page.DataContext>
     <Grid>
         <StackPanel Width="150" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <controls:TemplateButtonControl Height="30" Command="{Binding ButtonClickCommand}" />
-            <Rectangle Height="4" />
-            <controls:TemplateButtonControl Height="30" IsEnabled="{Binding IsButtonEnabled}" />
-            
-            <Rectangle Height="24" />
-
-            <controls:RoundedButtonControl Background="#0D6EFD" Height="30" CornerRadius="10" Command="{Binding ButtonClickCommand}">
-                <TextBlock Text="Rounded Button" Foreground="Yellow" />
-            </controls:RoundedButtonControl>
-            <Rectangle Height="4" />
-            <controls:RoundedButtonControl Background="#0D6EFD" Content="Rounded Button" Height="30" CornerRadius="10" IsEnabled="{Binding IsButtonEnabled}" />
-            
-            <Rectangle Height="24" />
-            
-            <Button Style="{StaticResource StyledButton}" Height="30" Command="{Binding ButtonClickCommand}">
-                <TextBlock Text="Styled Button" />
+            <Button Style="{StaticResource BrandButton}"  Command="{Binding ButtonClickCommand}">
+                <TextBlock Text="Primary" />
             </Button>
             <Rectangle Height="4" />
-            <Button Style="{StaticResource StyledButton}" Content="Styled Button" Height="30" IsEnabled="{Binding IsButtonEnabled}" />
-
-            <Rectangle Height="24" />
-
-            <controls:ImageTextButtonControl Background="#0D6EFD" />
+            <Button Command="{Binding ButtonClickCommand}">
+                <TextBlock Text="Default" />
+            </Button>
+            <Rectangle Height="4" />
+            <Button Command="{Binding ButtonClickCommand}" IsEnabled="False">
+                <TextBlock Text="Disable" />
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

@@ -40,7 +40,7 @@
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </ListBox>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="200,0,0,0" />
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="205,0,0,0" />
         <Rectangle x:Name="DialogDimmed" Fill="Black" Opacity="0.7" Visibility="Hidden" />
         <Grid x:Name="PopupContainer" Visibility="Hidden">
             <Rectangle Fill="Black" Opacity="0.7" />
