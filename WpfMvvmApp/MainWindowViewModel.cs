@@ -36,12 +36,14 @@ namespace WpfMvvmApp
             this.ThemeTypeList.Add(new ThemeTypeModel { Id = "TeamsHighContrast", Text = "Teams High Contrast" });
 
             this.ListBoxList = new ObservableCollection<MainWindowListBoxItemModel>();
+            this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Color", Content = Ioc.Default.GetRequiredService<ColorPage>() });
             this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Button", Content = Ioc.Default.GetRequiredService<ButtonPage>() });
+            this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
+            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ListBox", Content = Ioc.Default.GetRequiredService<ListBoxPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Popup", Content = Ioc.Default.GetRequiredService<PopupPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Dialog", Content = Ioc.Default.GetRequiredService<DialogPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Toast", Content = Ioc.Default.GetRequiredService<ToastPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ToggleButton", Content = Ioc.Default.GetRequiredService<ToggleButtonPage>() });
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ComboBox", Content = Ioc.Default.GetRequiredService<ComboBoxPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding", Content = Ioc.Default.GetRequiredService<ItemsBindingPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding2", Content = Ioc.Default.GetRequiredService<ItemsBinding2Page>() });

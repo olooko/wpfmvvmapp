@@ -46,12 +46,16 @@ namespace WpfMvvmApp
 
                     //Views
                     .AddTransient<SplashPage>()
+                    .AddTransient<ColorPage>()
+                    .AddTransient<ButtonPage>()
+                    .AddTransient<RadioButtonPage>()
+                    .AddTransient<ListBoxPage>()
                     .AddTransient<PopupPage>()
                     .AddTransient<DialogPage>()
                     .AddTransient<ToastPage>()
-                    .AddTransient<ButtonPage>()
+                    
                     .AddTransient<ToggleButtonPage>()
-                    .AddTransient<RadioButtonPage>()
+                    
                     .AddTransient<ComboBoxPage>()
                     .AddTransient<ItemsBindingPage>()
                     .AddTransient<ItemsBinding2Page>()
