@@ -43,6 +43,7 @@ namespace WpfMvvmApp
                     .AddSingleton<ISettingService, SettingService>()
                     .AddSingleton<IToastService, ToastService>()
                     .AddSingleton<IVariablesService, VariablesService>()
+                    .AddSingleton<IApplicationService, ApplicationService>()
 
                     //Views
                     .AddTransient<SplashPage>()
@@ -73,11 +74,6 @@ namespace WpfMvvmApp
                     .AddTransient<NumericUpDownPage>()
 
                     .BuildServiceProvider());
-        }
-
-        public static void ChangeTheme(string theme)
-        {
-            Application.Current.Resources.MergedDictionaries[0].Source = new Uri(string.Format("/Styles/Colors{0}.xaml", theme), UriKind.Relative);
         }
     }
 }

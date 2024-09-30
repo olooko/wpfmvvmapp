@@ -10,6 +10,7 @@ namespace WpfMvvmApp
 {
     public partial class MainWindowViewModel : ObservableObject
     {
+        private readonly IApplicationService _applicationService;
         private readonly IPageService _pageService;
 
         [ObservableProperty]
@@ -26,6 +27,7 @@ namespace WpfMvvmApp
 
         public MainWindowViewModel()
         {
+            _applicationService = Ioc.Default.GetRequiredService<IApplicationService>();
             _pageService = Ioc.Default.GetRequiredService<IPageService>();
 
             this.ThemeTypeList = new ObservableCollection<ThemeTypeModel>();
@@ -71,9 +73,8 @@ namespace WpfMvvmApp
         [RelayCommand]
         private void ChangeThemeType()
         {
-            App.ChangeTheme(this.SelectedThemeType.Id);
+            _applicationService.ChangeTheme(this.SelectedThemeType.Id);
         }
-
 
         [RelayCommand]
         private void SetContent()
