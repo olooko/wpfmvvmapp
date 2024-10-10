@@ -10,7 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfMvvmApp.Models._Sample;
+using WpfMvvmApp.Models;
 using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp.ViewModels

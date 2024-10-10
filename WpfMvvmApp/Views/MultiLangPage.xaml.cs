@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfMvvmApp.Windows._Sample;
+using WpfMvvmApp.Windows;
 
 namespace WpfMvvmApp.Views
 {

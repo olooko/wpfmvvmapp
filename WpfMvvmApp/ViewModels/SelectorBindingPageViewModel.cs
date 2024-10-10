@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
-using WpfMvvmApp.Enums._Sample;
-using WpfMvvmApp.Models._Sample;
+using WpfMvvmApp.Enums;
+using WpfMvvmApp.Models;
 
 namespace WpfMvvmApp.ViewModels
 {

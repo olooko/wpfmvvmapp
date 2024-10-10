@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
 using System.Windows.Controls;
-using WpfMvvmApp.Messages._Sample;
+using WpfMvvmApp.Messages;
+using WpfMvvmApp.Windows;
 
 namespace WpfMvvmApp.Services
 {

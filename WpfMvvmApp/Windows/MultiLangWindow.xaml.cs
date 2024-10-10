@@ -10,22 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfMvvmApp.Enums;
-using WpfMvvmApp.Helpers;
 
-namespace WpfMvvmApp.Views
+namespace WpfMvvmApp.Windows
 {
-    public partial class EnumToDescriptionPage : Page
+    public partial class MultiLangWindow : Window
     {
-        public EnumToDescriptionPage()
+        public MultiLangWindow()
         {
             InitializeComponent();
+        }
 
-            this.Values.Items.Add("CC");
-            this.Values.Items.Add(DescriptionEnum.A.ToDescription());
-            this.Values.Items.Add(DescriptionEnum.B.ToDescription());
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using System;
-using WpfMvvmApp.Messages._Sample;
+using WpfMvvmApp.Messages;
 
 namespace WpfMvvmApp.ViewModels
 {

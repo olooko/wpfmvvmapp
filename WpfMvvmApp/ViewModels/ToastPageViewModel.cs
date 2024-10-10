@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
-using WpfMvvmApp.Messages._Sample;
+using WpfMvvmApp.Messages;
 using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp.ViewModels

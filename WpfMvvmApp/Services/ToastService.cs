@@ -1,4 +1,5 @@
-﻿
+﻿using WpfMvvmApp.Windows;
+
 namespace WpfMvvmApp.Services
 {
     public interface IToastService

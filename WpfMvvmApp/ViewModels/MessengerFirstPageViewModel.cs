@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfMvvmApp.Messages._Sample;
+using WpfMvvmApp.Messages;
 using WpfMvvmApp.Services;
 using WpfMvvmApp.Views;
 

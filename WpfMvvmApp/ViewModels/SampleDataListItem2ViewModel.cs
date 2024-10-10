@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Windows;
-using WpfMvvmApp.Enums._Sample;
+using WpfMvvmApp.Enums;
 
 namespace WpfMvvmApp.ViewModels
 {

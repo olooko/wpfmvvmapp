@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
-using WpfMvvmApp.Popups._Sample;
+using WpfMvvmApp.Popups;
 using WpfMvvmApp.Services;
 using System.Windows;
 
