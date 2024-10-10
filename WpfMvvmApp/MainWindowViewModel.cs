@@ -70,16 +70,14 @@ namespace WpfMvvmApp
             _pageService.Navigate(Ioc.Default.GetRequiredService<SplashPage>());
         }
 
-        [RelayCommand]
-        private void ChangeThemeType()
+        partial void OnSelectedThemeTypeChanged(ThemeTypeModel value)
         {
-            _applicationService.ChangeTheme(this.SelectedThemeType.Id);
+            _applicationService.ChangeTheme(value.Id);
         }
 
-        [RelayCommand]
-        private void SetContent()
+        partial void OnSelectedListBoxItemChanged(MainWindowListBoxItemModel value)
         {
-            _pageService.Navigate(this.SelectedListBoxItem.Content);
+            _pageService.Navigate(value.Content);
         }
     }
 }

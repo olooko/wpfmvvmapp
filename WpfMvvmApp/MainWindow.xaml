@@ -26,20 +26,8 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid Margin="7">
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" ItemsSource="{Binding ThemeTypeList}" SelectedItem="{Binding SelectedThemeType}" DisplayMemberPath="Text" SelectedIndex="0">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="SelectionChanged">
-                    <i:InvokeCommandAction Command="{Binding ChangeThemeTypeCommand}" />
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </ComboBox>
-        <ListBox Margin="0,40,0,0" HorizontalAlignment="Left" Width="200" SelectionMode="Single" DisplayMemberPath="Text" ItemsSource="{Binding ListBoxList}" SelectedItem="{Binding SelectedListBoxItem}">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="SelectionChanged">
-                    <i:InvokeCommandAction Command="{Binding SetContentCommand}" />
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </ListBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" ItemsSource="{Binding ThemeTypeList}" SelectedItem="{Binding SelectedThemeType}" DisplayMemberPath="Text" SelectedIndex="0" />
+        <ListBox Margin="0,40,0,0" HorizontalAlignment="Left" Width="200" SelectionMode="Single" DisplayMemberPath="Text" ItemsSource="{Binding ListBoxList}" SelectedItem="{Binding SelectedListBoxItem}" />
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="205,0,0,0" />
         <Rectangle x:Name="DialogDimmed" Fill="Black" Opacity="0.7" Visibility="Hidden" />
         <Grid x:Name="PopupContainer" Visibility="Hidden">
