@@ -1,5 +1,4 @@
 # wpfmvvmapp
-WPF MVVM APP + Controls Customizing for netfx481 and net8.0+ 
-
+WPF MVVM APP + Custom Controls
 
 Multi-Lang Tip: ResXFileCodeGenerator -> PublicResXFileCodeGenerator
