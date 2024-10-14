@@ -46,7 +46,7 @@ namespace WpfMvvmApp
                     .AddSingleton<IApplicationService, ApplicationService>()
 
                     //Views
-                    .AddTransient<SplashPage>()
+                    .AddTransient<IndexPage>()
                     .AddTransient<ColorPage>()
                     .AddTransient<ButtonPage>()
                     .AddTransient<RadioButtonPage>()

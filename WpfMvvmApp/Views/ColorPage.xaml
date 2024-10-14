@@ -36,47 +36,38 @@
                 <Border Background="{DynamicResource ColorNeutralBackgroundDisabledBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
                     <TextBlock Foreground="{DynamicResource ColorNeutralForegroundDisabledBrush}" Text="Disabled" Style="{StaticResource ForegroundText}" />
                 </Border>
+
+
+                <Border Background="{DynamicResource ColorNeutralBackgroundInvertedBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
+                    <TextBlock Foreground="{DynamicResource ColorNeutralForegroundInvertedBrush}" Text="Inverted" Style="{StaticResource ForegroundText}" />
+                </Border>
+                
                 <Border Background="{DynamicResource ColorNeutralBackgroundInvertedDisabledBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
                     <TextBlock Foreground="{DynamicResource ColorNeutralForegroundInvertedDisabledBrush}" Text="InvertedDisabled" Style="{StaticResource ForegroundText}" />
                 </Border>
                 
-                <TextBlock Foreground="{DynamicResource ColorNeutralForeground2LinkBrush}" Text="Link" Style="{StaticResource ForegroundText}" />
+                
 
-                <Border Background="{DynamicResource ColorNeutralBackgroundStaticBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
-                    <TextBlock Foreground="{DynamicResource ColorNeutralForeground1StaticBrush}" Text="Static" Style="{StaticResource ForegroundText}" />
-                </Border>
-                <Border Background="{DynamicResource ColorNeutralBackgroundInvertedBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
-                    <TextBlock Foreground="{DynamicResource ColorNeutralForegroundStaticInvertedBrush}" Text="StaticInverted" Style="{StaticResource ForegroundText}" />
-                </Border>
-                <Border Background="{DynamicResource ColorNeutralBackgroundInvertedBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
-                    <TextBlock Foreground="{DynamicResource ColorNeutralForegroundInvertedBrush}" Text="Inverted" Style="{StaticResource ForegroundText}" />
-                </Border>
-                <Border Background="{DynamicResource ColorNeutralBackgroundInvertedBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
-                    <TextBlock Foreground="{DynamicResource ColorNeutralForegroundInverted2Brush}" Text="Inverted2" Style="{StaticResource ForegroundText}" />
-                </Border>
-                <Border Background="{DynamicResource ColorNeutralBackgroundInvertedBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
-                    <TextBlock Foreground="{DynamicResource ColorNeutralForegroundInvertedLinkBrush}" Text="InvertedLink" Style="{StaticResource ForegroundText}" />
-                </Border>
-                <!--<TextBlock Foreground="{DynamicResource ColorNeutralForegroundOnBrandBrush}" Text="OnBrand" Style="{StaticResource ForegroundText}" />-->
+                
+
+
+                
+                
+                
+                
             </WrapPanel>
             <TextBlock Text="Brand" />
             <WrapPanel Orientation="Horizontal">
                 <Border Background="{DynamicResource ColorBrandBackground2Brush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
-                    <TextBlock Foreground="{DynamicResource ColorBrandForegroundLinkBrush}" Text="Link" Style="{StaticResource ForegroundText}" />
-                </Border>
-                <Border Background="{DynamicResource ColorCompoundBrandBackgroundBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
-                    <TextBlock Foreground="{DynamicResource ColorCompoundBrandForeground1Brush}" Text="Compound" Style="{StaticResource ForegroundText}" />
-                </Border>
-                <Border Background="{DynamicResource ColorBrandBackgroundBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
-                    <TextBlock Foreground="{DynamicResource ColorBrandForeground1Brush}" Text="1" Style="{StaticResource ForegroundText}" />
-                </Border>
-                <Border Background="{DynamicResource ColorBrandBackground2Brush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
                     <TextBlock Foreground="{DynamicResource ColorBrandForeground2Brush}" Text="2" Style="{StaticResource ForegroundText}" />
                 </Border>
+                <Border Background="{DynamicResource ColorBrandBackgroundBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
+                    <TextBlock Foreground="{DynamicResource ColorBrandBackgroundInvertedBrush}" Text="1" Style="{StaticResource ForegroundText}" />
+                </Border>
+
                 <Border Background="{DynamicResource ColorBrandBackgroundInvertedBrush}" BorderBrush="Transparent" Style="{StaticResource BackgroundBorder}">
                     <TextBlock Foreground="{DynamicResource ColorBrandForegroundInvertedBrush}" Text="Inverted" Style="{StaticResource ForegroundText}" />
                 </Border>
-                <!--<TextBlock Foreground="{DynamicResource ColorBrandForegroundOnLightBrush}" Text="OnLight" Style="{StaticResource ForegroundText}" />-->
             </WrapPanel>
             <TextBlock Text="Palette" />
             <WrapPanel Orientation="Horizontal">

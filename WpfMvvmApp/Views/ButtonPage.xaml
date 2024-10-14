@@ -12,12 +12,12 @@
     </Page.DataContext>
     <Grid>
         <StackPanel Width="150" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Style="{StaticResource BrandButton}"  Command="{Binding ButtonClickCommand}">
-                <TextBlock Text="Brand" />
-            </Button>
-            <Rectangle Height="4" />
             <Button Command="{Binding ButtonClickCommand}">
                 <TextBlock Text="Default" />
+            </Button>
+            <Rectangle Height="4" />
+            <Button Style="{StaticResource BrandButton}" Command="{Binding ButtonClickCommand}">
+                <TextBlock Text="Brand" />
             </Button>
             <Rectangle Height="4" />
             <Button Command="{Binding ButtonClickCommand}" IsEnabled="False">

@@ -67,7 +67,7 @@ namespace WpfMvvmApp
         [RelayCommand]
         private void Initialize()
         {
-            _pageService.Navigate(Ioc.Default.GetRequiredService<SplashPage>());
+            _pageService.Navigate(Ioc.Default.GetRequiredService<IndexPage>());
         }
 
         partial void OnSelectedThemeTypeChanged(ThemeTypeModel value)
