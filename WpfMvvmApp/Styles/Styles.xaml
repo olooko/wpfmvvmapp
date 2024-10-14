@@ -329,7 +329,31 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="BrandButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+    <Style x:Key="Type1BrandButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Foreground" Value="{DynamicResource ColorNeutralForegroundOnBrandBrush}" />
+        <Setter Property="Background" Value="{DynamicResource ColorBrandBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource ColorNeutralForegroundOnBrandBrush}" />
+                <Setter Property="Background" Value="{DynamicResource ColorBrandBackgroundHoverBrush}" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource ColorNeutralForegroundOnBrandBrush}" />
+                <Setter Property="Background" Value="{DynamicResource ColorBrandBackgroundPressedBrush}" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource ColorNeutralForegroundDisabledBrush}" />
+                <Setter Property="Background" Value="{DynamicResource ColorNeutralBackgroundDisabledBrush}" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="Type2BrandButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
         <Setter Property="Foreground" Value="{DynamicResource ColorBrandForeground2Brush}" />
         <Setter Property="Background" Value="{DynamicResource ColorBrandBackground2Brush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource ColorBrandStroke2Brush}" />
@@ -343,6 +367,25 @@
                 <Setter Property="Foreground" Value="{DynamicResource ColorBrandForeground2PressedBrush}" />
                 <Setter Property="Background" Value="{DynamicResource ColorBrandBackground2PressedBrush}" />
                 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrandStroke2PressedBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="LinkButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Foreground" Value="{DynamicResource ColorBrandForegroundLinkBrush}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource ColorBrandForegroundLinkHoverBrush}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource ColorBrandForegroundLinkPressedBrush}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource ColorNeutralForegroundDisabledBrush}" />
+                <Setter Property="Background" Value="Transparent" />
             </Trigger>
         </Style.Triggers>
     </Style>
