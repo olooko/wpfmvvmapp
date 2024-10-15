@@ -14,7 +14,7 @@
                                             <ControlTemplate TargetType="{x:Type ToggleButton}">
                                                 <Grid>
                                                     <Border x:Name="Border" CornerRadius="4" BorderThickness="1" BorderBrush="{DynamicResource ColorNeutralStroke1Brush}" Background="{DynamicResource ColorNeutralBackground1Brush}">
-                                                        <Image x:Name="Chevron" Margin="0,0,9,0" Source="/Images/icon-combobox-chevron.png" Width="20" Height="20" HorizontalAlignment="Right" />
+                                                        <Path Margin="0,0,9,0" Fill="{DynamicResource ColorNeutralForeground4Brush}" VerticalAlignment="Center" HorizontalAlignment="Right" Data="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
                                                     </Border>
                                                 </Grid>
                                                 <ControlTemplate.Triggers>
