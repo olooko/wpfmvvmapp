@@ -5,7 +5,7 @@ using WpfMvvmApp.Models;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class SelectorBindingPageViewModel : ObservableRecipient
+    public partial class SelectorBindingPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private ObservableCollection<SampleDataListItemModel> _sampleDataList;

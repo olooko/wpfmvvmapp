@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class PopupPageViewModel : ObservableRecipient
+    public partial class PopupPageViewModel : ViewModelBase
     {
         [RelayCommand]
         private void ShowOkPopup()

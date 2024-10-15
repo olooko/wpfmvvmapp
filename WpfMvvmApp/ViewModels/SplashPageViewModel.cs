@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class SplashPageViewModel : ObservableObject
+    public partial class SplashPageViewModel : ViewModelBase
     {
         public SplashPageViewModel() { }
 

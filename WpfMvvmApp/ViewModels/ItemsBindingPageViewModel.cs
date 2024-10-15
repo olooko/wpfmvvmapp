@@ -7,7 +7,7 @@ using WpfMvvmApp.Models;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class ItemsBindingPageViewModel : ObservableRecipient
+    public partial class ItemsBindingPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private ObservableCollection<SampleDataListItemModel> _sampleDataList;

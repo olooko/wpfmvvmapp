@@ -6,7 +6,7 @@ using System.Windows.Threading;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class AsyncRelayCommandPageViewModel : ObservableRecipient
+    public partial class AsyncRelayCommandPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private string _sampleText1;

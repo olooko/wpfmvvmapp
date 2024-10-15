@@ -13,7 +13,7 @@ using WpfMvvmApp.Views;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class MessengerSecondPageViewModel : ObservableRecipient, IRecipient<MessengerSampleMessage>
+    public partial class MessengerSecondPageViewModel : ViewModelBase, IRecipient<MessengerSampleMessage>
     {
         [ObservableProperty]
         private string _message;

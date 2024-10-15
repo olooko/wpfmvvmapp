@@ -15,7 +15,7 @@ using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class CryptographyPageViewModel : ObservableObject
+    public partial class CryptographyPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private ObservableCollection<SampleDataJsonModel> _samples;

@@ -16,7 +16,7 @@ namespace WpfMvvmApp.Services
         public void ChangeTheme(string theme)
         {
             App.Current.Resources.MergedDictionaries[0].Source = new Uri(string.Format("/Styles/Colors{0}.xaml", theme), UriKind.Relative);
-            App.Current.Resources.MergedDictionaries[1].Source = new Uri(string.Format("/Styles/Brushes.xaml", theme), UriKind.Relative);
+            App.Current.Resources.MergedDictionaries[1].Source = new Uri("/Styles/Brushes.xaml", UriKind.Relative);
         }
     }
 }

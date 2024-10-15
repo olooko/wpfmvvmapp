@@ -5,7 +5,7 @@ using WpfMvvmApp.Enums;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class SampleDataListItem2ViewModel : ObservableObject
+    public partial class SampleDataListItem2ViewModel : ViewModelBase
     {
         public int Id { get; set; }
         public string Text { get; set; }

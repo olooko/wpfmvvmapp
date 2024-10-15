@@ -7,7 +7,7 @@ using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class ToastPageViewModel : ObservableRecipient, IRecipient<SampleToastMessage>
+    public partial class ToastPageViewModel : ViewModelBase, IRecipient<SampleToastMessage>
     {
         public ToastPageViewModel() 
         {

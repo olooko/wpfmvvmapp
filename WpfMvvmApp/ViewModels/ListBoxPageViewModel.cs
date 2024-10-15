@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class ListBoxPageViewModel : ObservableObject
+    public partial class ListBoxPageViewModel : ViewModelBase
     {
     }
 }

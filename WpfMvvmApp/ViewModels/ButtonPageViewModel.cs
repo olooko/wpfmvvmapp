@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class ButtonPageViewModel : ObservableRecipient
+    public partial class ButtonPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private bool _isButtonEnabled;

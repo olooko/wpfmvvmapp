@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class CommandWithAnimationPageViewModel : ObservableRecipient
+    public partial class CommandWithAnimationPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private string _value;

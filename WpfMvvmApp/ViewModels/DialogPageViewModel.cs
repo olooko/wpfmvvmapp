@@ -7,7 +7,7 @@ using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class DialogPageViewModel : ObservableRecipient
+    public partial class DialogPageViewModel : ViewModelBase
     {
         [RelayCommand]
         private void ShowDialog()

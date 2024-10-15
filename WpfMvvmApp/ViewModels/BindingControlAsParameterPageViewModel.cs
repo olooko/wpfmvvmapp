@@ -9,7 +9,7 @@ using System.Windows.Controls;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class BindingControlAsParameterPageViewModel : ObservableObject
+    public partial class BindingControlAsParameterPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private string _passwordText;

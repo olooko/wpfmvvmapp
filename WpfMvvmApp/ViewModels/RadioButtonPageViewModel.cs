@@ -2,7 +2,7 @@
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class RadioButtonPageViewModel : ObservableRecipient
+    public partial class RadioButtonPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private bool _buttonEnabled;

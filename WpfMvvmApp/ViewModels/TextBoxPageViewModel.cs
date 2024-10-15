@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class TextBoxPageViewModel : ObservableRecipient
+    public partial class TextBoxPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private string _textValue;

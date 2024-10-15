@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfMvvmApp.Models
 {
-    public class ThemeTypeModel
+    public class ThemeTypeListItemModel
     {
         public string Id { get; set; }
         public string Text { get; set; }

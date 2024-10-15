@@ -6,7 +6,7 @@ using WpfMvvmApp.Models;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class ComboBoxPageViewModel : ObservableRecipient
+    public partial class ComboBoxPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private bool _isComboBoxEnabled;

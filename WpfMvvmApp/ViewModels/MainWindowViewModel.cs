@@ -4,43 +4,45 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using WpfMvvmApp.Models;
 using WpfMvvmApp.Services;
+using WpfMvvmApp.ViewModels;
 using WpfMvvmApp.Views;
+
 
 namespace WpfMvvmApp
 {
-    public partial class MainWindowViewModel : ObservableObject
+    public partial class MainWindowViewModel : ViewModelBase
     {
         private readonly IApplicationService _applicationService;
         private readonly IPageService _pageService;
 
         [ObservableProperty]
-        private ObservableCollection<ThemeTypeModel> _themeTypeList;
+        private ObservableCollection<ThemeTypeListItemModel> _themeTypeList;
 
         [ObservableProperty]
-        private ThemeTypeModel _selectedThemeType;
+        private ThemeTypeListItemModel _selectedThemeTypeListItem;
 
         [ObservableProperty]
-        private ObservableCollection<MainWindowListBoxItemModel> _listBoxList;
+        private ObservableCollection<ContentListItemModel> _contentList;
 
         [ObservableProperty]
-        private MainWindowListBoxItemModel _selectedListBoxItem;
+        private ContentListItemModel _selectedContentListItem;
 
         public MainWindowViewModel()
         {
             _applicationService = Ioc.Default.GetRequiredService<IApplicationService>();
             _pageService = Ioc.Default.GetRequiredService<IPageService>();
 
-            this.ThemeTypeList = new ObservableCollection<ThemeTypeModel>();
-            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "Light", Text = "Light" });
-            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "Dark", Text = "Dark" });
-            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "TeamsLight", Text = "Teams Light" });
-            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "TeamsDark", Text = "Teams Dark" });
-            this.ThemeTypeList.Add(new ThemeTypeModel { Id = "TeamsHighContrast", Text = "Teams High Contrast" });
+            this.ThemeTypeList = new ObservableCollection<ThemeTypeListItemModel>();
+            this.ThemeTypeList.Add(new ThemeTypeListItemModel { Id = "Light", Text = "Light" });
+            this.ThemeTypeList.Add(new ThemeTypeListItemModel { Id = "Dark", Text = "Dark" });
+            this.ThemeTypeList.Add(new ThemeTypeListItemModel { Id = "TeamsLight", Text = "Teams Light" });
+            this.ThemeTypeList.Add(new ThemeTypeListItemModel { Id = "TeamsDark", Text = "Teams Dark" });
+            this.ThemeTypeList.Add(new ThemeTypeListItemModel { Id = "TeamsHighContrast", Text = "Teams High Contrast" });
 
-            this.ListBoxList = new ObservableCollection<MainWindowListBoxItemModel>();
-            this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Color", Content = Ioc.Default.GetRequiredService<ColorPage>() });
-            this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Button", Content = Ioc.Default.GetRequiredService<ButtonPage>() });
-            this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
+            this.ContentList = new ObservableCollection<ContentListItemModel>();
+            this.ContentList.Add(new ContentListItemModel { Text = "Color", Content = Ioc.Default.GetRequiredService<ColorPage>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "Button", Content = Ioc.Default.GetRequiredService<ButtonPage>() });
+            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ListBox", Content = Ioc.Default.GetRequiredService<ListBoxPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Popup", Content = Ioc.Default.GetRequiredService<PopupPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Dialog", Content = Ioc.Default.GetRequiredService<DialogPage>() });
@@ -61,7 +63,7 @@ namespace WpfMvvmApp
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Cryptography", Content = Ioc.Default.GetRequiredService<CryptographyPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "NumericUpDown", Content = Ioc.Default.GetRequiredService<NumericUpDownPage>() });
 
-            Serilog.Log.Debug("{0} 개의 항목이 추가되었습니다.", this.ListBoxList.Count);
+            Serilog.Log.Debug("{0} 개의 항목이 추가되었습니다.", this.ContentList.Count);
         }
 
         [RelayCommand]
@@ -70,12 +72,12 @@ namespace WpfMvvmApp
             _pageService.Navigate(Ioc.Default.GetRequiredService<IndexPage>());
         }
 
-        partial void OnSelectedThemeTypeChanged(ThemeTypeModel value)
+        partial void OnSelectedThemeTypeListItemChanged(ThemeTypeListItemModel value)
         {
             _applicationService.ChangeTheme(value.Id);
         }
 
-        partial void OnSelectedListBoxItemChanged(MainWindowListBoxItemModel value)
+        partial void OnSelectedContentListItemChanged(ContentListItemModel value)
         {
             _pageService.Navigate(value.Content);
         }

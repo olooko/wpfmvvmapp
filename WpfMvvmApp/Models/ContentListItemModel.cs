@@ -2,7 +2,7 @@
 
 namespace WpfMvvmApp.Models
 {
-    public class MainWindowListBoxItemModel
+    public class ContentListItemModel
     {
         public string Text { get; set; }
         public Page Content { get; set; }

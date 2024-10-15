@@ -2,7 +2,7 @@
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class ToggleButtonPageViewModel : ObservableRecipient
+    public partial class ToggleButtonPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private bool _isButton1Selected;

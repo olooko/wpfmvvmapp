@@ -13,7 +13,7 @@ using WpfMvvmApp.Views;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class MessengerFirstPageViewModel : ObservableRecipient
+    public partial class MessengerFirstPageViewModel : ViewModelBase
     {
         [RelayCommand]
         private void SendMessage()

@@ -6,7 +6,7 @@ using WpfMvvmApp.Messages;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class MessengerWithAnimationPageViewModel : ObservableRecipient
+    public partial class MessengerWithAnimationPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private int _count;
