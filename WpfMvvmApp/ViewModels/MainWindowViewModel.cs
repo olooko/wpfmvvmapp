@@ -43,6 +43,7 @@ namespace WpfMvvmApp
             this.ContentList.Add(new ContentListItemModel { Text = "Color", Content = Ioc.Default.GetRequiredService<ColorPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Button", Content = Ioc.Default.GetRequiredService<ButtonPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "TextBox", Content = Ioc.Default.GetRequiredService<TextBoxPage>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "RichTextBox", Content = Ioc.Default.GetRequiredService<RichTextBoxPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ListBox", Content = Ioc.Default.GetRequiredService<ListBoxPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Popup", Content = Ioc.Default.GetRequiredService<PopupPage>() });

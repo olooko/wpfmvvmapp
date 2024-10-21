@@ -50,6 +50,9 @@ namespace WpfMvvmApp
                     .AddTransient<ColorPage>()
                     .AddTransient<ButtonPage>()
                     .AddTransient<TextBoxPage>()
+                    .AddTransient<RichTextBoxPage>()
+
+
                     .AddTransient<RadioButtonPage>()
                     .AddTransient<ListBoxPage>()
                     .AddTransient<PopupPage>()
