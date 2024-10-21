@@ -51,13 +51,15 @@ namespace WpfMvvmApp
                     .AddTransient<ButtonPage>()
                     .AddTransient<TextBoxPage>()
                     .AddTransient<RichTextBoxPage>()
-
+                    .AddTransient<ToastPage>()
+                    .AddTransient<ExtraDataFirstPage>()
+                    .AddTransient<ExtraDataSecondPage>()
 
                     .AddTransient<RadioButtonPage>()
                     .AddTransient<ListBoxPage>()
                     .AddTransient<PopupPage>()
                     .AddTransient<DialogPage>()
-                    .AddTransient<ToastPage>()
+
                     .AddTransient<ComboBoxPage>()
                     .AddTransient<ItemsBindingPage>()
                     .AddTransient<ItemsBinding2Page>()
@@ -66,8 +68,7 @@ namespace WpfMvvmApp
                     .AddTransient<CommandWithAnimationPage>()
                     .AddTransient<MessengerWithAnimationPage>()
                     .AddTransient<AsyncRelayCommandPage>()
-                    .AddTransient<MessengerFirstPage>()
-                    .AddTransient<MessengerSecondPage>()                  
+              
                     .AddTransient<EnumToDescriptionPage>()
                     .AddTransient<MultiLangPage>()
                     .AddTransient<CryptographyPage>()

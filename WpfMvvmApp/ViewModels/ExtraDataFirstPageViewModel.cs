@@ -13,13 +13,13 @@ using WpfMvvmApp.Pages;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class MessengerFirstPageViewModel : ViewModelBase
+    public partial class ExtraDataFirstPageViewModel : ViewModelBase
     {
         [RelayCommand]
-        private void SendMessage()
+        private void SendHello()
         {
             IPageService pageService = Ioc.Default.GetRequiredService<IPageService>();
-            pageService.Navigate(Ioc.Default.GetRequiredService<MessengerSecondPage>(), new MessengerSampleMessage("This is messenger sample message."));
+            pageService.Navigate(Ioc.Default.GetRequiredService<ExtraDataSecondPage>(), "Hello, World!");
         }
     }
 }
