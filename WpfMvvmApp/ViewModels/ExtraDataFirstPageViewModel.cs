@@ -15,11 +15,19 @@ namespace WpfMvvmApp.ViewModels
 {
     public partial class ExtraDataFirstPageViewModel : ViewModelBase
     {
+        [ObservableProperty]
+        private string _message;
+
+        public ExtraDataFirstPageViewModel()
+        {
+            this.Message = "Hello, World!";
+        }
+
         [RelayCommand]
-        private void SendHello()
+        private void SendMessage()
         {
             IPageService pageService = Ioc.Default.GetRequiredService<IPageService>();
-            pageService.Navigate(Ioc.Default.GetRequiredService<ExtraDataSecondPage>(), "Hello, World!");
+            pageService.Navigate(Ioc.Default.GetRequiredService<ExtraDataSecondPage>(), this.Message);
         }
     }
 }

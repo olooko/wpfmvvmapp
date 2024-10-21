@@ -60,7 +60,6 @@ namespace WpfMvvmApp
                     .AddTransient<PopupPage>()
                     .AddTransient<DialogPage>()
 
-                    .AddTransient<ComboBoxPage>()
                     .AddTransient<ItemsBindingPage>()
                     .AddTransient<ItemsBinding2Page>()
                     .AddTransient<BindingControlAsParameterPage>()
@@ -72,7 +71,6 @@ namespace WpfMvvmApp
                     .AddTransient<EnumToDescriptionPage>()
                     .AddTransient<MultiLangPage>()
                     .AddTransient<CryptographyPage>()
-                    .AddTransient<NumericUpDownPage>()
 
                     .BuildServiceProvider());
         }

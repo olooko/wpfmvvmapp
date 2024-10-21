@@ -12,6 +12,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="{Binding Message}" />
+            <Rectangle Height="4" />
             <Button Content="Go Back" Command="{Binding GoBackCommand}" />
         </StackPanel>
         

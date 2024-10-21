@@ -10,6 +10,10 @@
         <viewModels:ExtraDataFirstPageViewModel />
     </Page.DataContext>
     <Grid>
-        <Button Content="Send `Hello`" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding SendHelloCommand}" />
+        <StackPanel Width="200" VerticalAlignment="Center">
+            <TextBox Text="{Binding Message}" />
+            <Rectangle Height="4" />
+            <Button Content="Send Message" Command="{Binding SendMessageCommand}" />
+        </StackPanel>
     </Grid>
 </Page>
