@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using WpfMvvmApp.Models;
 using WpfMvvmApp.Services;
 using WpfMvvmApp.ViewModels;
-using WpfMvvmApp.Views;
+using WpfMvvmApp.Pages;
 
 
 namespace WpfMvvmApp

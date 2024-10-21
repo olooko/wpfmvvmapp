@@ -5,7 +5,7 @@ using System.IO;
 using System.Globalization;
 using System.Windows;
 using WpfMvvmApp.Services;
-using WpfMvvmApp.Views;
+using WpfMvvmApp.Pages;
 
 namespace WpfMvvmApp
 {

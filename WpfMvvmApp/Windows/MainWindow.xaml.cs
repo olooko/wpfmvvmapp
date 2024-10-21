@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Media.Animation;
-using WpfMvvmApp.Views;
+using WpfMvvmApp.Pages;
 
 namespace WpfMvvmApp.Windows
 {

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WpfMvvmApp.Messages;
 using WpfMvvmApp.Services;
-using WpfMvvmApp.Views;
+using WpfMvvmApp.Pages;
 
 namespace WpfMvvmApp.ViewModels
 {
