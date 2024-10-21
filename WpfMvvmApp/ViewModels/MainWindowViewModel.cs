@@ -44,12 +44,13 @@ namespace WpfMvvmApp
             this.ContentList.Add(new ContentListItemModel { Text = "Button", Content = Ioc.Default.GetRequiredService<ButtonPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "TextBox", Content = Ioc.Default.GetRequiredService<TextBoxPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "RichTextBox", Content = Ioc.Default.GetRequiredService<RichTextBoxPage>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "Toast", Content = Ioc.Default.GetRequiredService<ToastPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ListBox", Content = Ioc.Default.GetRequiredService<ListBoxPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Popup", Content = Ioc.Default.GetRequiredService<PopupPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Dialog", Content = Ioc.Default.GetRequiredService<DialogPage>() });
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Toast", Content = Ioc.Default.GetRequiredService<ToastPage>() });
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ToggleButton", Content = Ioc.Default.GetRequiredService<ToggleButtonPage>() });
+            //
+
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ComboBox", Content = Ioc.Default.GetRequiredService<ComboBoxPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding", Content = Ioc.Default.GetRequiredService<ItemsBindingPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding2", Content = Ioc.Default.GetRequiredService<ItemsBinding2Page>() });

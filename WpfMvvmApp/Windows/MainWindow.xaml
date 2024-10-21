@@ -34,17 +34,18 @@
         <Grid x:Name="PopupContainer" Visibility="Hidden">
             <Rectangle Fill="Black" Opacity="0.7" />
         </Grid>
-        <StackPanel x:Name="ToastContainer" Visibility="Hidden">
-            <StackPanel.Style>
-                <Style TargetType="StackPanel">
+
+        <Border x:Name="ToastContainer" Visibility="Hidden" Background="{DynamicResource ColorNeutralBackgroundInvertedBrush}" Padding="7" CornerRadius="4">
+            <Border.Style>
+                <Style TargetType="Border">
                     <Setter Property="VerticalAlignment" Value="Bottom" />
                     <Setter Property="HorizontalAlignment" Value="Center" />
                     <Setter Property="Margin" Value="0,0,0,14" />
                 </Style>
-            </StackPanel.Style>
-            <Border Background="Gray" Padding="7">
-                <TextBlock x:Name="ToastMessage" />
-            </Border>
-        </StackPanel>
+            </Border.Style>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="ToastMessage" Foreground="{DynamicResource ColorNeutralForegroundInvertedBrush}" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

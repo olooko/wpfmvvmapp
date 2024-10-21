@@ -11,7 +11,13 @@ namespace WpfMvvmApp.ViewModels
     {
         public ToastPageViewModel() 
         {
-            WeakReferenceMessenger.Default.Register(this);
+            //WeakReferenceMessenger.Default.Register(this);
+        }
+
+        public void Receive(SampleToastMessage message)
+        {
+        //    IToastService toastService = Ioc.Default.GetRequiredService<IToastService>();
+        //    toastService.ShowToast(message.Value);
         }
 
         [RelayCommand]
@@ -21,10 +27,5 @@ namespace WpfMvvmApp.ViewModels
             toastService.ShowToast("This is toast message.");
         }
 
-        public void Receive(SampleToastMessage message)
-        {
-            IToastService toastService = Ioc.Default.GetRequiredService<IToastService>();
-            toastService.ShowToast(message.Value);
-        }
     }
 }

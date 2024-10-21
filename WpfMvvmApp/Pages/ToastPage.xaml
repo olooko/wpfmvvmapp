@@ -13,12 +13,12 @@
         <Button Command="{Binding Path=ShowToastCommand}">
             <Button.Style>
                 <Style TargetType="Button">
-                    <Setter Property="Content" Value="Show Toast" />
                     <Setter Property="HorizontalAlignment" Value="Center" />
                     <Setter Property="VerticalAlignment" Value="Center" />
                     <Setter Property="Padding" Value="7" />
                 </Style>
             </Button.Style>
+            <TextBlock Text="Show Toast" />
         </Button>
     </Grid>
 </Page>
