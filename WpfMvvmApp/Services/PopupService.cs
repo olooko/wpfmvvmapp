@@ -14,7 +14,7 @@ namespace WpfMvvmApp.Services
     {
         public void Push(UserControl control)
         {
-            var popupContainer = ((MainWindow)App.Current.MainWindow).PopupContainer;
+            var popupContainer = ((MainWindow)App.Current.MainWindow).PopupContent;
 
             popupContainer.Children.Add(control);
             popupContainer.Visibility = Visibility.Visible;
@@ -22,7 +22,7 @@ namespace WpfMvvmApp.Services
 
         public void Pop() 
         {
-            var popupContainer = ((MainWindow)App.Current.MainWindow).PopupContainer;
+            var popupContainer = ((MainWindow)App.Current.MainWindow).PopupContent;
 
             int lastIndex = popupContainer.Children.Count - 1;
 

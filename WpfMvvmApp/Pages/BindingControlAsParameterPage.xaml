@@ -12,6 +12,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
             <PasswordBox x:Name="MyPassword" />
+            <Rectangle Height="4" />
             <Button Content="Click!" Command="{Binding SetTextCommand}" CommandParameter="{Binding ElementName=MyPassword}" />
             <Rectangle Height="10" />
             <TextBlock Text="{Binding PasswordText}" />

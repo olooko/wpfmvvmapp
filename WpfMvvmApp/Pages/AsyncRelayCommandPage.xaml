@@ -10,8 +10,10 @@
         <viewModels:AsyncRelayCommandPageViewModel />
     </Page.DataContext>
     <Grid>
-        <Button Command="{Binding AsyncTestCommand}" VerticalAlignment="Center" HorizontalAlignment="Center">Async Test!!</Button>
-
-        <TextBox VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,50,0,0" Width="100" Text="{Binding SampleText1}" />
+        <StackPanel Width="200" VerticalAlignment="Center">
+            <Button Command="{Binding AsyncTestCommand}">Async Test!!</Button>
+            <Rectangle Height="4" />
+            <TextBox Text="{Binding SampleText1}" />
+        </StackPanel>
     </Grid>
 </Page>

@@ -18,18 +18,7 @@ namespace WpfMvvmApp.ViewModels
 
             for (int i = 0; i < 10; i++)
             {
-                if (i % 2 == 0)
-                {
-                    Dispatcher.CurrentDispatcher.Invoke(new System.Action(() => {
-                        this.SampleText1 += i.ToString();
-                    }));
-                }
-                else
-                {
-                    this.SampleText1 += i.ToString();
-                }
-
-
+                this.SampleText1 += i.ToString();
  
                 await Task.Delay(1000);
             }

@@ -7,19 +7,8 @@ using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class ToastPageViewModel : ViewModelBase, IRecipient<SampleToastMessage>
+    public partial class ToastPageViewModel : ViewModelBase
     {
-        public ToastPageViewModel() 
-        {
-            //WeakReferenceMessenger.Default.Register(this);
-        }
-
-        public void Receive(SampleToastMessage message)
-        {
-        //    IToastService toastService = Ioc.Default.GetRequiredService<IToastService>();
-        //    toastService.ShowToast(message.Value);
-        }
-
         [RelayCommand]
         private void ShowToast()
         {

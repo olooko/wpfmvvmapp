@@ -10,14 +10,7 @@
         <viewModels:ToastPageViewModel />
     </Page.DataContext>
     <Grid>
-        <Button Command="{Binding Path=ShowToastCommand}">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="HorizontalAlignment" Value="Center" />
-                    <Setter Property="VerticalAlignment" Value="Center" />
-                    <Setter Property="Padding" Value="7" />
-                </Style>
-            </Button.Style>
+        <Button Command="{Binding Path=ShowToastCommand}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="7">
             <TextBlock Text="Show Toast" />
         </Button>
     </Grid>

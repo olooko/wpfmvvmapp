@@ -1,6 +1,6 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Animation;
-using WpfMvvmApp.Pages;
 
 namespace WpfMvvmApp.Windows
 {
@@ -15,14 +15,31 @@ namespace WpfMvvmApp.Windows
         {
             this.ToastMessage.Text = message;
 
-            this.ToastContainer.Visibility = Visibility.Visible;
-            Storyboard sb = Resources["ShowToast"] as Storyboard;
-            sb.Begin();
+            this.ToastContent.Visibility = Visibility.Visible;
+
+            DoubleAnimation doubleAnimation = new DoubleAnimation();
+            doubleAnimation.From = 0;
+            doubleAnimation.To = 1;
+            doubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(3));
+            doubleAnimation.AutoReverse = true;
+
+            var powerEase = new PowerEase();
+            powerEase.Power = 10;
+            powerEase.EasingMode = EasingMode.EaseOut;
+            doubleAnimation.EasingFunction = powerEase;
+
+            Storyboard.SetTargetName(doubleAnimation, this.ToastContent.Name);
+            Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath(Border.OpacityProperty));
+
+            var showToastStoryBoard = new Storyboard();
+            showToastStoryBoard.Children.Add(doubleAnimation);
+            showToastStoryBoard.Completed += ShowToastStoryBoard_Completed;
+            showToastStoryBoard.Begin(this.ToastContent);
         }
 
-        private void ShowToast_Completed(object sender, EventArgs e)
+        private void ShowToastStoryBoard_Completed(object sender, EventArgs e)
         {
-            this.ToastContainer.Visibility = Visibility.Hidden;
+            this.ToastContent.Visibility = Visibility.Hidden;
         }
     }
 }

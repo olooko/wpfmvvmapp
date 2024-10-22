@@ -13,9 +13,9 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _message;
 
-        public override void ExtraDataReceived(object message)
+        public override void ExtraDataReceived(object extraData)
         {
-            this.Message = message as string;
+            this.Message = extraData as string;
         }
 
         [RelayCommand]

@@ -21,9 +21,7 @@ namespace WpfMvvmApp.Services
             var viewModelBase = page.DataContext as ViewModelBase;
 
             if (viewModelBase != null)
-            {
                 viewModelBase.ExtraDataReceived(extraData);
-            }
         }
 
         public void GoBack()
