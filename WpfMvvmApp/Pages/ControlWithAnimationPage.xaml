@@ -11,7 +11,7 @@
         <viewModels:ControlWithAnimationPageViewModel />
     </Page.DataContext>
     <Page.Resources>
-        <Storyboard x:Key="TextBlockAnimated">
+        <Storyboard x:Key="TextBlockAnimatedStoryboard" Completed="TextBlockAnimatedStoryboard_Completed">
             <DoubleAnimation AutoReverse="True" Duration="0:0:0.5" Storyboard.TargetName="TextBlock" Storyboard.TargetProperty="FontSize" From="14" To="16">
                 <DoubleAnimation.EasingFunction>
                     <BounceEase EasingMode="EaseIn"/>
@@ -25,7 +25,7 @@
             <Rectangle Height="7" />
             <Button Content="Calculate with Animations" Padding="7">
                 <i:Interaction.Triggers>
-                    <i:EventTrigger SourceName="Storyboard" EventName="Completed">
+                    <i:EventTrigger SourceName="TextBoxStoryboard" EventName="Completed">
                         <i:InvokeCommandAction Command="{Binding CalculateCommand}" CommandParameter="{Binding Value}" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
@@ -33,7 +33,7 @@
                     <EventTrigger RoutedEvent="Button.Click">
                         <EventTrigger.Actions>
                             <BeginStoryboard>
-                                <Storyboard x:Name="Storyboard">
+                                <Storyboard x:Name="TextBoxStoryboard">
                                     <ThicknessAnimation AutoReverse="True" Duration="0:0:0.7" Storyboard.TargetProperty="Padding" From="7" To="10">
                                         <ThicknessAnimation.EasingFunction>
                                             <BounceEase EasingMode="EaseIn"/>

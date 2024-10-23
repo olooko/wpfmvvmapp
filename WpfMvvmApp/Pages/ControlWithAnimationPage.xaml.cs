@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using WpfMvvmApp.Messages;
+using WpfMvvmApp.ViewModels;
 
 namespace WpfMvvmApp.Pages
 {
@@ -16,8 +17,13 @@ namespace WpfMvvmApp.Pages
 
         private void OnControlWithAnimationMessageWithToken1(object recipient, ControlWithAnimationMessage message)
         {
-            var sb = this.Resources["TextBlockAnimated"] as Storyboard;
+            var sb = this.Resources["TextBlockAnimatedStoryboard"] as Storyboard;
             sb.Begin();
+        }
+
+        private void TextBlockAnimatedStoryboard_Completed(object sender, EventArgs e)
+        {
+            ((ControlWithAnimationPageViewModel)this.DataContext).FinishCommand.Execute(null);
         }
     }
 }

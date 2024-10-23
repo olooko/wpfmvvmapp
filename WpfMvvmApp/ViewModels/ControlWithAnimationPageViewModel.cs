@@ -21,15 +21,20 @@ namespace WpfMvvmApp.ViewModels
         {
             this.Value = "1";
             _count = 0;
+            this.TimesString = string.Format("{0} times clicked!", _count);
         }
 
         [RelayCommand]
         private void Calculate(object value)
         {
             this.Value = Convert.ToString(Convert.ToInt32(value as string) * 2 + 1);
-            this.TimesString = string.Format("{0} times clicked!", ++_count);
-
             WeakReferenceMessenger.Default.Send(new ControlWithAnimationMessage(this.TimesString), "token1");
+        }
+
+        [RelayCommand]
+        private void Finish()
+        {
+            this.TimesString = string.Format("{0} times clicked!", ++_count);
         }
     }
 }
