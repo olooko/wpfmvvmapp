@@ -24,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Dialogs\MultiLangDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Languages\Strings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

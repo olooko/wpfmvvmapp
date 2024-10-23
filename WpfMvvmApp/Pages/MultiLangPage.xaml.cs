@@ -23,37 +23,5 @@ namespace WpfMvvmApp.Pages
         {
             InitializeComponent();
         }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            UpdateCulture();
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            string culture = this.CultureList.SelectedItem.ToString();
-
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(culture);
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
-
-            UpdateCulture();
-        }
-
-        private void UpdateCulture()
-        {
-            if (this.Button1 != null)
-            {
-                this.Button1.Content = Languages.Strings.BUTTON_TEXT;
-            }
-
-        }
-
-        private void Button1_Click(object sender, RoutedEventArgs e)
-        {
-            MultiLangWindow popup = new MultiLangWindow();
-            popup.Owner = Application.Current.MainWindow;
-            popup.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            popup.ShowDialog();
-        }
     }
 }

@@ -41,16 +41,9 @@ namespace WpfMvvmApp
 
 
                     .AddTransient<RadioButtonPage>()
-                    .AddTransient<ListBoxPage>()
-                    
-
                     .AddTransient<ItemsBindingPage>()
                     .AddTransient<ItemsBinding2Page>()
-                    
                     .AddTransient<SelectorBindingPage>()
-                    
-              
-
                     .AddTransient<MultiLangPage>()
 
                     .BuildServiceProvider());
