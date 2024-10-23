@@ -16,13 +16,12 @@ namespace WpfMvvmApp
 
             Ioc.Default.ConfigureServices(
                 new ServiceCollection()
-                    
+
                     //Services
+                    .AddSingleton<IApplicationService, ApplicationService>()
                     .AddSingleton<IDialogService, DialogService>()
                     .AddSingleton<IPageService, PageService>()
-                    .AddSingleton<IPopupService, PopupService>()
-                    .AddSingleton<IToastService, ToastService>()
-                    .AddSingleton<IApplicationService, ApplicationService>()
+                    .AddSingleton<IToastService, ToastService>()         
 
                     //Views
                     .AddTransient<IndexPage>()
@@ -36,12 +35,14 @@ namespace WpfMvvmApp
                     .AddTransient<AsyncRelayCommandPage>()
                     .AddTransient<BindingControlAsParameterPage>()
                     .AddTransient<ControlWithAnimationPage>()
+                    .AddTransient<DialogPage>()
+
+
 
 
                     .AddTransient<RadioButtonPage>()
                     .AddTransient<ListBoxPage>()
-                    .AddTransient<PopupPage>()
-                    .AddTransient<DialogPage>()
+                    
 
                     .AddTransient<ItemsBindingPage>()
                     .AddTransient<ItemsBinding2Page>()

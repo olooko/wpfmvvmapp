@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net481;net8.0-windows</TargetFrameworks>
-    <LangVersion>10.0</LangVersion>
+    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <Nullable>disable</Nullable>

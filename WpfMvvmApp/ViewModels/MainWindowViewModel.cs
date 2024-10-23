@@ -49,20 +49,14 @@ namespace WpfMvvmApp
             this.ContentList.Add(new ContentListItemModel { Text = "Async Command", Content = Ioc.Default.GetRequiredService<AsyncRelayCommandPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Binding Control As Param.", Content = Ioc.Default.GetRequiredService<BindingControlAsParameterPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Control With Animation", Content = Ioc.Default.GetRequiredService<ControlWithAnimationPage>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "Dialog", Content = Ioc.Default.GetRequiredService<DialogPage>() });
 
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ListBox", Content = Ioc.Default.GetRequiredService<ListBoxPage>() });
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Popup", Content = Ioc.Default.GetRequiredService<PopupPage>() });
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Dialog", Content = Ioc.Default.GetRequiredService<DialogPage>() });
-            //
-
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ComboBox", Content = Ioc.Default.GetRequiredService<ComboBoxPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding", Content = Ioc.Default.GetRequiredService<ItemsBindingPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding2", Content = Ioc.Default.GetRequiredService<ItemsBinding2Page>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Selector Binding", Content = Ioc.Default.GetRequiredService<SelectorBindingPage>() });
-            //
-
-            //
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Enum to Description", Content = Ioc.Default.GetRequiredService<EnumToDescriptionPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Multiple Languages", Content = Ioc.Default.GetRequiredService<MultiLangPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Cryptography", Content = Ioc.Default.GetRequiredService<CryptographyPage>() });

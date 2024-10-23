@@ -10,14 +10,13 @@ namespace WpfMvvmApp.ViewModels
     public partial class DialogPageViewModel : ViewModelBase
     {
         [RelayCommand]
-        private void ShowDialog()
+        private async Task ShowDialog()
         {
             IDialogService dialogService = Ioc.Default.GetRequiredService<IDialogService>();
 
-            dialogService.Show(new SampleDialog());
+            bool result = await dialogService.ShowModal(new SampleDialog());
 
-
-            MessageBox.Show("My point!");
+            MessageBox.Show(result.ToString());
         }
 
     }

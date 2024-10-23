@@ -1,24 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace WpfMvvmApp.Dialogs
 {
-    public partial class SampleDialog : Window
+    public partial class SampleDialog : DialogBase
     {
         public SampleDialog()
         {
             InitializeComponent();
+        }
+
+        private void OkButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            this.Close(true);
+        }
+
+        private void CancelButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            this.Close(false);
         }
     }
 }

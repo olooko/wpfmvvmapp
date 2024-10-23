@@ -1,34 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using WpfMvvmApp.Dialogs;
 using WpfMvvmApp.Windows;
 
 namespace WpfMvvmApp.Services
 {
     interface IDialogService
     {
-        bool? Show(Window window);
+        Task<bool> ShowModal(DialogBase dialogBase);
     }
 
     public sealed class DialogService : IDialogService
     {
-        public bool? Show(Window window)
+        public async Task<bool> ShowModal(DialogBase dialogBase)
         {
-            MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
+            var dialogContent = ((MainWindow)App.Current.MainWindow).DialogContent;
+            dialogContent.Children.Add(dialogBase);
 
-            window.Owner = mainWindow;
-            window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-
-            mainWindow.DialogDimmed.Visibility = Visibility.Visible;
-
-            bool? result = window.ShowDialog();
-
-            mainWindow.DialogDimmed.Visibility = Visibility.Hidden;
-
-            return result;
+            return await dialogBase.ShowModal();
         }
     }
 }
