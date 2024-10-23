@@ -1,8 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Threading;
 
 namespace WpfMvvmApp.ViewModels
 {
@@ -21,8 +18,7 @@ namespace WpfMvvmApp.ViewModels
                 this.SampleText1 += i.ToString();
  
                 await Task.Delay(1000);
-            }
-            
+            }          
         }
     }
 }

@@ -35,7 +35,7 @@ namespace WpfMvvmApp
                     .AddTransient<ExtraDataSecondPage>()
                     .AddTransient<AsyncRelayCommandPage>()
                     .AddTransient<BindingControlAsParameterPage>()
-
+                    .AddTransient<ControlWithAnimationPage>()
 
 
                     .AddTransient<RadioButtonPage>()
@@ -47,11 +47,9 @@ namespace WpfMvvmApp
                     .AddTransient<ItemsBinding2Page>()
                     
                     .AddTransient<SelectorBindingPage>()
-                    .AddTransient<CommandWithAnimationPage>()
-                    .AddTransient<MessengerWithAnimationPage>()
                     
               
-                    .AddTransient<EnumToDescriptionPage>()
+
                     .AddTransient<MultiLangPage>()
 
                     .BuildServiceProvider());

@@ -48,6 +48,7 @@ namespace WpfMvvmApp
             this.ContentList.Add(new ContentListItemModel { Text = "Navigate With ExtraData", Content = Ioc.Default.GetRequiredService<ExtraDataFirstPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Async Command", Content = Ioc.Default.GetRequiredService<AsyncRelayCommandPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Binding Control As Param.", Content = Ioc.Default.GetRequiredService<BindingControlAsParameterPage>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "Control With Animation", Content = Ioc.Default.GetRequiredService<ControlWithAnimationPage>() });
 
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "ListBox", Content = Ioc.Default.GetRequiredService<ListBoxPage>() });
@@ -60,8 +61,7 @@ namespace WpfMvvmApp
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding2", Content = Ioc.Default.GetRequiredService<ItemsBinding2Page>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Selector Binding", Content = Ioc.Default.GetRequiredService<SelectorBindingPage>() });
             //
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Command With Animation", Content = Ioc.Default.GetRequiredService<CommandWithAnimationPage>() });
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Messenger With Animation", Content = Ioc.Default.GetRequiredService<MessengerWithAnimationPage>() });
+
             //
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Enum to Description", Content = Ioc.Default.GetRequiredService<EnumToDescriptionPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Multiple Languages", Content = Ioc.Default.GetRequiredService<MultiLangPage>() });

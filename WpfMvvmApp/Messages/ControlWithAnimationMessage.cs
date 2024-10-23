@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace WpfMvvmApp.Messages
 {
-    public class SampleStoryBoardBeginMessage : ValueChangedMessage<string>
+    public class ControlWithAnimationMessage : ValueChangedMessage<string>
     {
-        public SampleStoryBoardBeginMessage(string message) : base(message)
+        public ControlWithAnimationMessage(string message) : base(message)
         {
         }
     }
