@@ -27,6 +27,8 @@ namespace WpfMvvmApp
                     .AddTransient<IndexPage>()
                     .AddTransient<ColorPage>()
                     .AddTransient<ButtonPage>()
+                    .AddTransient<RadioButtonPage>()
+                    .AddTransient<CheckBoxPage>()
                     .AddTransient<TextBoxPage>()
                     .AddTransient<RichTextBoxPage>()
                     .AddTransient<ToastPage>()
@@ -36,16 +38,15 @@ namespace WpfMvvmApp
                     .AddTransient<BindingControlAsParameterPage>()
                     .AddTransient<ControlWithAnimationPage>()
                     .AddTransient<DialogPage>()
+                    .AddTransient<MultiLangPage>()
+                    
 
 
 
-
-                    .AddTransient<RadioButtonPage>()
                     .AddTransient<ItemsBindingPage>()
                     .AddTransient<ItemsBinding2Page>()
                     .AddTransient<SelectorBindingPage>()
-                    .AddTransient<MultiLangPage>()
-
+                    
                     .BuildServiceProvider());
         }
     }

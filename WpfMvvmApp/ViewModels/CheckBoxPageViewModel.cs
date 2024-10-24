@@ -4,12 +4,12 @@ using System.Windows;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class RadioButtonPageViewModel : ViewModelBase
+    public partial class CheckBoxPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private string _radioValue;
 
-        public RadioButtonPageViewModel()
+        public CheckBoxPageViewModel()
         {
             this.RadioValue = "1";
         }

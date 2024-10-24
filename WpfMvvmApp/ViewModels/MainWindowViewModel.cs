@@ -42,6 +42,8 @@ namespace WpfMvvmApp
             this.ContentList = new ObservableCollection<ContentListItemModel>();
             this.ContentList.Add(new ContentListItemModel { Text = "Color", Content = Ioc.Default.GetRequiredService<ColorPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Button", Content = Ioc.Default.GetRequiredService<ButtonPage>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "CheckBox", Content = Ioc.Default.GetRequiredService<CheckBoxPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "TextBox", Content = Ioc.Default.GetRequiredService<TextBoxPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "RichTextBox", Content = Ioc.Default.GetRequiredService<RichTextBoxPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Toast", Content = Ioc.Default.GetRequiredService<ToastPage>() });
@@ -52,7 +54,7 @@ namespace WpfMvvmApp
             this.ContentList.Add(new ContentListItemModel { Text = "Dialog", Content = Ioc.Default.GetRequiredService<DialogPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Multiple Languages", Content = Ioc.Default.GetRequiredService<MultiLangPage>() });
 
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "RadioButton", Content = Ioc.Default.GetRequiredService<RadioButtonPage>() });
+
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding", Content = Ioc.Default.GetRequiredService<ItemsBindingPage>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding2", Content = Ioc.Default.GetRequiredService<ItemsBinding2Page>() });
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Selector Binding", Content = Ioc.Default.GetRequiredService<SelectorBindingPage>() });
