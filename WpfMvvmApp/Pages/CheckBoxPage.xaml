@@ -12,25 +12,21 @@
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <CheckBox IsChecked="True" Command="{Binding SelectCommand}" CommandParameter="1">
+            <CheckBox IsChecked="True">
                 <TextBlock Text="Sample1" />
             </CheckBox>
             <Rectangle Height="7" />
-            <CheckBox IsChecked="True" IsEnabled="False" Command="{Binding SelectCommand}" CommandParameter="2">
+            <CheckBox IsChecked="True" IsEnabled="False">
                 <TextBlock Text="Sample2" />
             </CheckBox>
             <Rectangle Height="7" />
-            <CheckBox Command="{Binding SelectCommand}" CommandParameter="3">
+            <CheckBox>
                 <TextBlock Text="Sample3" />
             </CheckBox>
             <Rectangle Height="7" />
-            <CheckBox IsEnabled="False" Command="{Binding SelectCommand}" CommandParameter="4">
+            <CheckBox IsEnabled="False">
                 <TextBlock Text="Sample4" />
             </CheckBox>
-            <Rectangle Height="14" />
-            <Button Command="{Binding ShowCommand}">
-                <TextBlock Text="{Binding RadioValue}" />
-            </Button>
         </StackPanel>
     </Grid>
 </Page>

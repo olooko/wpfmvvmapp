@@ -17,10 +17,12 @@
             <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
-    <Grid Margin="7">
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" ItemsSource="{Binding ThemeTypeList}" SelectedItem="{Binding SelectedThemeTypeListItem}" DisplayMemberPath="Text" SelectedIndex="0" />
-        <ListBox Margin="0,40,0,0" HorizontalAlignment="Left" Width="200" SelectionMode="Single" DisplayMemberPath="Text" ItemsSource="{Binding ContentList}" SelectedItem="{Binding SelectedContentListItem}" />
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="205,0,0,0" />
+    <Grid>
+        <Grid Margin="7">
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" ItemsSource="{Binding ThemeTypeList}" SelectedItem="{Binding SelectedThemeTypeListItem}" DisplayMemberPath="Text" SelectedIndex="0" />
+            <ListBox Margin="0,40,0,0" HorizontalAlignment="Left" Width="200" SelectionMode="Single" DisplayMemberPath="Text" ItemsSource="{Binding ContentList}" SelectedItem="{Binding SelectedContentListItem}" />
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="205,0,0,0" />
+        </Grid>
 
         <Grid x:Name="DialogContent" Visibility="Hidden" Background="{DynamicResource ColorBackgroundOverlayBrush}" />
 
