@@ -14,7 +14,7 @@ namespace WpfMvvmApp.Pages
         }
 
 
-        private void Border_MouseMove(object sender, MouseEventArgs e)
+        private void Item_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
@@ -28,7 +28,7 @@ namespace WpfMvvmApp.Pages
             }
         }
 
-        private void Border_Drop(object sender, DragEventArgs e)
+        private void Item_Drop(object sender, DragEventArgs e)
         {
             var targetModel = (SampleDataListItemModel)(sender as Border).DataContext;
 
@@ -36,7 +36,7 @@ namespace WpfMvvmApp.Pages
             {
                 var sourceModel = e.Data.GetData("SourceModel") as SampleDataListItemModel;
 
-                ObservableCollection<SampleDataListItemModel> sampleDataList = (ObservableCollection<SampleDataListItemModel>)this.listview.ItemsSource;
+                ObservableCollection<SampleDataListItemModel> sampleDataList = (ObservableCollection<SampleDataListItemModel>)this.List1.ItemsSource;
 
                 int newIndex = sampleDataList.IndexOf(targetModel);
 

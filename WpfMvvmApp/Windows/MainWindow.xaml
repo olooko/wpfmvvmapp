@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfMvvmApp"
         mc:Ignorable="d"
-        Title="WPF MVVM Application + Custom Controls" 
+        Title="WPF MVVM APP + Custom Controls" 
         Height="450" Width="800" 
         Background="{DynamicResource ColorNeutralBackground1Brush}">
     <Window.DataContext>

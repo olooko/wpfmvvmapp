@@ -53,10 +53,9 @@ namespace WpfMvvmApp
             this.ContentList.Add(new ContentListItemModel { Text = "Control With Animation", Content = Ioc.Default.GetRequiredService<ControlWithAnimationPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Dialog", Content = Ioc.Default.GetRequiredService<DialogPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Multiple Languages", Content = Ioc.Default.GetRequiredService<MultiLangPage>() });
-
-
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding", Content = Ioc.Default.GetRequiredService<ItemsBindingPage>() });
-            //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Items Binding2", Content = Ioc.Default.GetRequiredService<ItemsBinding2Page>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "Items Binding", Content = Ioc.Default.GetRequiredService<ItemsBindingPage>() });
+            
+            
             //this.ListBoxList.Add(new MainWindowListBoxItemModel { Text = "Selector Binding", Content = Ioc.Default.GetRequiredService<SelectorBindingPage>() });
         }
 

@@ -4,55 +4,116 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:controls="clr-namespace:WpfMvvmApp.Controls"
+      xmlns:selectors="clr-namespace:WpfMvvmApp.Selectors"
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
+    <Page.Resources>
+        <DataTemplate x:Key="ButtonTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding Text}" />
+                <Button>Button</Button>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="CheckBoxTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding Text}" />
+                <CheckBox />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="TextBoxTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding Text}" />
+                <TextBox />
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>    
     <Page.DataContext>
         <viewModels:ItemsBindingPageViewModel />
     </Page.DataContext>
-    <ItemsControl x:Name="listview" Margin="50" Background="AliceBlue" ItemsSource="{Binding SampleDataList}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <StackPanel Orientation="Horizontal"/>
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <Border Padding="9" AllowDrop="True" MouseMove="Border_MouseMove" Drop="Border_Drop">
-                    <Border.Style>
-                        <Style TargetType="Border">
-                            <Setter Property="Background" Value="Aqua" />
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=Selected}" Value="True">
-                                    <Setter Property="Background" Value="Green" />
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Border.Style>
-                    <StackPanel Orientation="Vertical">
-                        <controls:SampleDataListItemControl>
-                            <controls:SampleDataListItemControl.Style>
-                                <Style TargetType="controls:SampleDataListItemControl">
-                                    <Setter Property="Color" Value="{Binding Path=Color}" />
-                                    <Setter Property="Text" Value="{Binding Path=Text}" />
-                                    <Setter Property="Command" Value="{Binding Path=DataContext.DeleteItemCommand, RelativeSource={RelativeSource AncestorType=Page}}" />
-                                    <Setter Property="CommandParameter" Value="{Binding Path=Id}" />
+    <ScrollViewer>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock Text="List1 &amp; DragDrop" Foreground="{DynamicResource ColorNeutralForeground4Brush}" />
+            <ItemsControl x:Name="List1" Background="AliceBlue" ItemsSource="{Binding SampleDataList}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="9" AllowDrop="True" MouseMove="Item_MouseMove" Drop="Item_Drop">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Background" Value="Aqua" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Selected}" Value="True">
+                                            <Setter Property="Background" Value="Green" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
-                            </controls:SampleDataListItemControl.Style>
-                        </controls:SampleDataListItemControl>
-                        <Label VerticalContentAlignment="Center" Content="{Binding Path=Text}" />
-                        <Button>
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Content" Value="Delete" />
-                                    <Setter Property="Command" Value="{Binding Path=DataContext.DeleteItemCommand, RelativeSource={RelativeSource AncestorType=Page}}" />
-                                    <Setter Property="CommandParameter" Value="{Binding Path=Id}" />
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
-                </Border>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-    </ItemsControl>
+                            </Border.Style>
+                            <StackPanel Orientation="Vertical">
+                                <controls:SampleDataListItemControl>
+                                    <controls:SampleDataListItemControl.Style>
+                                        <Style TargetType="controls:SampleDataListItemControl">
+                                            <Setter Property="Color" Value="{Binding Path=Color}" />
+                                            <Setter Property="Text" Value="{Binding Path=Text}" />
+                                            <Setter Property="Command" Value="{Binding Path=DataContext.DeleteItemCommand, RelativeSource={RelativeSource AncestorType=Page}}" />
+                                            <Setter Property="CommandParameter" Value="{Binding Path=Id}" />
+                                        </Style>
+                                    </controls:SampleDataListItemControl.Style>
+                                </controls:SampleDataListItemControl>
+                                <Label VerticalContentAlignment="Center" Content="{Binding Path=Text}" />
+                                <Button>
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Content" Value="Delete" />
+                                            <Setter Property="Command" Value="{Binding Path=DataContext.DeleteItemCommand, RelativeSource={RelativeSource AncestorType=Page}}" />
+                                            <Setter Property="CommandParameter" Value="{Binding Path=Id}" />
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock Text="List2" Foreground="{DynamicResource ColorNeutralForeground4Brush}" />
+            <ItemsControl Background="AliceBlue" ItemsSource="{Binding SampleDataList2}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type viewModels:SampleDataListItem2ViewModel}">
+                        <Button Content="{Binding Text}" Command="{Binding DeleteItemCommand}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock Text="List3" Foreground="{DynamicResource ColorNeutralForeground4Brush}" />
+            <ItemsControl>
+                <ItemsControl.Style>
+                    <Style TargetType="ItemsControl">
+                        <Setter Property="Background" Value="AliceBlue" />
+                        <Setter Property="ItemsSource" Value="{Binding SampleDataList3}" />
+                        <Setter Property="ItemTemplateSelector">
+                            <Setter.Value>
+                                <selectors:SampleDataTemplateSelector
+                            ButtonTemplate="{StaticResource ButtonTemplate}" 
+                            CheckBoxTemplate="{StaticResource CheckBoxTemplate}" 
+                            TextBoxTemplate="{StaticResource TextBoxTemplate}" />
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ItemsControl.Style>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
 </Page>

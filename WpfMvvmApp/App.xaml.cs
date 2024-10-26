@@ -39,13 +39,7 @@ namespace WpfMvvmApp
                     .AddTransient<ControlWithAnimationPage>()
                     .AddTransient<DialogPage>()
                     .AddTransient<MultiLangPage>()
-                    
-
-
-
                     .AddTransient<ItemsBindingPage>()
-                    .AddTransient<ItemsBinding2Page>()
-                    .AddTransient<SelectorBindingPage>()
                     
                     .BuildServiceProvider());
         }
