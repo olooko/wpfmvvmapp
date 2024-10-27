@@ -80,24 +80,11 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
             <TextBlock Text="List2" Foreground="{DynamicResource ColorNeutralForeground4Brush}" />
-            <ItemsControl Background="AliceBlue" ItemsSource="{Binding SampleDataList2}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate DataType="{x:Type viewModels:SampleDataListItem2ViewModel}">
-                        <Button Content="{Binding Text}" Command="{Binding DeleteItemCommand}" />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-            <TextBlock Text="List3" Foreground="{DynamicResource ColorNeutralForeground4Brush}" />
             <ItemsControl>
                 <ItemsControl.Style>
                     <Style TargetType="ItemsControl">
                         <Setter Property="Background" Value="AliceBlue" />
-                        <Setter Property="ItemsSource" Value="{Binding SampleDataList3}" />
+                        <Setter Property="ItemsSource" Value="{Binding SampleDataList}" />
                         <Setter Property="ItemTemplateSelector">
                             <Setter.Value>
                                 <selectors:SampleDataTemplateSelector
