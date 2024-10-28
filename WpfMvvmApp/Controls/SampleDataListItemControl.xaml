@@ -5,32 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel Orientation="Vertical">
-        <StackPanel.Style>
-            <Style TargetType="StackPanel">
-                <Setter Property="Background" Value="Black" />
+    <Border CornerRadius="4" Padding="4">
+        <Border.Style>
+            <Style TargetType="{x:Type Border}">
                 <Style.Triggers>
                     <DataTrigger Binding="{Binding Path=Color, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="White">
-                        <Setter Property="Background" Value="White" />
+                        <Setter Property="Background" Value="{DynamicResource ColorNeutralBackground2Brush}" />
                     </DataTrigger>
                     <DataTrigger Binding="{Binding Path=Color, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="Blue">
-                        <Setter Property="Background" Value="DarkBlue" />
+                        <Setter Property="Background" Value="{DynamicResource ColorPaletteRoyalBlueBackground2Brush}" />
                     </DataTrigger>
                     <DataTrigger Binding="{Binding Path=Color, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="Red">
-                        <Setter Property="Background" Value="DarkRed" />
+                        <Setter Property="Background" Value="{DynamicResource ColorPaletteRedBackground2Brush}" />
                     </DataTrigger>
                 </Style.Triggers>
             </Style>
-        </StackPanel.Style>        
-        <Label VerticalContentAlignment="Center" Foreground="Orange" Content="{Binding Path=Text, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-        <Button>
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Content" Value="Delete" />
-                    <Setter Property="Command" Value="{Binding Path=Command, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                    <Setter Property="CommandParameter" Value="{Binding Path=CommandParameter, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-                </Style>
-            </Button.Style>
-        </Button>
-    </StackPanel>
+        </Border.Style>
+        <StackPanel>
+            <Label VerticalContentAlignment="Center" Foreground="Orange" Content="{Binding Path=Text, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+            <Button Command="{Binding Path=Command, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding Path=CommandParameter, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                <TextBlock Text="Delete" />
+            </Button>
+        </StackPanel>
+    </Border>
 </UserControl>
