@@ -22,7 +22,7 @@
             </Style>
         </Border.Style>
         <StackPanel>
-            <Label VerticalContentAlignment="Center" Foreground="Orange" Content="{Binding Path=Text, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+            <Label VerticalContentAlignment="Center" Foreground="{DynamicResource ColorPaletteDarkOrangeForeground3Brush}" Content="{Binding Path=Text, RelativeSource={RelativeSource AncestorType=UserControl}}" />
             <Button Command="{Binding Path=Command, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding Path=CommandParameter, RelativeSource={RelativeSource AncestorType=UserControl}}">
                 <TextBlock Text="Delete" />
             </Button>

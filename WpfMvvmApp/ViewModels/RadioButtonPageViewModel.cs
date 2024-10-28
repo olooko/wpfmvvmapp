@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Text;
 using System.Windows;
 
 namespace WpfMvvmApp.ViewModels
@@ -7,23 +8,33 @@ namespace WpfMvvmApp.ViewModels
     public partial class RadioButtonPageViewModel : ViewModelBase
     {
         [ObservableProperty]
+        private bool[] _isCheckedArray;
+
+        [ObservableProperty]
         private string _radioValue;
 
         public RadioButtonPageViewModel()
         {
-            this.RadioValue = "1";
+            this.IsCheckedArray = new bool[4];
+            this.IsCheckedArray[0] = false;
+            this.IsCheckedArray[1] = false;
+            this.IsCheckedArray[2] = false;
+            this.IsCheckedArray[3] = true;
+
+            Select();
         }
 
         [RelayCommand]
-        private void Select(object value)
+        private void Select()
         {
-            this.RadioValue = value as string;
-        }
+            StringBuilder sb = new StringBuilder();
 
-        [RelayCommand]
-        private void Show()
-        {
-            MessageBox.Show(this.RadioValue);
+            foreach (var ic in this.IsCheckedArray)
+            {
+                sb.AppendFormat("{0} ", ic.ToString());
+            }
+
+            this.RadioValue = sb.ToString();
         }
     }
 }

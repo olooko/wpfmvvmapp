@@ -12,25 +12,23 @@
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <RadioButton GroupName="Sample" IsChecked="True" Command="{Binding SelectCommand}" CommandParameter="1">
+            <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[0]}" Command="{Binding SelectCommand}">
                 <TextBlock Text="Sample1" />
             </RadioButton>
             <Rectangle Height="7" />
-            <RadioButton GroupName="Sample" IsEnabled="False" Command="{Binding SelectCommand}" CommandParameter="2">
+            <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[1]}" Command="{Binding SelectCommand}">
                 <TextBlock Text="Sample2" />
             </RadioButton>
             <Rectangle Height="7" />
-            <RadioButton GroupName="Sample" Command="{Binding SelectCommand}" CommandParameter="3">
+            <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[2]}" Command="{Binding SelectCommand}">
                 <TextBlock Text="Sample3" />
             </RadioButton>
             <Rectangle Height="7" />
-            <RadioButton GroupName="Sample" Command="{Binding SelectCommand}" CommandParameter="4">
+            <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[3]}" Command="{Binding SelectCommand}">
                 <TextBlock Text="Sample4" />
             </RadioButton>
             <Rectangle Height="14" />
-            <Button Command="{Binding ShowCommand}">
-                <TextBlock Text="{Binding RadioValue}" />
-            </Button>
+            <TextBlock Text="{Binding RadioValue}" />
         </StackPanel>
     </Grid>
 </Page>
