@@ -16,7 +16,11 @@ namespace WpfMvvmApp.Services
             var dialogContent = ((MainWindow)App.Current.MainWindow).DialogContent;
             dialogContent.Children.Add(dialogBase);
 
-            return await dialogBase.ShowModal();
+            bool result = await dialogBase.ShowModal();
+
+            dialogContent.Children.Remove(dialogBase);
+
+            return result;
         }
     }
 }
