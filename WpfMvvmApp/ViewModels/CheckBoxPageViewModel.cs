@@ -12,6 +12,12 @@ namespace WpfMvvmApp.ViewModels
         private bool[] _isCheckedArray;
 
         [ObservableProperty]
+        private string[] _values;
+
+        [ObservableProperty]
+        private string _checkChecked;
+
+        [ObservableProperty]
         private string _checkValue;
 
         public CheckBoxPageViewModel()
@@ -22,20 +28,35 @@ namespace WpfMvvmApp.ViewModels
             this.IsCheckedArray[2] = false;
             this.IsCheckedArray[3] = false;
 
+            this.Values = new string[4];
+            this.Values[0] = "1";
+            this.Values[1] = "2";
+            this.Values[2] = "3";
+            this.Values[3] = "4";
+
             Select();
         }
 
         [RelayCommand]
         private void Select()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb1 = new StringBuilder();
+            StringBuilder sb2 = new StringBuilder();
 
-            foreach (var ic in this.IsCheckedArray)
+            for (int i = 0; i < this.IsCheckedArray.Length; i++)
             {
-                sb.AppendFormat("{0} ", ic.ToString());
+                bool b = this.IsCheckedArray[i];
+
+                sb1.AppendFormat("{0} ", b.ToString());
+
+                if (b == true)
+                {
+                    sb2.AppendFormat("{0} ", this.Values[i]);
+                }
             }
 
-            this.CheckValue = sb.ToString();
+            this.CheckChecked = sb1.ToString();
+            this.CheckValue = sb2.ToString();
         }
     }
 }

@@ -11,6 +11,9 @@ namespace WpfMvvmApp.ViewModels
         private bool[] _isCheckedArray;
 
         [ObservableProperty]
+        private string _radioChecked;
+
+        [ObservableProperty]
         private string _radioValue;
 
         public RadioButtonPageViewModel()
@@ -21,11 +24,11 @@ namespace WpfMvvmApp.ViewModels
             this.IsCheckedArray[2] = false;
             this.IsCheckedArray[3] = true;
 
-            Select();
+            Select("4");
         }
 
         [RelayCommand]
-        private void Select()
+        private void Select(object parameter)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -34,7 +37,8 @@ namespace WpfMvvmApp.ViewModels
                 sb.AppendFormat("{0} ", ic.ToString());
             }
 
-            this.RadioValue = sb.ToString();
+            this.RadioChecked = sb.ToString();
+            this.RadioValue = parameter as string;
         }
     }
 }

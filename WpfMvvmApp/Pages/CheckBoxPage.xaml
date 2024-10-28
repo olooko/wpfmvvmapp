@@ -12,22 +12,23 @@
     </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <CheckBox IsChecked="{Binding IsCheckedArray[0]}" Command="{Binding SelectCommand}">
+            <CheckBox IsChecked="{Binding IsCheckedArray[0]}" Command="{Binding SelectCommand}" Tag="{Binding Values[0]}">
                 <TextBlock Text="Sample1" />
             </CheckBox>
             <Rectangle Height="7" />
-            <CheckBox IsChecked="{Binding IsCheckedArray[1]}" Command="{Binding SelectCommand}" IsEnabled="False">
+            <CheckBox IsChecked="{Binding IsCheckedArray[1]}" Command="{Binding SelectCommand}" Tag="{Binding Values[1]}" IsEnabled="False">
                 <TextBlock Text="Sample2" />
             </CheckBox>
             <Rectangle Height="7" />
-            <CheckBox IsChecked="{Binding IsCheckedArray[2]}" Command="{Binding SelectCommand}">
+            <CheckBox IsChecked="{Binding IsCheckedArray[2]}" Command="{Binding SelectCommand}" Tag="{Binding Values[2]}">
                 <TextBlock Text="Sample3" />
             </CheckBox>
             <Rectangle Height="7" />
-            <CheckBox IsChecked="{Binding IsCheckedArray[3]}" Command="{Binding SelectCommand}" IsEnabled="False">
+            <CheckBox IsChecked="{Binding IsCheckedArray[3]}" Command="{Binding SelectCommand}" Tag="{Binding Values[3]}" IsEnabled="False">
                 <TextBlock Text="Sample4" />
             </CheckBox>
             <Rectangle Height="14" />
+            <TextBlock Text="{Binding CheckChecked}" />
             <TextBlock Text="{Binding CheckValue}" />
         </StackPanel>
     </Grid>
