@@ -14,7 +14,7 @@ namespace WpfMvvmApp.Dialogs
             _token = new CancellationToken();
         }
 
-        public async Task<bool> ShowModal()
+        public async Task<bool> WaitAsync()
         {
             return await _taskCompletionSource.Task.WaitAsync(_token);
         }

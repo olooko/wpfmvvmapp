@@ -19,7 +19,7 @@ namespace WpfMvvmApp.Services
             dialogContent.Visibility = Visibility.Visible;
             dialogContent.Children.Add(dialogBase);
 
-            bool result = await dialogBase.ShowModal();
+            bool result = await dialogBase.WaitAsync();
 
             dialogContent.Visibility = Visibility.Collapsed;
             dialogContent.Children.Remove(dialogBase);
