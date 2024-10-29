@@ -16,13 +16,11 @@ namespace WpfMvvmApp.Dialogs
 
         public async Task<bool> ShowModal()
         {
-            ((Grid)this.Parent).Visibility = Visibility.Visible;
             return await _taskCompletionSource.Task.WaitAsync(_token);
         }
 
         public void Close(bool result)
         {
-            ((Grid)this.Parent).Visibility = Visibility.Collapsed;
             _taskCompletionSource.SetResult(result);
         }
     }
