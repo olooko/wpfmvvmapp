@@ -6,17 +6,15 @@ namespace WpfMvvmApp.Dialogs
     public class DialogBase : UserControl
     {
         private TaskCompletionSource<bool> _taskCompletionSource;
-        private CancellationToken _token;
 
         public DialogBase()
         {
             _taskCompletionSource = new TaskCompletionSource<bool>();
-            _token = new CancellationToken();
         }
 
         public async Task<bool> WaitAsync()
         {
-            return await _taskCompletionSource.Task.WaitAsync(_token);
+            return await _taskCompletionSource.Task.WaitAsync(Timeout.InfiniteTimeSpan);
         }
 
         public void Close(bool result)
