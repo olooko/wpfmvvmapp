@@ -17,7 +17,11 @@
         <StackPanel Width="200" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Binding Value" Foreground="{DynamicResource ColorNeutralForeground4Brush}" />
             <Rectangle Height="4" />
-            <TextBox Text="{Binding TextValue}" />
+            <TextBox Text="{Binding TextValue, UpdateSourceTrigger=PropertyChanged}">
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding ApplyCommand}" Gesture="Enter" />
+                </TextBox.InputBindings>
+            </TextBox>
             <Rectangle Height="4" />
             <Button Content="Apply" Command="{Binding ApplyCommand}" />
             <Rectangle Height="20" />
