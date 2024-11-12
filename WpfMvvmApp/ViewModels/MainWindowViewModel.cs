@@ -65,6 +65,12 @@ namespace WpfMvvmApp
             _pageService.Navigate(Ioc.Default.GetRequiredService<IndexPage>());
         }
 
+        [RelayCommand]
+        private void Exit()
+        {
+            Environment.Exit(0);
+        }
+
         partial void OnSelectedThemeTypeListItemChanged(ThemeTypeListItemModel value)
         {
             _applicationService.ChangeTheme(value.Id);
