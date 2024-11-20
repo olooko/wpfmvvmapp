@@ -5,7 +5,7 @@ namespace WpfMvvmApp.Pages
 {
     public partial class ExtraDataSecondPage : Page
     {
-        public ExtraDataSecondPage(ExtraDataFirstPageViewModel viewModel)
+        public ExtraDataSecondPage(ExtraDataSecondPageViewModel viewModel)
         {
             InitializeComponent();
 

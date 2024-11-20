@@ -72,6 +72,7 @@ namespace WpfMvvmApp
             IHost host = builder.Build();
 
             MainWindow window = host.Services.GetRequiredService<MainWindow>();
+            App.Current.MainWindow = window;
             window.Show();
 
             await host.StartAsync();
