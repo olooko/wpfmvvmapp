@@ -11,6 +11,8 @@ namespace WpfMvvmApp
 {
     public partial class App : Application
     {
+        private IHost _host;
+
         public App()
         {
         }
@@ -69,13 +71,20 @@ namespace WpfMvvmApp
             builder.Services.AddTransient<MultiLangPageViewModel>();
             builder.Services.AddTransient<ItemsBindingPageViewModel>();
 
-            IHost host = builder.Build();
+            _host = builder.Build();
 
-            MainWindow window = host.Services.GetRequiredService<MainWindow>();
+            MainWindow window = _host.Services.GetRequiredService<MainWindow>();
             App.Current.MainWindow = window;
             window.Show();
 
-            await host.StartAsync();
+            await _host.StartAsync();
+        }
+
+        protected override async void OnExit(ExitEventArgs e)
+        {
+            base.OnExit(e);
+
+            await _host.StopAsync();
         }
     }
 }
