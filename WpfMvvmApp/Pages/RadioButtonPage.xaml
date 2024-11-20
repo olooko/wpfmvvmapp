@@ -10,23 +10,23 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[0]}" Command="{Binding SelectCommand}" CommandParameter="1">
-                <TextBlock Text="Sample1" />
+                <TextBlock Text="Sample1" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
             </RadioButton>
             <Rectangle Height="7" />
             <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[1]}" Command="{Binding SelectCommand}" CommandParameter="2">
-                <TextBlock Text="Sample2" />
+                <TextBlock Text="Sample2" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
             </RadioButton>
             <Rectangle Height="7" />
             <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[2]}" Command="{Binding SelectCommand}" CommandParameter="3">
-                <TextBlock Text="Sample3" />
+                <TextBlock Text="Sample3" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
             </RadioButton>
             <Rectangle Height="7" />
             <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[3]}" Command="{Binding SelectCommand}" CommandParameter="4">
-                <TextBlock Text="Sample4" />
+                <TextBlock Text="Sample4" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
             </RadioButton>
             <Rectangle Height="14" />
-            <TextBlock Text="{Binding RadioChecked}" />
-            <TextBlock Text="{Binding RadioValue}" />
+            <TextBlock Text="{Binding RadioChecked}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
+            <TextBlock Text="{Binding RadioValue}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
         </StackPanel>
     </Grid>
 </Page>

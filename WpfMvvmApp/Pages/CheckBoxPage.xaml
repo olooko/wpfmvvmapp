@@ -10,23 +10,23 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <CheckBox IsChecked="{Binding IsCheckedArray[0]}" Command="{Binding SelectCommand}" Tag="{Binding Values[0]}">
-                <TextBlock Text="Sample1" />
+                <TextBlock Text="Sample1" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
             </CheckBox>
             <Rectangle Height="7" />
             <CheckBox IsChecked="{Binding IsCheckedArray[1]}" Command="{Binding SelectCommand}" Tag="{Binding Values[1]}" IsEnabled="False">
-                <TextBlock Text="Sample2" />
+                <TextBlock Text="Sample2" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
             </CheckBox>
             <Rectangle Height="7" />
             <CheckBox IsChecked="{Binding IsCheckedArray[2]}" Command="{Binding SelectCommand}" Tag="{Binding Values[2]}">
-                <TextBlock Text="Sample3" />
+                <TextBlock Text="Sample3" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
             </CheckBox>
             <Rectangle Height="7" />
             <CheckBox IsChecked="{Binding IsCheckedArray[3]}" Command="{Binding SelectCommand}" Tag="{Binding Values[3]}" IsEnabled="False">
-                <TextBlock Text="Sample4" />
+                <TextBlock Text="Sample4" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
             </CheckBox>
             <Rectangle Height="14" />
-            <TextBlock Text="{Binding CheckChecked}" />
-            <TextBlock Text="{Binding CheckValue}" />
+            <TextBlock Text="{Binding CheckChecked}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
+            <TextBlock Text="{Binding CheckValue}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
         </StackPanel>
     </Grid>
 </Page>

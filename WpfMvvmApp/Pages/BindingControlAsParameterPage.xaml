@@ -12,7 +12,7 @@
             <Rectangle Height="4" />
             <Button Content="Click!" Command="{Binding SetTextCommand}" CommandParameter="{Binding ElementName=MyPassword}" />
             <Rectangle Height="10" />
-            <TextBlock Text="{Binding PasswordText}" />
+            <TextBlock Text="{Binding PasswordText}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
         </StackPanel>
     </Grid>
 </Page>

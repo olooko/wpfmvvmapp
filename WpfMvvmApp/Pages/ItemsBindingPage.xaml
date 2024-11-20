@@ -11,7 +11,7 @@
     <Page.Resources>
         <DataTemplate x:Key="ButtonTemplate">
             <StackPanel Margin="4" Width="70">
-                <TextBlock Text="{Binding Id}" />
+                <TextBlock Text="{Binding Id}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
                 <Rectangle Height="4" />
                 <Button>
                     <TextBlock Text="{Binding Text}" />
@@ -20,16 +20,16 @@
         </DataTemplate>
         <DataTemplate x:Key="CheckBoxTemplate">
             <StackPanel Margin="4" Width="70">
-                <TextBlock Text="{Binding Id}" />
+                <TextBlock Text="{Binding Id}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
                 <Rectangle Height="4" />
                 <CheckBox>
-                    <TextBlock Text="{Binding Text}" />
+                    <TextBlock Text="{Binding Text}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
                 </CheckBox>
             </StackPanel>
         </DataTemplate>
         <DataTemplate x:Key="TextBoxTemplate">
             <StackPanel Margin="4" Width="70">
-                <TextBlock Text="{Binding Id}" />
+                <TextBlock Text="{Binding Id}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
                 <Rectangle Height="4" />
                 <TextBox Text="{Binding Text}" />
             </StackPanel>
@@ -68,7 +68,7 @@
                                         </Style>
                                     </controls:SampleDataListItemControl.Style>
                                 </controls:SampleDataListItemControl>
-                                <Label VerticalContentAlignment="Center" Content="{Binding Path=Text}" />
+                                <Label VerticalContentAlignment="Center" Content="{Binding Path=Text}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
                                 <Button Command="{Binding Path=DataContext.DeleteItemCommand, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding Path=Id}">
                                     <TextBlock Text="Delete" />
                                 </Button>

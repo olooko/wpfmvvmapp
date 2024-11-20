@@ -43,7 +43,7 @@
                 </Button.Triggers>
             </Button>
             <Rectangle Height="12" />
-            <TextBlock x:Name="TextBlock" Text="{Binding TimesString}" />
+            <TextBlock x:Name="TextBlock" Text="{Binding TimesString}" Foreground="{DynamicResource ColorNeutralForeground1Brush}" />
         </StackPanel>
     </Grid>
 </Page>

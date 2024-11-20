@@ -16,13 +16,13 @@ namespace WpfMvvmApp.ViewModels
         private string _selectedItem;
 
         public MultiLangPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
-        {
-            this.SelectedItem = "en-US";
+        {          
         }
 
         [RelayCommand]
         private void Loaded()
         {
+            this.SelectedItem = "en-US";
             UpdateCulture();
         }
 
