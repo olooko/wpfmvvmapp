@@ -6,9 +6,6 @@
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
-    <Page.DataContext>
-        <viewModels:ToastPageViewModel />
-    </Page.DataContext>
     <Grid>
         <Button Command="{Binding Path=ShowToastCommand}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="7">
             <TextBlock Text="Show Toast" />

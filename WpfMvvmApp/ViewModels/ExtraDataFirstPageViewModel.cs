@@ -1,13 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.Messaging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WpfMvvmApp.Messages;
+using Microsoft.Extensions.DependencyInjection;
 using WpfMvvmApp.Services;
 using WpfMvvmApp.Pages;
 
@@ -18,7 +11,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _message;
 
-        public ExtraDataFirstPageViewModel()
+        public ExtraDataFirstPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.Message = "Hello, World!";
         }
@@ -26,8 +19,8 @@ namespace WpfMvvmApp.ViewModels
         [RelayCommand]
         private void SendMessage()
         {
-            IPageService pageService = Ioc.Default.GetRequiredService<IPageService>();
-            pageService.Navigate(Ioc.Default.GetRequiredService<ExtraDataSecondPage>(), this.Message);
+            IPageService pageService = _serviceProvider.GetRequiredService<IPageService>();
+            pageService.Navigate(_serviceProvider.GetRequiredService<ExtraDataSecondPage>(), this.Message);
         }
     }
 }

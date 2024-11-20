@@ -5,6 +5,10 @@ namespace WpfMvvmApp.ViewModels
 {
     public partial class AsyncRelayCommandPageViewModel : ViewModelBase
     {
+        public AsyncRelayCommandPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
+        {
+        }
+
         [ObservableProperty]
         private string _sampleText1;
 

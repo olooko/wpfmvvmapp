@@ -3,14 +3,17 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using WpfMvvmApp.Models;
+using WpfMvvmApp.ViewModels;
 
 namespace WpfMvvmApp.Pages
 {
     public partial class ItemsBindingPage : Page
     {
-        public ItemsBindingPage()
+        public ItemsBindingPage(ItemsBindingPageViewModel viewModel)
         {
             InitializeComponent();
+
+            this.DataContext = viewModel;
         }
 
 

@@ -14,7 +14,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _textValue;
 
-        public TextBoxPageViewModel()
+        public TextBoxPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.TextValue = "binding test!";
         }

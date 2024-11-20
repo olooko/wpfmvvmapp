@@ -20,7 +20,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _checkValue;
 
-        public CheckBoxPageViewModel()
+        public CheckBoxPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.IsCheckedArray = new bool[4];
             this.IsCheckedArray[0] = true;

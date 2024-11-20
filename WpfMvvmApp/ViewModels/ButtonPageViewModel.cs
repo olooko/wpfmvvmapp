@@ -9,7 +9,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private bool _isButtonEnabled;
 
-        public ButtonPageViewModel()
+        public ButtonPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.IsButtonEnabled = false;
         }

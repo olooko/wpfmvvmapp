@@ -6,9 +6,11 @@ namespace WpfMvvmApp.Windows
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainWindowViewModel viewModel)
         {
             InitializeComponent();
+
+            this.DataContext = viewModel;
         }
 
         public void ShowToast(string message)

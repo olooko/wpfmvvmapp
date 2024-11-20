@@ -35,9 +35,6 @@
             </StackPanel>
         </DataTemplate>
     </Page.Resources>    
-    <Page.DataContext>
-        <viewModels:ItemsBindingPageViewModel />
-    </Page.DataContext>
     <ScrollViewer>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBlock Text="List1 &amp; DragDrop" Foreground="{DynamicResource ColorNeutralForeground4Brush}" />

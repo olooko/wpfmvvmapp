@@ -7,9 +7,6 @@
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
-    <Page.DataContext>
-        <viewModels:RadioButtonPageViewModel />
-    </Page.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <RadioButton GroupName="Sample" IsChecked="{Binding IsCheckedArray[0]}" Command="{Binding SelectCommand}" CommandParameter="1">

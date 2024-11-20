@@ -1,9 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.Messaging;
-using System.Diagnostics;
-using WpfMvvmApp.Messages;
+using Microsoft.Extensions.DependencyInjection;
 using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp.ViewModels
@@ -13,6 +10,10 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _message;
 
+        public ExtraDataSecondPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
+        {
+        }
+
         public override void ExtraDataReceived(object extraData)
         {
             this.Message = extraData as string;
@@ -21,7 +22,7 @@ namespace WpfMvvmApp.ViewModels
         [RelayCommand]
         private void GoBack()
         {
-            IPageService pageService = Ioc.Default.GetRequiredService<IPageService>();
+            IPageService pageService = _serviceProvider.GetRequiredService<IPageService>();
             pageService.GoBack();
         }
     }

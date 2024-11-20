@@ -9,9 +9,6 @@
         Title="WPF MVVM APP + Custom Controls" 
         Height="450" Width="800" 
         Background="{DynamicResource ColorNeutralBackground1Brush}">
-    <Window.DataContext>
-        <local:MainWindowViewModel />
-    </Window.DataContext>
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
@@ -32,7 +29,7 @@
 
 
         <Grid Grid.Row="1" Margin="7">
-            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" ItemsSource="{Binding ThemeTypeList}" SelectedItem="{Binding SelectedThemeTypeListItem}" DisplayMemberPath="Text" SelectedIndex="0" />
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" ItemsSource="{Binding ThemeTypeList}" SelectedItem="{Binding SelectedThemeTypeListItem}" DisplayMemberPath="Text" />
             <ListBox Margin="0,40,0,0" HorizontalAlignment="Left" Width="200" SelectionMode="Single" DisplayMemberPath="Text" ItemsSource="{Binding ContentList}" SelectedItem="{Binding SelectedContentListItem}" />
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="205,0,0,0" />
         </Grid>

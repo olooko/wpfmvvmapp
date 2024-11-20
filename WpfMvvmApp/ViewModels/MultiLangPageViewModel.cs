@@ -1,10 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.Extensions.DependencyInjection;
 using System.Globalization;
-using System.Windows;
 using WpfMvvmApp.Dialogs;
-using WpfMvvmApp.Pages;
 using WpfMvvmApp.Services;
 
 namespace WpfMvvmApp.ViewModels
@@ -17,7 +15,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _selectedItem;
 
-        public MultiLangPageViewModel()
+        public MultiLangPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.SelectedItem = "en-US";
         }
@@ -31,7 +29,7 @@ namespace WpfMvvmApp.ViewModels
         [RelayCommand]
         private async Task ShowDialog()
         {
-            IDialogService dialogService = Ioc.Default.GetRequiredService<IDialogService>();
+            IDialogService dialogService = _serviceProvider.GetRequiredService<IDialogService>();
             await dialogService.ShowModal(new MultiLangDialog());
         }
 

@@ -1,6 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.DependencyInjection;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.Input;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using WpfMvvmApp.Dialogs;
 using WpfMvvmApp.Services;
@@ -9,10 +8,14 @@ namespace WpfMvvmApp.ViewModels
 {
     public partial class DialogPageViewModel : ViewModelBase
     {
+        public DialogPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
+        {
+        }
+
         [RelayCommand]
         private async Task ShowDialog()
         {
-            IDialogService dialogService = Ioc.Default.GetRequiredService<IDialogService>();
+            IDialogService dialogService = _serviceProvider.GetRequiredService<IDialogService>();
 
             bool result = await dialogService.ShowModal(new SampleDialog());
 

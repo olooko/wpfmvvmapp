@@ -7,9 +7,6 @@
       xmlns:controls="clr-namespace:WpfMvvmApp.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
-    <Page.DataContext>
-        <viewModels:RichTextBoxPageViewModel />
-    </Page.DataContext>
     <Grid>
         <StackPanel Width="300" VerticalAlignment="Center">
             <controls:BindableRichTextBoxControl DocumentString="{Binding DocumentStringValue}" Height="100" />

@@ -17,7 +17,7 @@ namespace WpfMvvmApp.ViewModels
 
         private int _count;
 
-        public ControlWithAnimationPageViewModel()
+        public ControlWithAnimationPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.Value = "1";
             _count = 0;

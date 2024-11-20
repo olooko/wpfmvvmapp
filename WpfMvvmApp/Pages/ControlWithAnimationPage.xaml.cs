@@ -8,9 +8,11 @@ namespace WpfMvvmApp.Pages
 {
     public partial class ControlWithAnimationPage : Page
     {
-        public ControlWithAnimationPage()
+        public ControlWithAnimationPage(ControlWithAnimationPageViewModel viewModel)
         {
             InitializeComponent();
+
+            this.DataContext = viewModel;
 
             WeakReferenceMessenger.Default.Register<ControlWithAnimationMessage, string>(this, "token1", OnControlWithAnimationMessageWithToken1);
         }

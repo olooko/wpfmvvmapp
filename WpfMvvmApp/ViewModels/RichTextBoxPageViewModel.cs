@@ -10,7 +10,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _documentStringValue;
 
-        public RichTextBoxPageViewModel()
+        public RichTextBoxPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.DocumentStringValue = "<FlowDocument xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\"><Paragraph>binding test!</Paragraph></FlowDocument>";
         }

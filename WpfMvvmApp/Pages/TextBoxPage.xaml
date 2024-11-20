@@ -10,9 +10,6 @@
     <Page.Resources>
         <Style x:Key="StyledTextBox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}" />
     </Page.Resources>
-    <Page.DataContext>
-        <viewModels:TextBoxPageViewModel />
-    </Page.DataContext>
     <Grid>
         <StackPanel Width="200" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Binding Value" Foreground="{DynamicResource ColorNeutralForeground4Brush}" />

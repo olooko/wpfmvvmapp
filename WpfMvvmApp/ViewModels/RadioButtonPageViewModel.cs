@@ -16,7 +16,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _radioValue;
 
-        public RadioButtonPageViewModel()
+        public RadioButtonPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.IsCheckedArray = new bool[4];
             this.IsCheckedArray[0] = false;

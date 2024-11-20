@@ -12,7 +12,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private ObservableCollection<SampleDataListItemModel> _sampleDataList;
 
-        public ItemsBindingPageViewModel()
+        public ItemsBindingPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.SampleDataList = new ObservableCollection<SampleDataListItemModel>();
             this.SampleDataList.Add(new SampleDataListItemModel { Id = 1, Text = "Item1", Selected = false, Color = SampleDataListItemColorEnum.Red });

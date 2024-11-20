@@ -7,9 +7,6 @@
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
-    <Page.DataContext>
-        <viewModels:ControlWithAnimationPageViewModel />
-    </Page.DataContext>
     <Page.Resources>
         <Storyboard x:Key="TextBlockAnimatedStoryboard" Completed="TextBlockAnimatedStoryboard_Completed">
             <DoubleAnimation AutoReverse="True" Duration="0:0:0.5" Storyboard.TargetName="TextBlock" Storyboard.TargetProperty="FontSize" From="14" To="16">
