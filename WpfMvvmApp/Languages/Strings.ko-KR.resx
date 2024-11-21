@@ -123,4 +123,7 @@
   <data name="CLOSE_TEXT" xml:space="preserve">
     <value>닫기</value>
   </data>
+  <data name="STATIC_TEXT" xml:space="preserve">
+    <value>정적 텍스트</value>
+  </data>
 </root>

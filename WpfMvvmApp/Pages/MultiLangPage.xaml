@@ -5,6 +5,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      xmlns:lang="clr-namespace:WpfMvvmApp.Languages"
+      xmlns:ext="clr-namespace:WpfMvvmApp.Extensions"
       xmlns:viewModels="clr-namespace:WpfMvvmApp.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
@@ -20,8 +22,10 @@
                 <sys:String>ko-KR</sys:String>
             </ComboBox>
             <Rectangle Height="12" />
+            <TextBlock Text="{ext:Localize STATIC_TEXT}" />
+            <Rectangle Height="12" />
             <Button Command="{Binding ShowDialogCommand}">
-                <TextBlock Text="{Binding Text}" />
+                <TextBlock Text="{ext:Localize BUTTON_TEXT}" />
             </Button>
         </StackPanel>        
     </Grid>

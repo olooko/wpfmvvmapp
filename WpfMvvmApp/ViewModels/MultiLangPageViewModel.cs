@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Globalization;
 using WpfMvvmApp.Dialogs;
 using WpfMvvmApp.Services;
+using WpfMvvmApp.Sources;
 
 namespace WpfMvvmApp.ViewModels
 {
@@ -23,7 +24,7 @@ namespace WpfMvvmApp.ViewModels
         private void Loaded()
         {
             this.SelectedItem = "en-US";
-            UpdateCulture();
+            UpdateCulture(this.SelectedItem);
         }
 
         [RelayCommand]
@@ -35,15 +36,12 @@ namespace WpfMvvmApp.ViewModels
 
         partial void OnSelectedItemChanged(string value)
         {
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(value);
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(value);
-
-            UpdateCulture();
+            UpdateCulture(value);
         }
 
-        private void UpdateCulture()
+        private void UpdateCulture(string value)
         {
-            this.Text = Languages.Strings.BUTTON_TEXT;
+            TranslationSource.Instance.CurrentCulture = new CultureInfo(value);
         }
     }
 }

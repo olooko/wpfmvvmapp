@@ -2,10 +2,12 @@
 using Microsoft.Extensions.Hosting;
 using System.Globalization;
 using System.Windows;
-using WpfMvvmApp.Services;
 using WpfMvvmApp.Pages;
-using WpfMvvmApp.Windows;
+using WpfMvvmApp.Services;
+using WpfMvvmApp.Sources;
 using WpfMvvmApp.ViewModels;
+using WpfMvvmApp.Windows;
+
 
 namespace WpfMvvmApp
 {
@@ -21,9 +23,7 @@ namespace WpfMvvmApp
         {
             base.OnStartup(e);
 
-            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-
+            TranslationSource.Instance.CurrentCulture = new CultureInfo("en-US");
 
             var builder = Host.CreateApplicationBuilder();
 

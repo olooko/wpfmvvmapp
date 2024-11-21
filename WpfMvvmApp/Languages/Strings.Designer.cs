@@ -77,5 +77,14 @@ namespace WpfMvvmApp.Languages {
                 return ResourceManager.GetString("CLOSE_TEXT", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Static Text과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string STATIC_TEXT {
+            get {
+                return ResourceManager.GetString("STATIC_TEXT", resourceCulture);
+            }
+        }
     }
 }
