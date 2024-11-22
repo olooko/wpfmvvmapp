@@ -55,7 +55,7 @@ namespace WpfMvvmApp
             this.ContentList.Add(new ContentListItemModel { Text = "Binding Control As Param.", Content = serviceProvider.GetRequiredService<BindingControlAsParameterPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Control With Animation", Content = serviceProvider.GetRequiredService<ControlWithAnimationPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Dialog", Content = serviceProvider.GetRequiredService<DialogPage>() });
-            this.ContentList.Add(new ContentListItemModel { Text = "Multiple Languages", Content = serviceProvider.GetRequiredService<MultiLangPage>() });
+            this.ContentList.Add(new ContentListItemModel { Text = "Translation", Content = serviceProvider.GetRequiredService<TranslationPage>() });
             this.ContentList.Add(new ContentListItemModel { Text = "Items Binding", Content = serviceProvider.GetRequiredService<ItemsBindingPage>() });
         }
 

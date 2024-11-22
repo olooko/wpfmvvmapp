@@ -6,38 +6,32 @@ namespace WpfMvvmApp.Sources
 {
     public class TranslationSource : INotifyPropertyChanged
     {
-        private static readonly TranslationSource instance = new TranslationSource();
+        private static readonly TranslationSource _instance = new TranslationSource();
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public static TranslationSource Instance
         {
-            get { return instance; }
+            get { return _instance; }
         }
 
-        private readonly ResourceManager resourceManager = new ResourceManager(typeof(Languages.Strings));
-        private CultureInfo currentCulture = null;
+        private readonly ResourceManager _resourceManager = new ResourceManager(typeof(Languages.Translation));
+        private CultureInfo _currentCulture = null;
 
         public string this[string key]
         {
-            get { return this.resourceManager.GetString(key, this.currentCulture); }
+            get { return _resourceManager.GetString(key, _currentCulture); }
         }
 
         public CultureInfo CurrentCulture
         {
-            get { return this.currentCulture; }
+            get { return _currentCulture; }
             set
             {
-                if (this.currentCulture != value)
-                {
-                    this.currentCulture = value;
-                    var @event = this.PropertyChanged;
-                    if (@event != null)
-                    {
-                        @event.Invoke(this, new PropertyChangedEventArgs(string.Empty));
-                    }
-                }
+                _currentCulture = value;
+                if (this.PropertyChanged != null)
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs(string.Empty));
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

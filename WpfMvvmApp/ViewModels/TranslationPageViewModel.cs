@@ -8,7 +8,7 @@ using WpfMvvmApp.Sources;
 
 namespace WpfMvvmApp.ViewModels
 {
-    public partial class MultiLangPageViewModel : ViewModelBase
+    public partial class TranslationPageViewModel : ViewModelBase
     {
         [ObservableProperty]
         private string _text;
@@ -16,7 +16,7 @@ namespace WpfMvvmApp.ViewModels
         [ObservableProperty]
         private string _selectedItem;
 
-        public MultiLangPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
+        public TranslationPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
         {          
         }
 

@@ -3,9 +3,9 @@ using WpfMvvmApp.ViewModels;
 
 namespace WpfMvvmApp.Pages
 {
-    public partial class MultiLangPage : Page
+    public partial class TranslationPage : Page
     {
-        public MultiLangPage(MultiLangPageViewModel viewModel)
+        public TranslationPage(TranslationPageViewModel viewModel)
         {
             InitializeComponent();
 

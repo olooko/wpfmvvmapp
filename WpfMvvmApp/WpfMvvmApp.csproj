@@ -28,17 +28,17 @@
     <Compile Update="Dialogs\MultiLangDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Languages\Strings.Designer.cs">
+    <Compile Update="Languages\Translation.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Strings.resx</DependentUpon>
+      <DependentUpon>Translation.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Languages\Strings.resx">
+    <EmbeddedResource Update="Languages\Translation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <LastGenOutput>Translation.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -51,7 +51,7 @@ namespace WpfMvvmApp
             builder.Services.AddTransient<BindingControlAsParameterPage>();
             builder.Services.AddTransient<ControlWithAnimationPage>();
             builder.Services.AddTransient<DialogPage>();
-            builder.Services.AddTransient<MultiLangPage>();
+            builder.Services.AddTransient<TranslationPage>();
             builder.Services.AddTransient<ItemsBindingPage>();
 
             //ViewModels
@@ -68,7 +68,7 @@ namespace WpfMvvmApp
             builder.Services.AddTransient<BindingControlAsParameterPageViewModel>();
             builder.Services.AddTransient<ControlWithAnimationPageViewModel>();
             builder.Services.AddTransient<DialogPageViewModel>();
-            builder.Services.AddTransient<MultiLangPageViewModel>();
+            builder.Services.AddTransient<TranslationPageViewModel>();
             builder.Services.AddTransient<ItemsBindingPageViewModel>();
 
             _host = builder.Build();
